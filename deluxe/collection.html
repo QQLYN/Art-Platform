@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tabstyle.css">
   </head>
   <body>
 
@@ -56,7 +57,7 @@
         <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
           <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
           	<div class="text">
-	            <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
+	            <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html"></a></span> <span>About</span></p>
 	            <h1 class="mb-4 bread">Rooms</h1>
             </div>
           </div>
@@ -66,10 +67,10 @@
 
 
     <section class="ftco-section bg-light">
-	    <div style="    margin-bottom: 2%;margin-left: 22%">
-			<div class="text">
-				<p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
-			</div>
+		<div class="tab">
+	  			<button class="tablinks" onclick="openCity(event, 'London')">London</button>
+	  			<button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+	  			<button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
 		</div>
 		<div>
     	<div class="container">
@@ -79,20 +80,20 @@
 		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
 						<!--小卡片-->
 		    				<div class="room">
-		    					<a href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-1.jpg);">
+		    					<a href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/sa2.jpg);">
 		    						<div class="icon d-flex justify-content-center align-items-center">
 		    							<span class="icon-search2"></span>
 		    						</div>
 		    					</a>
 								
 		    					<div class="text p-3 text-center">
-		    						<h3 class="mb-3"><a href="rooms-single.html">房間</a></h3>
-									<h3 class="mb-3">Room Model</h3>
+		    						<h3 class="mb-3"><a href="rooms-single.html">山水風景畫地區不限</a></h3>
+									<h3 class="mb-3">山水風景</h3>
 		    						<ul class="list">
 		    							<li><span>類別:</span> 風景</li>
-		    							<li><span>地區:</span> 台北市</li>
+		    							<li><span>地區:</span> 台灣，台北</li>
 		    							<li><span>資歷:</span> 5年</li>
-		    							<li><span>價錢:</span>1500元</li>
+		    							<li><span>價錢:</span>100元</li>
 		    						</ul>
 		    						<hr>
 		    						<p class="pt-1"><a href="room-single.html" class="btn-custom">More Information <span class="icon-long-arrow-right"></span></a></p>
@@ -101,17 +102,17 @@
 		    			</div>
 		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
 		    				<div class="room">
-		    					<a href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-2.jpg);">
+		    					<a href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/sa3.jpg);">
 		    						<div class="icon d-flex justify-content-center align-items-center">
 		    							<span class="icon-search2"></span>
 		    						</div>
 		    					</a>
 		    					<div class="text p-3 text-center">
-		    						<h3 class="mb-3"><a href="rooms-single.html">海景房</a></h3>
-									<h3 class="mb-3">Room Model</h3>
+		    						<h3 class="mb-3"><a href="rooms-single.html">婚紗照拍攝自然唯美風</a></h3>
+									<h3 class="mb-3">Wedding</h3>
 		    						<ul class="list">
-		    							<li><span>類別:</span> 風景</li>
-		    							<li><span>地區:</span> 台北市</li>
+		    							<li><span>類別:</span> 人像</li>
+		    							<li><span>地區:</span> 台灣，雲林</li>
 		    							<li><span>資歷:</span> 3年</li>
 		    							<li><span>價錢:</span>2000元</li>
 		    						</ul>
@@ -122,82 +123,19 @@
 		    			</div>
 		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
 		    				<div class="room">
-		    					<a href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-3.jpg);">
+		    					<a href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/sa5.jpg);">
 		    						<div class="icon d-flex justify-content-center align-items-center">
 		    							<span class="icon-search2"></span>
 		    						</div>
 		    					</a>
 		    					<div class="text p-3 text-center">
-		    						<h3 class="mb-3"><a href="rooms-single.html">兩床房間</a></h3>
-									<h3 class="mb-3">Room Model</h3>
+		    						<h3 class="mb-3"><a href="rooms-single.html">網美蛋糕店　美食照片</a></h3>
+									<h3 class="mb-3">Food</h3>
 		    						<ul class="list">
-		    							<li><span>類別:</span> 風景</li>
-		    							<li><span>地區:</span> 新北市</li>
+		    							<li><span>類別:</span> 美食</li>
+		    							<li><span>地區:</span> 台灣，台北</li>
 		    							<li><span>資歷:</span> 1年</li>
-		    							<li><span>價錢:</span>1500元</li>
-		    						</ul>
-		    						<hr>
-		    						<p class="pt-1"><a href="room-single.html" class="btn-custom">More Information <span class="icon-long-arrow-right"></span></a></p>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
-		    				<div class="room">
-		    					<a href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-4.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-		    							<span class="icon-search2"></span>
-		    						</div>
-		    					</a>
-		    					<div class="text p-3 text-center">
-		    						<h3 class="mb-3"><a href="rooms-single.html">豪華房</a></h3>
-									<h3 class="mb-3">Room Model</h3>
-		    						<ul class="list">
-		    							<li><span>類別:</span> 風景</li>
-		    							<li><span>地區:</span> 桃園市</li>
-		    							<li><span>資歷:</span> 7年</li>
-		    							<li><span>價錢:</span>3000元</li>
-		    						</ul>
-		    						<hr>
-		    						<p class="pt-1"><a href="room-single.html" class="btn-custom">More Information <span class="icon-long-arrow-right"></span></a></p>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
-		    				<div class="room">
-		    					<a href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-5.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-		    							<span class="icon-search2"></span>
-		    						</div>
-		    					</a>
-		    					<div class="text p-3 text-center">
-		    						<h3 class="mb-3"><a href="rooms-single.html">居家房</a></h3>
-									<h3 class="mb-3">Room Model</h3>
-		    						<ul class="list">
-		    							<li><span>類別:</span> 風景</li>
-		    							<li><span>地區:</span> 新北市</li>
-		    							<li><span>資歷:</span> 2年</li>
-		    							<li><span>價錢:</span>1750元</li>
-		    						</ul>
-		    						<hr>
-		    						<p class="pt-1"><a href="room-single.html" class="btn-custom">More Information <span class="icon-long-arrow-right"></span></a></p>
-		    					</div>
-		    				</div>
-		    			</div>
-		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
-		    				<div class="room">
-		    					<a href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-6.jpg);">
-		    						<div class="icon d-flex justify-content-center align-items-center">
-		    							<span class="icon-search2"></span>
-		    						</div>
-		    					</a>
-		    					<div class="text p-3 text-center">
-		    						<h3 class="mb-3"><a href="rooms-single.html">商務房</a></h3>
-									<h3 class="mb-3">Room Model</h3>
-		    						<ul class="list">
-		    							<li><span>類別:</span> 風景</li>
-		    							<li><span>地區:</span> 台北市</li>
-		    							<li><span>資歷:</span> 10年</li>
-		    							<li><span>價錢:</span>4000元</li>
+		    							<li><span>價錢:</span>1300元</li>
 		    						</ul>
 		    						<hr>
 		    						<p class="pt-1"><a href="room-single.html" class="btn-custom">More Information <span class="icon-long-arrow-right"></span></a></p>
@@ -274,6 +212,41 @@
 		              </div>
 		            </div>
 	            </form>
+	      		</div>
+	      		<div class="sidebar-wrap bg-light ftco-animate">
+	      			<h3 class="heading mb-4">Star Rating</h3>
+	      			<form method="post" class="star-rating">
+							  <div class="form-check">
+									<input type="checkbox" class="form-check-input" id="exampleCheck1">
+									<label class="form-check-label" for="exampleCheck1">
+										<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p>
+									</label>
+							  </div>
+							  <div class="form-check">
+						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+						      <label class="form-check-label" for="exampleCheck1">
+						    	   <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i></span></p>
+						      </label>
+							  </div>
+							  <div class="form-check">
+						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+						      <label class="form-check-label" for="exampleCheck1">
+						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+						     </label>
+							  </div>
+							  <div class="form-check">
+							    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+						      <label class="form-check-label" for="exampleCheck1">
+						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+						      </label>
+							  </div>
+							  <div class="form-check">
+						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+						      <label class="form-check-label" for="exampleCheck1">
+						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+							    </label>
+							  </div>
+							</form>
 	      		</div>
 	        </div>
 		    </div>
