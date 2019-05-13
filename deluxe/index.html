@@ -27,10 +27,107 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     
-      
-     
      
       <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+      
+      <style>
+        .button {
+            background-color: #8D703B; /* Green */
+            border: none;
+            border-radius: 8px;
+            color: white;
+            padding: 10px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white; 
+            color: #8D703B; 
+            border: 2px solid  #8D703B;
+        }
+
+        .button1:hover {
+            background-color: #8D703B;
+            color: white;
+        }
+          
+        .switch_demo {
+            position: relative;
+            width: 150px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            }
+            .switch_demo-checkbox {
+            display: none;
+            }
+            .switch_demo-label {
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid black;
+            border-radius: 20px;
+            }
+            .switch_demo-inner {
+            display: block;
+            width: 200%;
+            margin-left: -100%;
+            transition: margin 0.3s ease-in 0s;
+            }
+            .switch_demo-inner:before,
+            .switch_demo-inner:after {
+            display: block;
+            float: left;
+            width: 50%;
+            height: 30px;
+            padding: 0;
+            line-height: 30px;
+            font-size: 14px;
+            color: white;
+            font-family: Trebuchet, Arial, sans-serif;
+            font-weight: bold;
+            box-sizing: border-box;
+            }
+            .switch_demo-inner:before {
+            content: "消費者";
+            padding-left: 10px;
+            background-color: #8D703B;
+            color: #FFFFFF;
+            }
+            .switch_demo-inner:after {
+            content: "攝影師";
+            padding-right: 10px;
+            background-color: #EEEEEE;
+            color: #999999;
+            text-align: right;
+            }
+            .switch_demo-switch {
+            display: block;
+            width: 18px;
+            margin: 6px;
+            background: #FFFFFF;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 116px;
+            border: 2px solid #999999;
+            border-radius: 20px;
+            transition: all 0.3s ease-in 0s;
+            }
+            .switch_demo-checkbox:checked + .switch_demo-label .switch_demo-inner {
+            margin-left: 0;
+            }
+            .switch_demo-checkbox:checked + .switch_demo-label .switch_demo-switch {
+            right: 0px;
+            }
+      </style>
   </head>
    
   <body>
@@ -47,7 +144,7 @@
 
 	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="rooms.html" class="nav-link">Collection</a></li>
-	          <li class="nav-item"><a href="restaurant.html" class="nav-link">Transcation</a></li>
+	          <li class="nav-item"><a href="transaction.html" class="nav-link">Transcation</a></li>
               <li class="nav-item"><a href="blog.html" class="nav-link">Account</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
               <li class="nav-item"><a href="" class="nav-link">Login</a></li>
@@ -127,9 +224,20 @@
             </div>
             
             <div style="display:inline; width: 100%">
-                <a href="index.html" class="nav-item active">攝影師</a>
+                <button class="button button1">Photographer</button>
                 <a class="nav-item active">&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="rooms.html" class="nav-item active">消費者</a>
+                <button class="button button1">consumer</button>
+                
+                
+                    <div class="center">
+                    <div class="switch_demo">
+                    <input type="checkbox" name="switch_demo" class="switch_demo-checkbox" id="switch_demo" checked>
+                    <label class="switch_demo-label" for="switch_demo">
+                    <span class="switch_demo-inner"></span>
+                    <span class="switch_demo-switch"></span>
+                    </label>
+                    </div>
+                    </div>
                 <p>
             </div>
     		<div class="row">
@@ -431,7 +539,7 @@
               <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
               </a>
               <div class="text mt-3 d-block">
-                <h3 class="heading mt-3"><a href="#">美食（各類的甜點、不同地區）</a></h3>
+                <h3 class="heading mt-3"><a href="#">美食（各類的甜點、不同國家的菜餚、特色料理等等）</a></h3>
                 <div class="meta mb-3">
                   <div><a href="#">Dec 6, 2018</a></div>
                   <div><a href="#">Admin</a></div>
@@ -445,7 +553,7 @@
               <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
               </a>
               <div class="text mt-3">
-                <h3 class="heading mt-3"><a href="#">人像（婚紗、畢業、個人特寫）</a></h3>
+                <h3 class="heading mt-3"><a href="#">人像（婚紗、畢業、個人特寫、寶寶滿月、家庭照）</a></h3>
                 <div class="meta mb-3">
                   <div><a href="#">Dec 6, 2018</a></div>
                   <div><a href="#">Admin</a></div>
@@ -459,7 +567,7 @@
               <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
               </a>
               <div class="text mt-3">
-                <h3 class="heading mt-3"><a href="#">風景（熱門景點、私房景點）</a></h3>
+                <h3 class="heading mt-3"><a href="#">風景（熱門景點、私房景點、海景、山景、地形）</a></h3>
                 <div class="meta mb-3">
                   <div><a href="#">Dec 6, 2018</a></div>
                   <div><a href="#">Admin</a></div>
