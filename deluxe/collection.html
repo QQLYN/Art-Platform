@@ -32,7 +32,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Deluxe</a>
+	      <a class="navbar-brand" href="index.html">ARTSA</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -40,11 +40,11 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item active"><a href="rooms.html" class="nav-link">Rooms</a></li>
-	          <li class="nav-item"><a href="restaurant.html" class="nav-link">Restaurant</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+	          <li class="nav-item active"><a href="collection.html" class="nav-link">Collection</a></li>
+	          <li class="nav-item"><a href="transaction.html" class="nav-link">Transcation</a></li>
+              <li class="nav-item"><a href="blog.html" class="nav-link">Account</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+              <li class="nav-item"><a href="Sign%20in.html" class="nav-link">Login</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -57,8 +57,8 @@
         <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
           <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
           	<div class="text">
-	            <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html"></a></span> <span>About</span></p>
-	            <h1 class="mb-4 bread">Rooms</h1>
+	             <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>Collection</span></p>
+	            <h1 class="mb-4 bread">Collection</h1>
             </div>
           </div>
         </div>
@@ -68,39 +68,39 @@
 
     <section class="ftco-section bg-light">
 		<div class="tab">
-	  			<button class="tablinks" onclick="openCity(event, 'London')">London</button>
-	  			<button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-	  			<button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+	  			<button class="tablinks" onclick="openCity(event, 'Scenery')">風景</button>
+	  			<button class="tablinks" onclick="openCity(event, 'People')">人像</button>
+	  			<button class="tablinks" onclick="openCity(event, 'Food')">美食</button>
 		</div>
 		<div>
     	<div class="container">
     		<div class="row">
 	        <div class="col-lg-9">
 		    		<div class="row">
-		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+		    			<div id="first" class="col-sm col-md-6 col-lg-4 ftco-animate" style="display: unset">
 						<!--小卡片-->
 		    				<div class="room">
-		    					<a href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/sa2.jpg);">
+		    					<a id="SceneryPicture" href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/sa2.jpg);">
 		    						<div class="icon d-flex justify-content-center align-items-center">
 		    							<span class="icon-search2"></span>
 		    						</div>
 		    					</a>
 								
 		    					<div class="text p-3 text-center">
-		    						<h3 class="mb-3"><a href="rooms-single.html">山水風景畫地區不限</a></h3>
-									<h3 class="mb-3">山水風景</h3>
+		    						<h3 class="mb-3"><a id="title" href="rooms-single.html">山水風景畫地區不限</a></h3>
+									<h3 id="name" class="mb-3">山水風景</h3>
 		    						<ul class="list">
-		    							<li><span>類別:</span> 風景</li>
-		    							<li><span>地區:</span> 台灣，台北</li>
-		    							<li><span>資歷:</span> 5年</li>
-		    							<li><span>價錢:</span>100元</li>
+		    							<li id="tag"><span>類別:</span>風景</li>
+		    							<li id="area"><span>地區:</span>台灣，台北</li>
+		    							<li id="years"><span>資歷:</span>5年</li>
+		    							<li id="price"><span>價錢:</span>1000元</li>
 		    						</ul>
 		    						<hr>
 		    						<p class="pt-1"><a href="room-single.html" class="btn-custom">More Information <span class="icon-long-arrow-right"></span></a></p>
 		    					</div>
 		    				</div>
 		    			</div>
-		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+		    			<div id ="second" class="col-sm col-md-6 col-lg-4 ftco-animate" style="display: unset">
 		    				<div class="room">
 		    					<a href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/sa3.jpg);">
 		    						<div class="icon d-flex justify-content-center align-items-center">
@@ -121,7 +121,7 @@
 		    					</div>
 		    				</div>
 		    			</div>
-		    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+		    			<div id="third" class="col-sm col-md-6 col-lg-4 ftco-animate" style="display: unset">
 		    				<div class="room">
 		    					<a href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/sa5.jpg);">
 		    						<div class="icon d-flex justify-content-center align-items-center">
@@ -155,8 +155,7 @@
 	                    <select name="" id="" class="form-control">
 	                    	<option value="">地區</option>
 	                    	<option value="">台北市</option>
-	                      <option value="">新北市</option>
-	                      <option value="">桃園市</option>
+	                      <option value="">雲林縣</option>
 	                    </select>
 	                  </div>
 		              </div>
@@ -167,7 +166,7 @@
 	                    	<option value="">類別</option>
 	                    	<option value="">風景</option>
 	                      <option value="">人像</option>
-	                      <option value="">動物</option>
+	                      <option value="">美食</option>
 	                    </select>
 	                  </div>
 		              </div>
@@ -207,13 +206,7 @@
 	                    </select>
 	                  </div>
 		              </div>
-		              <div class="form-group">
-		                <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
-		              </div>
-		            </div>
-	            </form>
-	      		</div>
-	      		<div class="sidebar-wrap bg-light ftco-animate">
+		              <div class="sidebar-wrap bg-light ftco-animate">
 	      			<h3 class="heading mb-4">Star Rating</h3>
 	      			<form method="post" class="star-rating">
 							  <div class="form-check">
@@ -248,6 +241,12 @@
 							  </div>
 							</form>
 	      		</div>
+		              <div class="form-group">
+		                <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
+		              </div>
+		            </div>
+	            </form>
+	      		</div>
 	        </div>
 		    </div>
     	</div>
@@ -257,6 +256,41 @@
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+<!--小卡片的內容-->
+<script>
+	function openCity(evt, cityName) {
+		console.log(cityName);
+		if(cityName == "Scenery")
+		{
+			document.getElementById("first").style.display = "unset";
+			document.getElementById("second").style.display = "none";
+			document.getElementById("third").style.display = "none";
+			console.log("Scenery");
+			//document.getElementById("SceneryPicture").style.background-image = "url(images/sa2.jpg)";
+			/*document.getElementById("title").innerHTML = "山水風景畫地區不限";
+			document.getElementById("name").innerHTML = "山水風景";
+			document.getElementById("tag").innerHTML = "<span>類別:</span>風景";
+			document.getElementById("area").innerHTML = "<span>地區:</span>台灣，台北";
+			document.getElementById("years").innerHTML = "<span>資歷:</span>5年";
+			document.getElementById("price").innerHTML = "<span>價格:</span>1000元";*/
+		}
+		if(cityName == "People")
+		{
+			document.getElementById("first").style.display = "none";
+			document.getElementById("second").style.display = "unset";
+			document.getElementById("third").style.display = "none";
+			console.log("People");
+		}
+		if(cityName == "Food")
+		{
+			document.getElementById("first").style.display = "none";
+			document.getElementById("second").style.display = "none";
+			document.getElementById("third").style.display = "unset";
+			console.log("Food");
+		}
+	}
+</script>
 
 
   <script src="js/jquery.min.js"></script>
