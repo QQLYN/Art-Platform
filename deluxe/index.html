@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ARTSA index</title>
+    <title>ARTSA</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -31,6 +31,7 @@
       <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
       
       <style>
+           /* 按鈕變色 */
         .button {
             background-color: #8D703B; /* Green */
             border: none;
@@ -57,6 +58,77 @@
             background-color: #8D703B;
             color: white;
         }
+          
+           /* 下拉式選單 */
+           ul { /* 取消ul預設的內縮及樣式 */
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            ul.drop-down-menu {
+                border: #fff 0px solid;
+                display: inline-block;
+                font-size: 13px;
+            }
+
+            ul.drop-down-menu li {
+                position: relative;
+                white-space: nowrap;
+                border-right: #fff 0px solid;
+            }
+
+            ul.drop-down-menu > li:last-child {
+                border-right: none;
+            }
+
+            ul.drop-down-menu > li {
+                float: left; /* 只有第一層是靠左對齊*/
+            }
+
+             ul.drop-down-menu a {/* 變色前的標題樣式*/
+                background-color: #fff;
+                color: #333;
+                display: block;
+                padding: 0 50px;
+                text-decoration: none;
+                line-height: 40px;
+
+            }
+            ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
+                background-color: #8D703B;
+                color: #fff;
+            }
+
+            ul.drop-down-menu ul {/* 下拉式選項的大小*/
+                background-color: #fff;
+                border: #fff 1px solid;
+                position: absolute;
+                z-index: 99;
+                left: -1px;
+                top: 100%;
+                min-width: 120px;
+            }
+
+            ul.drop-down-menu ul li:last-child {
+                border-bottom: none;
+            }
+            ul.drop-down-menu ul { /*隱藏次選單*/
+                display: none;
+            }
+
+            ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+                display: block;
+            }
+          .arrow-bottom{
+              display:inline-block;
+              margin-left: 5px;
+              border-top: 4px solid black;
+              border-right: 4px solid transparent;
+              border-left: 4px solid transparent;
+              width: 1px;
+              height: 1px;
+          }
       </style>
   </head>
    
@@ -73,11 +145,11 @@
 	        <ul class="navbar-nav ml-auto">
 
 	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="rooms.html" class="nav-link">Collection</a></li>
+	          <li class="nav-item"><a href="collection.html" class="nav-link">Collection</a></li>
 	          <li class="nav-item"><a href="transaction.html" class="nav-link">Transcation</a></li>
-              <li class="nav-item"><a href="blog.html" class="nav-link">Account</a></li>
+              <li class="nav-item"><a href="" class="nav-link">Account</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-              <li class="nav-item"><a href="" class="nav-link">Login</a></li>
+              <li class="nav-item"><a href="Signin.html" class="nav-link">Login</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -113,28 +185,80 @@
         </div>
       </div>
     </section>
+      
 
     <section class="ftco-booking">
+        
     	<div class="container">
     		<div class="row">
     			<div class="col-lg-12">
     				<form action="#" class="booking-form">
 	        		<div class="row">
-	        			<div class="col-md-10 d-flex">
+                        <div class="col-md-3 d-flex">
 	        				<div class="form-group p-4 align-self-stretch d-flex align-items-end">
-                                
-	        					<div class="wrap">
-				    					<label>search</label>
-				    					<input type="text" class="form-control" placeholder="search what you want">
-			    					</div>
-			    	        </div>
+	        			        <div class="wrap">
+			      			    <label for="#">地區</label>
+			      					<div class="form-field">
+			        					<div class="select-wrap">
+                                            
+                                                <ul class="drop-down-menu">
+                                                    <li><a href="#">請選擇&nbsp;<div class="arrow-bottom"></div></a>
+                                                        <ul>
+                                                            <li><input type="checkbox" name="vehicle1" value="Bike">&nbsp;&nbsp;台北<br></li>
+                                                             <li><input type="checkbox" name="vehicle1" value="Bike">&nbsp;&nbsp;台中<br></li>
+                                                             <li><input type="checkbox" name="vehicle1" value="Bike">&nbsp;&nbsp;高雄<br></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+			                             </div>
+				                    </div>
+				                </div>
+		                  </div>
 	        			</div>
-	        			
+                        
+	        			<div class="col-md-3 d-flex">
+	        				<div class="form-group p-4 align-self-stretch d-flex align-items-end">
+	        			        <div class="wrap">
+			      			    <label for="#">類別</label>
+			      					<div class="form-field">
+			        					<div class="select-wrap">
+                                            <ul class="drop-down-menu">
+                                                    <li><a href="#">請選擇&nbsp;<div class="arrow-bottom"></div></a>
+                                                        <ul>
+                                                            <li><input type="checkbox" name="vehicle1" value="Bike">&nbsp;&nbsp;人像<br></li>
+                                                             <li><input type="checkbox" name="vehicle1" value="Bike">&nbsp;&nbsp;商品<br></li>
+                                                             <li><input type="checkbox" name="vehicle1" value="Bike">&nbsp;&nbsp;動物<br></li>
+                                                            <li><input type="checkbox" name="vehicle1" value="Bike">&nbsp;&nbsp;美食<br></li>
+                                                            <li><input type="checkbox" name="vehicle1" value="Bike">&nbsp;&nbsp;風景<br></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+			                             </div>
+				                    </div>
+				                </div>
+		                  </div>
+	        			</div>
+                        
 	        			<div class="col-md d-flex">
+	        				<div class="form-group p-4 align-self-stretch d-flex align-items-end">
+	        					<div class="wrap">
+			      					<label for="#">關鍵字搜尋</label>
+			      					<div class="form-field">
+			        					<div class="select-wrap" >
+			                                 <input style="border: #fff 0px solid;height: 45px;width: 100%" type="text" name="search" placeholder="輸入妳想查詢的關鍵字">
+			                             </div>
+				                    </div>
+				            </div>
+		              </div>
+	        			</div>
+	        			<div class="col-md-2 d-flex">
 	        				<div class="form-group d-flex align-self-stretch">
-			              <input type="submit" value="find" class="btn btn-primary py-3 px-4 align-self-stretch">
+			              <input type="submit" value="search" class="btn btn-primary py-3 px-4 align-self-stretch">
 			            </div>
 	        			</div>
+                        
+	        			
+	        			
 	        		</div>
 	        	</form>
 	    		</div>
@@ -169,7 +293,7 @@
     							<span class="icon-search2"></span>
     						</div>
     					</a>
-    					<div class="text p-3">
+    					<div class="text p-3" text-center>
     						<h3 class="mb-3"><a href="rooms.html">山水風景畫地區不限</a></h3>
     						<p><span class="price mr-2">$1,000</span> <span class="per">每張照片</span></p>
                             
@@ -302,6 +426,8 @@
                 <div class="d-flex justify-content-center" style="width: 100%">
                     <a href="rooms.html"><input type="button" value="更多資訊" class="btn btn-primary py-3 px-4"></a>
     		    </div>
+                                                
+                
                 
                
                 
@@ -353,7 +479,7 @@
     </section>
 
 
-    <section class="ftco-section testimony-section bg-light">
+    <section class="ftco-section testimony-section bg-light" >
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h2>Top 5 Photographer</h2>
@@ -447,175 +573,6 @@
     </section>
 
 
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h2>Our Category</h2>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-3 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
-              <div class="text mt-3 d-block">
-                <h3 class="heading mt-3"><a href="#">美食（各類的甜點、不同國家的菜餚、特色料理等等）</a></h3>
-                <div class="meta mb-3">
-                  <div><a href="#">Dec 6, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
-              <div class="text mt-3">
-                <h3 class="heading mt-3"><a href="#">人像（婚紗、畢業、個人特寫、寶寶滿月、家庭照）</a></h3>
-                <div class="meta mb-3">
-                  <div><a href="#">Dec 6, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
-              <div class="text mt-3">
-                <h3 class="heading mt-3"><a href="#">風景（熱門景點、私房景點、海景、山景、地形）</a></h3>
-                <div class="meta mb-3">
-                  <div><a href="#">Dec 6, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_4.jpg');">
-              </a>
-              <div class="text mt-3">
-                <h3 class="heading mt-3"><a href="#">商品（衣服、物品、家具）</a></h3>
-                <div class="meta mb-3">
-                  <div><a href="#">Dec 6, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="instagram">
-      <div class="container-fluid">
-        <div class="row no-gutters justify-content-center pb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <h2><span>Instagram</span></h2>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-sm-12 col-md ftco-animate">
-            <a href="images/insta-1.jpg" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
-              <div class="icon d-flex justify-content-center">
-                <span class="icon-instagram align-self-center"></span>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md ftco-animate">
-            <a href="images/insta-2.jpg" class="insta-img image-popup" style="background-image: url(images/insta-2.jpg);">
-              <div class="icon d-flex justify-content-center">
-                <span class="icon-instagram align-self-center"></span>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md ftco-animate">
-            <a href="images/insta-3.jpg" class="insta-img image-popup" style="background-image: url(images/insta-3.jpg);">
-              <div class="icon d-flex justify-content-center">
-                <span class="icon-instagram align-self-center"></span>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md ftco-animate">
-            <a href="images/insta-4.jpg" class="insta-img image-popup" style="background-image: url(images/insta-4.jpg);">
-              <div class="icon d-flex justify-content-center">
-                <span class="icon-instagram align-self-center"></span>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md ftco-animate">
-            <a href="images/insta-5.jpg" class="insta-img image-popup" style="background-image: url(images/insta-5.jpg);">
-              <div class="icon d-flex justify-content-center">
-                <span class="icon-instagram align-self-center"></span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Deluxe Hotel</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">Useful Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Blog</a></li>
-                <li><a href="#" class="py-2 d-block">Rooms</a></li>
-                <li><a href="#" class="py-2 d-block">Amenities</a></li>
-                <li><a href="#" class="py-2 d-block">Gift Card</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Privacy</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Career</a></li>
-                <li><a href="#" class="py-2 d-block">About Us</a></li>
-                <li><a href="#" class="py-2 d-block">Contact Us</a></li>
-                <li><a href="#" class="py-2 d-block">Services</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </footer>
-    
-  
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
