@@ -82,20 +82,7 @@
             $("cc1").slideUp();
             });
         });
-        $(document).ready(function(){
-            $("dd").hide(100);
-            $("btn9").hide(100);
-            $(".btn9").click(function () {
-            $("dd").slideUp();
-            $("dd1").slideDown();
-            });
-            $(".btn10").click(function(){
-            $("dd").slideDown();
-            $("btn9").slideDown();
-            $("dd1").slideUp();
-            });
-        });
-    </script>
+      </script>
   </head>
   <body>
 
@@ -141,8 +128,9 @@
             <div class="row justify-content-center mb-5 pb-3">
             <div style="display:inline; width: 100%" align=left>
                 <button class="button button1" data-toggle="modal" data-target="#myModal">新增專案</button>
-                   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
+                   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	
+	<div class="modal-dialog" style="width:1250px;">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -150,7 +138,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<table align=center style="text-align:center;border-collapse:separate;" rules="none">
+				<table align=center style="text-align:center;border-collapse:separate;" rules="none" >
             <tr>
                 <td colspan="2"><img id="output" height="250" style="display:none"></td>
             </tr>
@@ -221,7 +209,7 @@
             </div></div></div></div></div></div>
     		<div class="row">
     		<div class="modal fade" id="modell" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
+	<div class="modal-dialog" style="width:1250px;">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -257,22 +245,22 @@
                  
              }</script>
           <tr height=50>
-             <td><font color="red">＊</font>修改照片
+             <td><font color="red">＊</font>照片
              <td><input id="inp" type="file" onchange="openFile10(event)" accept="image/jpeg,image/jpg" required></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改專案需求標題</td>
+              <td><font color="red">＊</font>專案需求標題</td>
               <td><input type="text" name="name" style="width: 280px" value="棚拍" required></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改需求專案內容</td>
+              <td><font color="red">＊</font>需求專案內容</td>
               <td><textarea rows="5" style="width: 280px" required>我想透過棚拍來製作自己的寫真集
 然後可以把此作品PO上網
 或是投稿到經紀公司
 就可以因此在網路上爆紅</textarea></td>
                     </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改地區</td>
+              <td><font color="red">＊</font>地區</td>
               <td style="padding-right: 180px"><select name="zone" style="width: 100px">
               <option value="Taipei">台北市</option>
               <option value="NewTaipei">新北市</option>
@@ -282,7 +270,7 @@
               <option value="Kaoshong" selected>高雄市</option></select></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改類別</td>
+              <td><font color="red">＊</font>類別</td>
               <td style="padding-right: 180px"><select name="tag" style="width: 100px">
               <option value="people" selected>人像</option>
               <option value="view">風景</option>
@@ -291,7 +279,7 @@
               <option value="thing">商品</option></select></td> 
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改期望價格</td>
+              <td><font color="red">＊</font>期望價格</td>
               <td style="padding-right: 80px">$&nbsp;<input type="text" name="price" value="500" style="width: 100px" required> 元 / 每張照片</td>
           </tr>
       </table>
@@ -333,7 +321,7 @@
     				</div>
     			</div>
     			<div class="modal fade" id="model1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
+	<div class="modal-dialog" style="width:1250px;">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -369,21 +357,21 @@
                  
              }</script>
           <tr height=50>
-             <td><font color="red">＊</font>修改照片
+             <td><font color="red">＊</font>照片
              <td><input id="inp" type="file" onchange="openFile1(event)" accept="image/jpeg,image/jpg" required></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改專案需求標題</td>
+              <td><font color="red">＊</font>專案需求標題</td>
               <td><input type="text" name="name" style="width: 280px" value="飯店景觀" required></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改需求專案內容</td>
+              <td><font color="red">＊</font>需求專案內容</td>
               <td><textarea rows="5" style="width: 280px" required>想找攝影師來拍攝我們飯店內的美麗景色
 可以因此吸引消費者前來住宿
 讓我們的飯店知名度增加</textarea></td>
                     </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改地區</td>
+              <td><font color="red">＊</font>地區</td>
               <td style="padding-right: 180px"><select name="zone" style="width: 100px">
               <option value="Taipei" selected>台北市</option>
               <option value="NewTaipei">新北市</option>
@@ -393,7 +381,7 @@
               <option value="Kaoshong">高雄市</option></select></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改類別</td>
+              <td><font color="red">＊</font>類別</td>
               <td style="padding-right: 180px"><select name="tag" style="width: 100px">
               <option value="people">人像</option>
               <option value="view" selected>風景</option>
@@ -402,7 +390,7 @@
               <option value="thing">商品</option></select></td> 
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改期望價格</td>
+              <td><font color="red">＊</font>期望價格</td>
               <td style="padding-right: 80px">$&nbsp;<input type="text" name="price" value="1000" style="width: 100px" required> 元 / 每張照片</td>
           </tr>
       </table>
@@ -440,7 +428,7 @@
     				</div>
     			</div>
     			<div class="modal fade" id="model2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
+	<div class="modal-dialog" style="width:1250px;">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -476,22 +464,22 @@
                  
              }</script>
           <tr height=50>
-             <td><font color="red">＊</font>修改照片
+             <td><font color="red">＊</font>照片
              <td><input id="inp" type="file" onchange="openFile2(event)" accept="image/jpeg,image/jpg" required></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改專案需求標題</td>
+              <td><font color="red">＊</font>專案需求標題</td>
               <td><input type="text" name="name" style="width: 280px" value="甜點美食" required></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改需求專案內容</td>
+              <td><font color="red">＊</font>需求專案內容</td>
               <td><textarea rows="5" style="width: 280px" required>希望可以有攝影師幫忙拍攝
 我的餐廳的所有甜點 
 可以上傳到網路上
 使餐廳知名度增加</textarea></td>
                     </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改地區</td>
+              <td><font color="red">＊</font>地區</td>
               <td style="padding-right: 180px"><select name="zone" style="width: 100px">
               <option value="Taipei">台北市</option>
               <option value="NewTaipei">新北市</option>
@@ -501,7 +489,7 @@
               <option value="Kaoshong" selected>高雄市</option></select></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改類別</td>
+              <td><font color="red">＊</font>類別</td>
               <td style="padding-right: 180px"><select name="tag" style="width: 100px">
               <option value="people">人像</option>
               <option value="view">風景</option>
@@ -510,7 +498,7 @@
               <option value="thing">商品</option></select></td> 
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改期望價格</td>
+              <td><font color="red">＊</font>期望價格</td>
               <td style="padding-right: 80px">$&nbsp;<input type="text" name="price" value="300" style="width: 100px" required> 元 / 每張照片</td>
           </tr>
       </table>
@@ -546,7 +534,7 @@
     			</div>
     			
     					<div class="modal fade" id="model3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
+	<div class="modal-dialog" style="width:1250px;">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -582,22 +570,22 @@
                  
              }</script>
           <tr height=50>
-             <td><font color="red">＊</font>修改照片
+             <td><font color="red">＊</font>照片
              <td><input id="inp" type="file" onchange="openFile3(event)" accept="image/jpeg,image/jpg" required></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改專案需求標題</td>
+              <td><font color="red">＊</font>專案需求標題</td>
               <td><input type="text" name="name" style="width: 280px" value="時尚小包包" required></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改需求專案內容</td>
+              <td><font color="red">＊</font>需求專案內容</td>
               <td><textarea rows="5" style="width: 280px" required>此專櫃有一個平台可以讓消費者線上購物
 需要有攝影師幫忙拍攝所有單品 
 可以讓所有消費者更一目瞭然
 看到美麗的照片也會激起購物慾</textarea></td>
                     </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改地區</td>
+              <td><font color="red">＊</font>地區</td>
               <td style="padding-right: 180px"><select name="zone" style="width: 100px">
               <option value="Taipei">台北市</option>
               <option value="NewTaipei">新北市</option>
@@ -607,7 +595,7 @@
               <option value="Kaoshong">高雄市</option></select></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改類別</td>
+              <td><font color="red">＊</font>類別</td>
               <td style="padding-right: 180px"><select name="tag" style="width: 100px">
               <option value="people">人像</option>
               <option value="view">風景</option>
@@ -616,7 +604,7 @@
               <option value="thing" selected>商品</option></select></td> 
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改期望價格</td>
+              <td><font color="red">＊</font>期望價格</td>
               <td style="padding-right: 80px">$&nbsp;<input type="text" name="price" value="1300" style="width: 100px" required> 元 / 每張照片</td>
           </tr>
       </table>
@@ -651,7 +639,7 @@
     				</div>
     			</div>
     			<div class="modal fade" id="model4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
+	<div class="modal-dialog" style="width:1250px;">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -687,20 +675,20 @@
                  
              }</script>
           <tr height=50>
-             <td><font color="red">＊</font>修改照片
+             <td><font color="red">＊</font>照片
              <td><input id="inp" type="file" onchange="openFile4(event)" accept="image/jpeg,image/jpg" required></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改專案需求標題</td>
+              <td><font color="red">＊</font>專案需求標題</td>
               <td><input type="text" name="name" style="width: 280px" value="美麗夜景" required></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改需求專案內容</td>
+              <td><font color="red">＊</font>需求專案內容</td>
               <td><textarea rows="5" style="width: 280px" required>台北市政府想要徵求攝影師幫忙拍攝
 台北美麗的夜景 可供放在觀光局頁面上</textarea></td>
                     </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改地區</td>
+              <td><font color="red">＊</font>地區</td>
               <td style="padding-right: 180px"><select name="zone" style="width: 100px">
               <option value="Taipei" selected>台北市</option>
               <option value="NewTaipei">新北市</option>
@@ -710,7 +698,7 @@
               <option value="Kaoshong">高雄市</option></select></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改類別</td>
+              <td><font color="red">＊</font>類別</td>
               <td style="padding-right: 180px"><select name="tag" style="width: 100px">
               <option value="people">人像</option>
               <option value="view" selected>風景</option>
@@ -719,7 +707,7 @@
               <option value="thing">商品</option></select></td> 
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改期望價格</td>
+              <td><font color="red">＊</font>期望價格</td>
               <td style="padding-right: 80px">$&nbsp;<input type="text" name="price" value="900" style="width: 100px" required> 元 / 每張照片</td>
           </tr>
       </table>
@@ -739,8 +727,7 @@
     					<div class="text p-3 text-left">
     						<h3 class="mb-3"><div style="float: right"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#model4">&#xf044;</i>&nbsp;&nbsp;<i style='font-size:16px' class='far'>&#xf2ed;</i></div><a href="rooms.html">美麗夜景</a></h3>
     						台北市政府想要徵求攝影師幫忙拍攝<br>台北美麗的夜景 可供放在觀光局頁面上
-    						<br><dd1><img src="images/down.png" width="5%" class="btn10"></dd1>
-                              <dd><img src="images/up.png" width="5%" class="btn9"></dd>
+    						<br><br>
     						<p><span class="price mr-2">$900</span> <span class="per">每張照片</span></p>
     						<p><i class='fas fa-map-marker-alt' ></i>&nbsp;&nbsp;台灣，台北&nbsp;&nbsp;&nbsp;<i class='fas fa-image'></i>&nbsp;&nbsp;風景</p>
                             <hr>
@@ -754,7 +741,7 @@
     				</div>
     			</div>
     			<div class="modal fade" id="model5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
+	<div class="modal-dialog" style="width:1250px;">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -790,19 +777,19 @@
                  
              }</script>
           <tr height=50>
-             <td><font color="red">＊</font>修改照片
+             <td><font color="red">＊</font>照片
              <td><input id="inp" type="file" onchange="openFile5(event)" accept="image/jpeg,image/jpg" required></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改專案需求標題</td>
+              <td><font color="red">＊</font>專案需求標題</td>
               <td><input type="text" name="name" style="width: 280px" value="毛小孩寫真" required></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改需求專案內容</td>
+              <td><font color="red">＊</font>需求專案內容</td>
               <td><textarea rows="5" style="width: 280px" required>想替自己的毛小孩拍一份寫真</textarea></td>
                     </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改地區</td>
+              <td><font color="red">＊</font>地區</td>
               <td style="padding-right: 180px"><select name="zone" style="width: 100px">
               <option value="Taipei" >台北市</option>
               <option value="NewTaipei">新北市</option>
@@ -812,7 +799,7 @@
               <option value="Kaoshong">高雄市</option></select></td>
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改類別</td>
+              <td><font color="red">＊</font>類別</td>
               <td style="padding-right: 180px"><select name="tag" style="width: 100px">
               <option value="people">人像</option>
               <option value="view">風景</option>
@@ -820,7 +807,7 @@
               <option value="food">食物</option></select></td> 
           </tr>
           <tr height=100>
-              <td><font color="red">＊</font>修改期望價格</td>
+              <td><font color="red">＊</font>期望價格</td>
               <td style="padding-right: 80px">$&nbsp;<input type="text" name="price" value="2000" style="width: 100px" required> 元 / 每張照片</td>
           </tr>
       </table>
