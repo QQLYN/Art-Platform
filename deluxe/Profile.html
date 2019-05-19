@@ -130,7 +130,8 @@
               <option value="people">人像</option>
               <option value="view">風景</option>
               <option value="animal">動物</option>
-              <option value="food">食物</option></select></td>
+              <option value="food">食物</option>
+              <option value="thing">商品</option></select></td>
           </tr>
           <tr height=100 >
               <td>聯絡地址</td>
@@ -141,7 +142,7 @@
               <td colspan="3"><textarea rows="5" cols="54"></textarea></td>
           </tr>
           <tr height=100 >
-              <td colspan="4"><input type="submit" value="送出"></td>
+              <td colspan="4"><input class="button  button1" type="submit" value="送出"></td>
           </tr>
       </table>
       </section>
@@ -172,3 +173,80 @@
     
   </body>
 </html>
+<style>
+    .button1 {
+    background-color:#886600;
+    color: #886600;
+    border: 2px solid white;
+}
+    .button1:hover {
+    background-color: #8D703B;
+    color: white;
+}
+.button {
+    background-color: white;
+    border-color: #886600;
+    border-radius: 8px;
+    color: #886600;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+button, select {
+    text-transform: none;
+}
+button, input {
+    overflow: visible;
+}
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+button {
+    border-radius: 0;
+}
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+button {
+    padding: 1px 6px;
+}
+button {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+}
+button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+</style>
