@@ -28,8 +28,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/VerticalTabStyle.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
+   
   </head>
   <body>
 
@@ -82,21 +81,24 @@
             <div id="Profile" class="tabcontent">
               <div class="borderstyle">
                 <br>
-                <label>&nbsp;&nbsp;&nbsp;&nbsp;姓&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;</label><label id = "name" style="display: inline;">Andy Liu</label><label><input id="EditName" type="text" value="Andy Liu" name="請輸入姓名" style="display: none"></label>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;姓&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <label id = "name" style="display: inline;">Andy Liu</label><label><input id="EditName" type="text" value="Andy Liu" name="請輸入姓名" style="display: none"></label>
                 <div style="float: right" id="EditNamebt"><a href="#" onclick="edit('Name')"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
                 <div id="NameCheck" style="float: right; display: none;"><a href="#" id="NameCheckbt"><i style='font-size:16px' class="fas" data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="NameCanclebt"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
               </div>
               <div class="borderstyle">
                 <br>
-                <label>&nbsp;&nbsp;&nbsp;&nbsp;電&nbsp;&nbsp;&nbsp;&nbsp;話&nbsp;&nbsp;&nbsp;&nbsp;</label><label style="display: inline;">0912345678</label>
-                <div style="float: right"; id="EditPhonebt"><a href="#"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
-                 <div id="PhoneCheck" style="float: right;display: none;"><a href="#" id="PhoneCheckbt"><i style='font-size:16px' class='fas' data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="PhoneCancle"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell"></i>&#xf00d;</a>&nbsp;&nbsp;</div>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;電&nbsp;&nbsp;&nbsp;&nbsp;話&nbsp;&nbsp;&nbsp;&nbsp;</label><label id="Phone" style="display: inline;">0912345678</label>
+                <label><input id="EditPhone" type="text" value="0912345678" name="請輸入姓名" style="display: none"></label>
+                <div style="float: right"; id="EditPhonebt"><a href="#" onclick="edit('Phone')"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
+                 <div id="PhoneCheck" style="float: right;display: none;"><a href="#" id="PhoneCheckbt"><i style='font-size:16px' class='fas' data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="PhoneCancle"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
               </div>
               <div class="borderstyle">
                 <br>
-                <label>&nbsp;&nbsp;&nbsp;&nbsp;生&nbsp;&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;&nbsp;</label><label style="display: inline;">1998-01-01</label>
-                <div style="float: right" id="EditBirthdaybt"><a href="#"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
-                <div id="BirthdayCheck" style="float: right;display: none;"><a href="#"><i style='font-size:16px' class='fas' data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="BirthdayCancle"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;生&nbsp;&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;&nbsp;</label><label id="Birthday" style="display: inline;">1998-01-01</label>
+                <label><input id="EditBirthday" type="text" value="1998-01-01" name="請輸入姓名" style="display: none"></label>
+                <div style="float: right" id="EditBirthdaybt"><a href="#" onclick="edit('Birthday')"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
+                <div id="BirthdayCheck" style="float: right;display: none;"><a href="#" id="BirthdayCheckbt"><i style='font-size:16px' class='fas' data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="BirthdayCancle"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
               </div>
             </div>
 
@@ -151,8 +153,20 @@ function edit(category)
       document.getElementById('EditName').style.display = "inline";
       document.getElementById('EditNamebt').style.display = "none"
       document.getElementById('NameCheck').style.display = "inline";
-      value = document.getElementById('EditName').value;
-      console.log(value);
+  }
+  if(category == 'Phone')
+  {
+      document.getElementById('Phone').style.display = "none";
+      document.getElementById('EditPhone').style.display = "inline";
+      document.getElementById('EditPhonebt').style.display = "none";
+      document.getElementById('PhoneCheck').style.display = "inline";
+  }
+  if(category == 'Birthday')
+  {
+      document.getElementById('Birthday').style.display = "none";
+      document.getElementById('EditBirthday').style.display = "inline";
+      document.getElementById('EditBirthdaybt').style.display = "none"
+      document.getElementById('BirthdayCheck').style.display = "inline";
   }
 }
 </script>
