@@ -16,13 +16,13 @@
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
-  font-size: 30px;
+  font-size: 35px;
   text-transform: none;
   line-height: 1;
 
   /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  webkit-font-smoothing: antialiased;
+  moz-osx-font-smoothing: grayscale;
 }
 
 .icon-asterisk:before {
