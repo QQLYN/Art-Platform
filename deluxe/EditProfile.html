@@ -27,7 +27,8 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/VerticalTabStyle.css">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   </head>
   <body>
@@ -81,7 +82,21 @@
             <div id="Profile" class="tabcontent">
               <div class="borderstyle">
                 <br>
-                <p>姓&nbsp;&nbsp;&nbsp;&nbsp;名</p><p style="display: inline;">Andy Liu</p>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;姓&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;</label><label id = "name" style="display: inline;">Andy Liu</label><label><input id="EditName" type="text" value="Andy Liu" name="請輸入姓名" style="display: none"></label>
+                <div style="float: right"><a href="#" onclick="edit('Name')"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
+                <div id="NameCheck" style="float: right"><a href="#"><i style='font-size:16px' class='fa fa-check' data-toggle="modal" data-target="#modell"></i></a>&nbsp;&nbsp;<a href="#"><i style='font-size:16px' class='icon-remove' data-toggle="modal" data-target="#modell"></i></a>&nbsp;&nbsp;</div>
+              </div>
+              <div class="borderstyle">
+                <br>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;電&nbsp;&nbsp;&nbsp;&nbsp;話&nbsp;&nbsp;&nbsp;&nbsp;</label><label style="display: inline;">0912345678</label>
+                <div style="float: right"><a href="#"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
+                 <div id="PhoneCheck" style="float: right"><a href="#"><i style='font-size:16px' class='fa fa-check' data-toggle="modal" data-target="#modell"></i></a>&nbsp;&nbsp;<a href="#"><i style='font-size:16px' class='icon-remove' data-toggle="modal" data-target="#modell"></i></a>&nbsp;&nbsp;</div>
+              </div>
+              <div class="borderstyle">
+                <br>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;生&nbsp;&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;&nbsp;</label><label style="display: inline;">1998-01-01</label>
+                <div style="float: right"><a href="#"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
+                <div id="BirthdayCheck" style="float: right"><a href="#"><i style='font-size:16px' class='fa fa-check' data-toggle="modal" data-target="#modell"></i></a>&nbsp;&nbsp;<a href="#"><i style='font-size:16px' class='icon-remove' data-toggle="modal" data-target="#modell"></i></a>&nbsp;&nbsp;</div>
               </div>
             </div>
 
@@ -125,6 +140,19 @@
   // Show the current tab, and add an "active" class to the link that opened the tab
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
+}
+function edit(category)
+{
+  var value;
+  console.log(category);
+  if(category == 'Name')
+  {
+      document.getElementById('name').style.display = "none";
+      document.getElementById('EditName').style.display = "inline";
+
+      value = document.getElementById('EditName').value;
+      console.log(value);
+  }
 }
 </script>
 
