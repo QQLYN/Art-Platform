@@ -1,7 +1,12 @@
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ARTSA - Free Bootstrap 4 Template by Colorlib</title>
+    <title>ARTSA</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -33,10 +38,12 @@
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">ARTSA</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
+
 	      </button>
 	    </div>
 	  </nav>
+	  
+	  
     <!-- END nav -->
 
     <div class="hero-wrap" style="background-image: url('images/bg_1.jpg');">
@@ -87,17 +94,32 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"  ><a href="#"><span class="icon-facebook"></span></a></li>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
                                 </ul>
                 </div>
 				<div class="group"><a href="index.html" class="nav-link">
-                    <input type="submit" class="button" value="Sign In"></a>
+                    <input type="submit" class="button" value="一般登入"></a>
+                    <a href="index.html" class="nav-link">
+                    <input type="submit" class="button" value="攝影師登入"></a>
 				</div>
 				<div class="hr"></div>
 				<div class="foot-lnk">
-					<a href="#forgot">Forgot Password?</a>
+                    <p><a class="button button1" href="#forgot-modal">Forgot Password?</a></p>
+					<div id="forgot-modal" class="modal">
+					    <table>
+					        <tr>
+					            <td>e-mail:</td>
+					            <td></td>
+					        </tr>
+					        <tr>
+					            <p>
+					       傳送密碼至信箱
+					            </p>
+					        </tr>
+					    </table>
+					</div>
 				</div>
 			</div>
 			<div class="sign-up-htm">
@@ -120,10 +142,10 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#">&nbsp;&nbsp;<u>Got verification code</u></a>
+					<a href="#">&nbsp;&nbsp;<u>Got Verification Code</u></a>
 				</div>
 				<div class="group">
-					<label for="pass" class="label">Verification code</label>
+					<label for="pass" class="label">Verification Code</label>
 					<input id="pass" type="text" class="input">
 				</div>
 				<div>
@@ -199,7 +221,8 @@ a{color:inherit;text-decoration:none}
 	height:100%;
 	position:absolute;
 	padding:90px 70px 50px 70px;
-	background:rgba(40,57,101,.9);
+	background:	#007799;
+    opacity:0.4;
 }
 .login-html .sign-in-htm,
 .login-html .sign-up-htm{
@@ -233,7 +256,7 @@ a{color:inherit;text-decoration:none}
 .login-html .sign-in:checked + .tab,
 .login-html .sign-up:checked + .tab{
 	color:#fff;
-	border-color:#1161ee;
+	border-color:#5599FF;
 }
 .login-form{
 	min-height:345px;
@@ -260,14 +283,14 @@ a{color:inherit;text-decoration:none}
 }
 .login-form .group input[data-type="password"]{
 	text-security:circle;
-	-webkit-text-security:circle;
+	webkit-text-security:circle;
 }
 .login-form .group .label{
-	color:#aaa;
+	color:#FFF0F5;
 	font-size:12px;
 }
 .login-form .group .button{
-	background:#1161ee;
+	background:#8D703B;
 }
 .login-form .group label .icon{
 	width:15px;
@@ -325,3 +348,84 @@ a{color:inherit;text-decoration:none}
 	text-align:center;
 }
     </style>
+    
+<style>
+           /* 按鈕變色 */
+        .button {
+            background-color: #8D703B; /* Green */
+            border: none;
+            border-radius: 8px;
+            color: white;
+            padding: 10px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white; 
+            color: #8D703B; 
+            border: 2px solid  #8D703B;
+        }
+        
+          
+           /* 下拉式選單 */
+           ul { /* 取消ul預設的內縮及樣式 */
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            ul.drop-down-menu {
+                border: #fff 0px solid;
+                display: inline-block;
+                font-size: 13px;
+            }
+
+            ul.drop-down-menu li {
+                position: relative;
+                white-space: nowrap;
+                border-right: #fff 0px solid;
+            }
+
+            ul.drop-down-menu > li:last-child {
+                border-right: none;
+            }
+
+            ul.drop-down-menu > li {
+                float: left; /* 只有第一層是靠左對齊*/
+            }
+
+             ul.drop-down-menu a {/* 變色前的標題樣式*/
+                background-color: #fff;
+                color: #333;
+                display: block;
+                padding: 0 50px;
+                text-decoration: none;
+                line-height: 40px;
+
+            }
+            ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
+                background-color: #8D703B;
+                color: #fff;
+            }
+
+            ul.drop-down-menu ul li:last-child {
+                border-bottom: none;
+            }
+            
+          .arrow-bottom{
+              display:inline-block;
+              margin-left: 5px;
+              border-top: 4px solid black;
+              border-right: 4px solid transparent;
+              border-left: 4px solid transparent;
+              width: 1px;
+              height: 1px;
+          }
+      </style>
