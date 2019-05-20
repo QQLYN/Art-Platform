@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PM</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tabstyle.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("pp").hide(100);
+            $("btn1").hide(100);
+            $(".btn1").click(function () {
+            $("pp").slideUp();
+            $("pp1").slideDown();
+            });
+            $(".btn2").click(function(){
+            $("pp").slideDown();
+            $("btn1").slideDown();
+            $("pp1").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $("aa").hide(100);
+            $("btn3").hide(100);
+            $(".btn3").click(function () {
+            $("aa").slideUp();
+            $("aa1").slideDown();
+            });
+            $(".btn4").click(function(){
+            $("aa").slideDown();
+            $("btn3").slideDown();
+            $("aa1").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $("bb").hide(100);
+            $("btn5").hide(100);
+            $(".btn5").click(function () {
+            $("bb").slideUp();
+            $("bb1").slideDown();
+            });
+            $(".btn6").click(function(){
+            $("bb").slideDown();
+            $("btn5").slideDown();
+            $("bb1").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $("cc").hide(100);
+            $("btn7").hide(100);
+            $(".btn7").click(function () {
+            $("cc").slideUp();
+            $("cc1").slideDown();
+            });
+            $(".btn8").click(function(){
+            $("cc").slideDown();
+            $("btn7").slideDown();
+            $("cc1").slideUp();
+            });
+        });
+      </script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">ARTSA</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="collection.html" class="nav-link">Collection</a></li>
+	          <li class="nav-item"><a href="transaction.html" class="nav-link">Transcation</a></li>
+              <li class="nav-item"><a href="blog.html" class="nav-link">Account</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+              <li class="nav-item"><a href="Signin.html" class="nav-link">Login</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <div class="hero-wrap" style="background-image: url('images/bg_1.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
+          <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
+          	<div class="text">
+	             <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>Project Management</span></p>
+	            <h1 class="mb-4 bread">Project Management</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     
+
+    <section class="ftco-section bg-light">
+    	<div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+            <div style="display:inline; width: 100%" align=left>
+                <button class="button button1" data-toggle="modal" data-target="#myModal">新增專案</button>
+                   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+	<div class="modal-dialog model-dialog-centered modal-lg" role="document" style="width:800px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+			</div>
+			<div class="modal-body">
+				<table align=center style="text-align:center;border-collapse:separate;" rules="none" >
+            <tr>
+                <td colspan="2"><img id="output" height="250" style="display:none"></td>
+            </tr>
+             <style>
+             body {
+              width: 100%;
+              height: 100%;
+              margin:auto;
+              }
+              #inp {
+              text-align: center;
+              margin:0 0px 0px 30px;
+              }
+             </style>
+             <script>
+             function openFile(event){
+                var input = event.target; //取得上傳檔案
+                var reader = new FileReader(); //建立FileReader物件
+                 reader.readAsDataURL(input.files[0]); //以.readAsDataURL將上傳檔案轉換為base64字串
+                 reader.onload = function(){ //FileReader取得上傳檔案後執行以下內容
+                     var dataURL = reader.result; //設定變數dataURL為上傳圖檔的base64字串
+                     $('#output').attr('src', dataURL).show(); //將img的src設定為dataURL並顯示
+                 };
+             }</script>
+          <tr height=50>
+             <td><font color="red">＊</font>上傳照片
+             <td><input id="inp" type="file" onchange="openFile(event)" accept="image/jpeg,image/jpg" required></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>專案需求標題</td>
+              <td><input type="text" name="name" style="width: 280px" required></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>需求專案內容</td>
+              <td><textarea rows="5" style="width: 280px" required></textarea></td>
+                    </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>地區</td>
+              <td style="padding-right: 180px"><select name="zone" style="width: 100px">
+              <option value="Taipei">台北市</option>
+              <option value="NewTaipei">新北市</option>
+              <option value="Taoyuan">桃園市</option>
+              <option value="Taichung">台中市</option>
+              <option value="Tainan">台南市</option>
+              <option value="Kaoshong">高雄市</option></select></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>類別</td>
+              <td style="padding-right: 180px"><select name="tag" style="width: 100px">
+              <option value="people">人像</option>
+              <option value="view">風景</option>
+              <option value="animal">動物</option>
+              <option value="food">食物</option>
+              <option value="thing">商品</option></select></td> 
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>期望價格</td>
+              <td style="padding-right: 80px">$&nbsp;<input type="text" name="price" style="width: 100px" required> 元 / 每張照片</td>
+          </tr>
+      </table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" type="reset">重設
+				</button>
+				<a href="Project%20management.html"><button type="button" class="btn btn-primary">
+					發佈 !
+                    </button></a>
+            </div></div></div></div></div></div>
+    		<div class="row">
+    		<div class="modal fade" id="modell" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog model-dialog-centered modal-lg" role="document" style="width:800px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+			</div>
+			<div class="modal-body">
+				<table align=center style="text-align:center;border-collapse:separate;" rules="none">
+            <tr>
+                <td colspan="2"><zimg><img src="images/model.png" height="250"></zimg><img id="output1" height="250" style="display:none"></td>
+            </tr>
+             <style>
+             body {
+              width: 100%;
+              height: 100%;
+              margin:auto;
+              }
+              #inp {
+              text-align: center;
+              margin:0 0px 0px 30px;
+              }
+             </style>
+             <script>
+             function openFile10(event){
+                var input = event.target; //取得上傳檔案
+                var reader = new FileReader(); //建立FileReader物件
+                 reader.readAsDataURL(input.files[0]); //以.readAsDataURL將上傳檔案轉換為base64字串
+                 reader.onload = function(){ //FileReader取得上傳檔案後執行以下內容
+                     var dataURL = reader.result; //設定變數dataURL為上傳圖檔的base64字串
+                     $('zimg').hide(100);
+                     $('#output1').attr('src', dataURL).show(); //將img的src設定為dataURL並顯示
+                 };
+                 
+             }</script>
+          <tr height=50>
+             <td><font color="red">＊</font>照片
+             <td><input id="inp" type="file" onchange="openFile10(event)" accept="image/jpeg,image/jpg" required></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>專案需求標題</td>
+              <td><input type="text" name="name" style="width: 280px" value="棚拍" required></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>需求專案內容</td>
+              <td><textarea rows="5" style="width: 280px" required>我想透過棚拍來製作自己的寫真集
+然後可以把此作品PO上網
+或是投稿到經紀公司
+就可以因此在網路上爆紅</textarea></td>
+                    </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>地區</td>
+              <td style="padding-right: 180px"><select name="zone" style="width: 100px">
+              <option value="Taipei">台北市</option>
+              <option value="NewTaipei">新北市</option>
+              <option value="Taoyuan">桃園市</option>
+              <option value="Taichung">台中市</option>
+              <option value="Tainan">台南市</option>
+              <option value="Kaoshong" selected>高雄市</option></select></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>類別</td>
+              <td style="padding-right: 180px"><select name="tag" style="width: 100px">
+              <option value="people" selected>人像</option>
+              <option value="view">風景</option>
+              <option value="animal">動物</option>
+              <option value="food">食物</option>
+              <option value="thing">商品</option></select></td> 
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>期望價格</td>
+              <td style="padding-right: 80px">$&nbsp;<input type="text" name="price" value="500" style="width: 100px" required> 元 / 每張照片</td>
+          </tr>
+      </table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" type="reset">重設
+				</button>
+				<a href="Project%20management.html"><button type="button" class="btn btn-primary">
+					修改完成 !
+                    </button></a></div></div></div></div>
+    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    				<div class="room">
+    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/model.png);">
+    						<div class="justify-content-center align-items-center">
+    						</div>
+    					</a>
+                           <div class="text p-3">
+                               <h3 class="mb-3"><div style="float: right"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i>&nbsp;&nbsp;<i style='font-size:16px' class='far'>&#xf2ed;</i></div><a href="rooms.html" id="name">棚拍</a></h3>
+    						<a id="name1">我想透過棚拍來製作自己的寫真集<br>
+                                然後可以把此作品PO上網</a>
+                               <pp1><br><img src="images/down.png" width="5%" class="btn2"></pp1>
+                              <pp><br>或是投稿到經紀公司<br>就可以因此在網路上爆紅<br><img src="images/up.png" width="5%" class="btn1"></pp>
+                               
+    						<p><span class="price mr-2" id="price">$500</span> <span class="per">每張照片</span></p>
+                            
+                            <p><i class='fas fa-map-marker-alt' id="area"></i>&nbsp;&nbsp;
+                                台灣，高雄&nbsp;&nbsp;&nbsp;
+                                <i class='fas fa-image' id="tag"></i>&nbsp;&nbsp;
+                                人像</p>
+                           
+    						<hr>
+                            <p class="pt-1">交易筆數：6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i></p>
+                        </div>
+    				</div>
+    			</div>
+    			<div class="modal fade" id="model1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog model-dialog-centered modal-lg" role="document" style="width:800px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+			</div>
+			<div class="modal-body">
+				<table align=center style="text-align:center;border-collapse:separate;" rules="none">
+            <tr>
+                <td colspan="2"><bimg><img src="images/image_6.jpg" height="250"></bimg><img id="output2" height="250" style="display:none"></td>
+            </tr>
+             <style>
+             body {
+              width: 100%;
+              height: 100%;
+              margin:auto;
+              }
+              #inp {
+              text-align: center;
+              margin:0 0px 0px 30px;
+              }
+             </style>
+             <script>
+             function openFile1(event){
+                var input = event.target; //取得上傳檔案
+                var reader = new FileReader(); //建立FileReader物件
+                 reader.readAsDataURL(input.files[0]); //以.readAsDataURL將上傳檔案轉換為base64字串
+                 reader.onload = function(){ //FileReader取得上傳檔案後執行以下內容
+                     var dataURL = reader.result; //設定變數dataURL為上傳圖檔的base64字串
+                     $('bimg').hide(100);
+                     $('#output2').attr('src', dataURL).show(); //將img的src設定為dataURL並顯示
+                 };
+                 
+             }</script>
+          <tr height=50>
+             <td><font color="red">＊</font>照片
+             <td><input id="inp" type="file" onchange="openFile1(event)" accept="image/jpeg,image/jpg" required></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>專案需求標題</td>
+              <td><input type="text" name="name" style="width: 280px" value="飯店景觀" required></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>需求專案內容</td>
+              <td><textarea rows="5" style="width: 280px" required>想找攝影師來拍攝我們飯店內的美麗景色
+可以因此吸引消費者前來住宿
+讓我們的飯店知名度增加</textarea></td>
+                    </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>地區</td>
+              <td style="padding-right: 180px"><select name="zone" style="width: 100px">
+              <option value="Taipei" selected>台北市</option>
+              <option value="NewTaipei">新北市</option>
+              <option value="Taoyuan">桃園市</option>
+              <option value="Taichung">台中市</option>
+              <option value="Tainan">台南市</option>
+              <option value="Kaoshong">高雄市</option></select></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>類別</td>
+              <td style="padding-right: 180px"><select name="tag" style="width: 100px">
+              <option value="people">人像</option>
+              <option value="view" selected>風景</option>
+              <option value="animal">動物</option>
+              <option value="food">食物</option>
+              <option value="thing">商品</option></select></td> 
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>期望價格</td>
+              <td style="padding-right: 80px">$&nbsp;<input type="text" name="price" value="1000" style="width: 100px" required> 元 / 每張照片</td>
+          </tr>
+      </table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" type="reset">重設
+				</button>
+				<a href="Project%20management.html"><button type="button" class="btn btn-primary">
+					修改完成 !
+                    </button></a></div></div></div></div>
+    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    				<div class="room">
+    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/image_6.jpg);">
+    						<div class="justify-content-center align-items-center">
+    						</div>
+    					</a>
+    					<div class="text p-3 text-left">
+                            <h3 class="mb-3"><div style="float: right"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#model1">&#xf044;</i>&nbsp;&nbsp;<i style='font-size:16px' class='far'>&#xf2ed;</i></div><a href="rooms.html">飯店景觀</a></h3>
+    						想找攝影師來拍攝我們飯店內的美麗景色<br>可以因此吸引消費者前來住宿<br>
+                            <aa1><img src="images/down.png" width="5%" class="btn4"></aa1>
+                              <aa>讓我們的飯店知名度增加<br><img src="images/up.png" width="5%" class="btn3"></aa>
+    						<p><span class="price mr-2">$1,000</span> <span class="per">每張照片</span></p>
+                            <p><i class='fas fa-map-marker-alt' ></i>&nbsp;&nbsp;
+                                台灣，台北&nbsp;&nbsp;&nbsp;
+                                <i class='fas fa-image'></i>&nbsp;&nbsp;
+                                 風景</p>
+                                 <hr>
+                            <p class="pt-1">交易筆數：2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='far fa-star'></i>&nbsp;
+                                <i class='far fa-star'></i>&nbsp;
+                                <i class='far fa-star'></i></p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="modal fade" id="model2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog model-dialog-centered modal-lg" role="document" style="width:800px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+			</div>
+			<div class="modal-body">
+				<table align=center style="text-align:center;border-collapse:separate;" rules="none">
+            <tr>
+                <td colspan="2"><cimg><img src="images/menu-3.jpg" height="250"></cimg><img id="output3" height="250" style="display:none"></td>
+            </tr>
+             <style>
+             body {
+              width: 100%;
+              height: 100%;
+              margin:auto;
+              }
+              #inp {
+              text-align: center;
+              margin:0 0px 0px 30px;
+              }
+             </style>
+             <script>
+             function openFile2(event){
+                var input = event.target; //取得上傳檔案
+                var reader = new FileReader(); //建立FileReader物件
+                 reader.readAsDataURL(input.files[0]); //以.readAsDataURL將上傳檔案轉換為base64字串
+                 reader.onload = function(){ //FileReader取得上傳檔案後執行以下內容
+                     var dataURL = reader.result; //設定變數dataURL為上傳圖檔的base64字串
+                     $('cimg').hide(100);
+                     $('#output3').attr('src', dataURL).show(); //將img的src設定為dataURL並顯示
+                 };
+                 
+             }</script>
+          <tr height=50>
+             <td><font color="red">＊</font>照片
+             <td><input id="inp" type="file" onchange="openFile2(event)" accept="image/jpeg,image/jpg" required></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>專案需求標題</td>
+              <td><input type="text" name="name" style="width: 280px" value="甜點美食" required></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>需求專案內容</td>
+              <td><textarea rows="5" style="width: 280px" required>希望可以有攝影師幫忙拍攝
+我的餐廳的所有甜點 
+可以上傳到網路上
+使餐廳知名度增加</textarea></td>
+                    </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>地區</td>
+              <td style="padding-right: 180px"><select name="zone" style="width: 100px">
+              <option value="Taipei">台北市</option>
+              <option value="NewTaipei">新北市</option>
+              <option value="Taoyuan">桃園市</option>
+              <option value="Taichung">台中市</option>
+              <option value="Tainan">台南市</option>
+              <option value="Kaoshong" selected>高雄市</option></select></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>類別</td>
+              <td style="padding-right: 180px"><select name="tag" style="width: 100px">
+              <option value="people">人像</option>
+              <option value="view">風景</option>
+              <option value="animal">動物</option>
+              <option value="food" selected>食物</option>
+              <option value="thing">商品</option></select></td> 
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>期望價格</td>
+              <td style="padding-right: 80px">$&nbsp;<input type="text" name="price" value="300" style="width: 100px" required> 元 / 每張照片</td>
+          </tr>
+      </table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" type="reset">重設
+				</button>
+				<a href="Project%20management.html"><button type="button" class="btn btn-primary">
+					修改完成 !
+                    </button></a></div></div></div></div>
+    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    				<div class="room">
+    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/menu-3.jpg);">
+    						<div class="justify-content-center align-items-center">
+    						</div>
+    					</a>
+    					<div class="text p-3 text-left">
+                            <h3 class="mb-3"><div style="float: right"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#model2">&#xf044;</i>&nbsp;&nbsp;<i style='font-size:16px' class='far'>&#xf2ed;</i></div><a href="rooms.html">甜點美食</a></h3>
+    						希望可以有攝影師幫忙拍攝<br>我的餐廳的所有甜點
+                            <bb1><br><img src="images/down.png" width="5%" class="btn6"></bb1>
+                              <bb><br>可以上傳到網路上<br>使餐廳知名度增加<br><img src="images/up.png" width="5%" class="btn5"></bb>
+    						<p><span class="price mr-2">$300</span> <span class="per">每張照片</span></p>
+    						<p><i class='fas fa-map-marker-alt' ></i>&nbsp;&nbsp;台灣，高雄&nbsp;&nbsp;&nbsp;<i class='fas fa-image'></i>&nbsp;&nbsp;美食</p>
+                            <hr>
+                            <p class="pt-1">交易筆數：4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='far fa-star'></i></p>
+    					</div>
+    				</div>
+    			</div>
+    			
+    					<div class="modal fade" id="model3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog model-dialog-centered modal-lg" role="document" style="width:800px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+			</div>
+			<div class="modal-body">
+				<table align=center style="text-align:center;border-collapse:separate;" rules="none">
+            <tr>
+                <td colspan="2"><dimg><img src="images/bag.png" height="250"></dimg><img id="output4" height="250" style="display:none"></td>
+            </tr>
+             <style>
+             body {
+              width: 100%;
+              height: 100%;
+              margin:auto;
+              }
+              #inp {
+              text-align: center;
+              margin:0 0px 0px 30px;
+              }
+             </style>
+             <script>
+             function openFile3(event){
+                var input = event.target; //取得上傳檔案
+                var reader = new FileReader(); //建立FileReader物件
+                 reader.readAsDataURL(input.files[0]); //以.readAsDataURL將上傳檔案轉換為base64字串
+                 reader.onload = function(){ //FileReader取得上傳檔案後執行以下內容
+                     var dataURL = reader.result; //設定變數dataURL為上傳圖檔的base64字串
+                     $('dimg').hide(100);
+                     $('#output4').attr('src', dataURL).show(); //將img的src設定為dataURL並顯示
+                 };
+                 
+             }</script>
+          <tr height=50>
+             <td><font color="red">＊</font>照片
+             <td><input id="inp" type="file" onchange="openFile3(event)" accept="image/jpeg,image/jpg" required></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>專案需求標題</td>
+              <td><input type="text" name="name" style="width: 280px" value="時尚小包包" required></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>需求專案內容</td>
+              <td><textarea rows="5" style="width: 280px" required>此專櫃有一個平台可以讓消費者線上購物
+需要有攝影師幫忙拍攝所有單品 
+可以讓所有消費者更一目瞭然
+看到美麗的照片也會激起購物慾</textarea></td>
+                    </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>地區</td>
+              <td style="padding-right: 180px"><select name="zone" style="width: 100px">
+              <option value="Taipei">台北市</option>
+              <option value="NewTaipei">新北市</option>
+              <option value="Taoyuan">桃園市</option>
+              <option value="Taichung" selected>台中市</option>
+              <option value="Tainan">台南市</option>
+              <option value="Kaoshong">高雄市</option></select></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>類別</td>
+              <td style="padding-right: 180px"><select name="tag" style="width: 100px">
+              <option value="people">人像</option>
+              <option value="view">風景</option>
+              <option value="animal">動物</option>
+              <option value="food">食物</option>
+              <option value="thing" selected>商品</option></select></td> 
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>期望價格</td>
+              <td style="padding-right: 80px">$&nbsp;<input type="text" name="price" value="1300" style="width: 100px" required> 元 / 每張照片</td>
+          </tr>
+      </table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" type="reset">重設
+				</button>
+				<a href="Project%20management.html"><button type="button" class="btn btn-primary">
+					修改完成 !
+                    </button></a></div></div></div></div>
+    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    				<div class="room">
+    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/bag.png);">
+    						<div class="justify-content-center align-items-center">
+    						</div>
+    					</a>
+    					<div class="text p-3">
+                            <h3 class="mb-3"><div style="float: right"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#model3">&#xf044;</i>&nbsp;&nbsp;<i style='font-size:16px' class='far'>&#xf2ed;</i></div><a href="rooms.html">時尚小包包</a></h3>
+                            此專櫃有一個平台可以讓消費者線上購物<br>需要有攝影師幫忙拍攝所有單品
+                            <br><cc1><img src="images/down.png" width="5%" class="btn8"></cc1>
+                              <cc>可以讓所有消費者更一目瞭然<br>看到美麗的照片也會激起購物慾<br><img src="images/up.png" width="5%" class="btn7"></cc>
+    						<p><span class="price mr-2">$1,300</span> <span class="per">每張照片</span></p>
+    						<p><i class='fas fa-map-marker-alt' ></i>&nbsp;&nbsp;台灣，台中&nbsp;&nbsp;&nbsp;<i class='fas fa-image'></i>&nbsp;&nbsp;商品</p>
+                            <hr>
+                            <p class="pt-1">交易筆數：3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='far fa-star'></i>&nbsp;
+                                <i class='far fa-star'></i></p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="modal fade" id="model4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog model-dialog-centered modal-lg" role="document" style="width:800px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+			</div>
+			<div class="modal-body">
+				<table align=center style="text-align:center;border-collapse:separate;" rules="none">
+            <tr>
+                <td colspan="2"><eimg><img src="images/101.jpg" height="250"></eimg><img id="output5" height="250" style="display:none"></td>
+            </tr>
+             <style>
+             body {
+              width: 100%;
+              height: 100%;
+              margin:auto;
+              }
+              #inp {
+              text-align: center;
+              margin:0 0px 0px 30px;
+              }
+             </style>
+             <script>
+             function openFile4(event){
+                var input = event.target; //取得上傳檔案
+                var reader = new FileReader(); //建立FileReader物件
+                 reader.readAsDataURL(input.files[0]); //以.readAsDataURL將上傳檔案轉換為base64字串
+                 reader.onload = function(){ //FileReader取得上傳檔案後執行以下內容
+                     var dataURL = reader.result; //設定變數dataURL為上傳圖檔的base64字串
+                     $('eimg').hide(100);
+                     $('#output5').attr('src', dataURL).show(); //將img的src設定為dataURL並顯示
+                 };
+                 
+             }</script>
+          <tr height=50>
+             <td><font color="red">＊</font>照片
+             <td><input id="inp" type="file" onchange="openFile4(event)" accept="image/jpeg,image/jpg" required></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>專案需求標題</td>
+              <td><input type="text" name="name" style="width: 280px" value="美麗夜景" required></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>需求專案內容</td>
+              <td><textarea rows="5" style="width: 280px" required>台北市政府想要徵求攝影師幫忙拍攝
+台北美麗的夜景 可供放在觀光局頁面上</textarea></td>
+                    </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>地區</td>
+              <td style="padding-right: 180px"><select name="zone" style="width: 100px">
+              <option value="Taipei" selected>台北市</option>
+              <option value="NewTaipei">新北市</option>
+              <option value="Taoyuan">桃園市</option>
+              <option value="Taichung">台中市</option>
+              <option value="Tainan">台南市</option>
+              <option value="Kaoshong">高雄市</option></select></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>類別</td>
+              <td style="padding-right: 180px"><select name="tag" style="width: 100px">
+              <option value="people">人像</option>
+              <option value="view" selected>風景</option>
+              <option value="animal">動物</option>
+              <option value="food">食物</option>
+              <option value="thing">商品</option></select></td> 
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>期望價格</td>
+              <td style="padding-right: 80px">$&nbsp;<input type="text" name="price" value="900" style="width: 100px" required> 元 / 每張照片</td>
+          </tr>
+      </table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" type="reset">重設
+				</button>
+				<a href="Project%20management.html"><button type="button" class="btn btn-primary">
+					修改完成 !
+                    </button></a></div></div></div></div>
+    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    				<div class="room">
+    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/101.jpg);">
+    						<div class="justify-content-center align-items-center">
+    						</div>
+    					</a>
+    					<div class="text p-3 text-left">
+    						<h3 class="mb-3"><div style="float: right"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#model4">&#xf044;</i>&nbsp;&nbsp;<i style='font-size:16px' class='far'>&#xf2ed;</i></div><a href="rooms.html">美麗夜景</a></h3>
+    						台北市政府想要徵求攝影師幫忙拍攝<br>台北美麗的夜景 可供放在觀光局頁面上
+    						<br><br>
+    						<p><span class="price mr-2">$900</span> <span class="per">每張照片</span></p>
+    						<p><i class='fas fa-map-marker-alt' ></i>&nbsp;&nbsp;台灣，台北&nbsp;&nbsp;&nbsp;<i class='fas fa-image'></i>&nbsp;&nbsp;風景</p>
+                            <hr>
+                            <p class="pt-1">交易筆數：10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='far fa-star'></i></p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="modal fade" id="model5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog model-dialog-centered modal-lg" role="document" style="width:800px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+			</div>
+			<div class="modal-body">
+				<table align=center style="text-align:center;border-collapse:separate;" rules="none">
+            <tr>
+                <td colspan="2"><fimg><img src="images/dog.jpg" height="250"></fimg><img id="output6" height="250" style="display:none"></td>
+            </tr>
+             <style>
+             body {
+              width: 100%;
+              height: 100%;
+              margin:auto;
+              }
+              #inp {
+              text-align: center;
+              margin:0 0px 0px 30px;
+              }
+             </style>
+             <script>
+             function openFile5(event){
+                var input = event.target; //取得上傳檔案
+                var reader = new FileReader(); //建立FileReader物件
+                 reader.readAsDataURL(input.files[0]); //以.readAsDataURL將上傳檔案轉換為base64字串
+                 reader.onload = function(){ //FileReader取得上傳檔案後執行以下內容
+                     var dataURL = reader.result; //設定變數dataURL為上傳圖檔的base64字串
+                     $('fimg').hide(100);
+                     $('#output6').attr('src', dataURL).show(); //將img的src設定為dataURL並顯示
+                 };
+                 
+             }</script>
+          <tr height=50>
+             <td><font color="red">＊</font>照片
+             <td><input id="inp" type="file" onchange="openFile5(event)" accept="image/jpeg,image/jpg" required></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>專案需求標題</td>
+              <td><input type="text" name="name" style="width: 280px" value="毛小孩寫真" required></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>需求專案內容</td>
+              <td><textarea rows="5" style="width: 280px" required>想替自己的毛小孩拍一份寫真</textarea></td>
+                    </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>地區</td>
+              <td style="padding-right: 180px"><select name="zone" style="width: 100px">
+              <option value="Taipei" >台北市</option>
+              <option value="NewTaipei">新北市</option>
+              <option value="Taoyuan" selected>桃園市</option>
+              <option value="Taichung">台中市</option>
+              <option value="Tainan">台南市</option>
+              <option value="Kaoshong">高雄市</option></select></td>
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>類別</td>
+              <td style="padding-right: 180px"><select name="tag" style="width: 100px">
+              <option value="people">人像</option>
+              <option value="view">風景</option>
+              <option value="animal" selected>動物</option>
+              <option value="food">食物</option></select></td> 
+          </tr>
+          <tr height=50>
+              <td><font color="red">＊</font>期望價格</td>
+              <td style="padding-right: 80px">$&nbsp;<input type="text" name="price" value="2000" style="width: 100px" required> 元 / 每張照片</td>
+          </tr>
+      </table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" type="reset">重設
+				</button>
+				<a href="Project%20management.html"><button type="button" class="btn btn-primary">
+					修改完成 !
+                    </button></a></div></div></div></div>
+    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    				<div class="room">
+    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/dog.jpg);">
+    						<div class="justify-content-center align-items-center">
+    						</div>
+    					</a>
+    					<div class="text p-3 text-left">
+    						<h3 class="mb-3"><div style="float: right"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#model5">&#xf044;</i>&nbsp;&nbsp;<i style='font-size:16px' class='far'>&#xf2ed;</i></div><a href="rooms.html">毛小孩寫真</a></h3>
+    						想替自己的毛小孩拍一份寫真<br>
+    						<br><br>
+    						<p><span class="price mr-2">$2,000</span> <span class="per">每張照片</span></p>
+    						<p><i class='fas fa-map-marker-alt' ></i>&nbsp;&nbsp;台灣，桃園&nbsp;&nbsp;&nbsp;<i class='fas fa-image'></i>&nbsp;&nbsp;動物</p>
+                            <hr>
+                            <p class="pt-1">交易筆數：20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i>&nbsp;
+                                <i class='fas fa-star'></i></p>
+    					</div>
+    				</div>
+    			</div>
+                
+               
+                
+    	    </div>
+        </div>
+    </section>
+
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
+<style>
+.button1 {
+    background-color:#6c757d;
+    color: #6c757d;
+    border: 2px solid white;
+}
+    .button1:hover {
+    background-color: #6c757d;
+    color: white;
+}
+.button2 {
+    background-color:white;
+    color: white;
+    border: 1px solid #6c757d;
+}
+    .button2:hover {
+    background-color: white;
+    color: #6c757d;
+}
+.button {
+    background-color: white;
+    border-color: #6c757d;
+    border-radius: 8px;
+    color: #6c757d;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+button, select {
+    text-transform: none;
+}
+button, input {
+    overflow: visible;
+}
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+button {
+    border-radius: 0;
+}
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+button {
+    padding: 1px 6px;
+}
+button {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+}
+button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+</style>
