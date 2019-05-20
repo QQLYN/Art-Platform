@@ -26,11 +26,26 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-      <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
       
-      <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
       
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>.fixed-footer{
+  background: white;
+  color:#333333;
+  text-align:left;
+  border:1px solid #999999;
+  padding:10px;
+  width:100%;
+  position:fixed;
+  bottom:0;
+  left:50%;
+  margin-left:-640px;
+  _position: absolute; /* position fixed for IE6 */
+  _top:expression(documentElement.scrollTop+documentElement.clientHeight-this.clientHeight-4);
+  z-index:4;
+}</style>
       
   </head>
   <body>
@@ -219,8 +234,9 @@
 
 
 
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      
+    <footer class="fixed-footer">
+        <span class="price mr-2">$1,500</span>
+        <input type="button" value="更多資訊" class="btn btn-primary py-3 px-4">
     </footer>
     
   
