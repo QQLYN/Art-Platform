@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Deluxe - Free Bootstrap 4 Template by Colorlib</title>
+    <title>編輯基本資料</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -83,20 +83,20 @@
               <div class="borderstyle">
                 <br>
                 <label>&nbsp;&nbsp;&nbsp;&nbsp;姓&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;</label><label id = "name" style="display: inline;">Andy Liu</label><label><input id="EditName" type="text" value="Andy Liu" name="請輸入姓名" style="display: none"></label>
-                <div style="float: right"><a href="#" onclick="edit('Name')"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
-                <div id="NameCheck" style="float: right"><a href="#"><i style='font-size:16px' class='fa fa-check' data-toggle="modal" data-target="#modell"></i></a>&nbsp;&nbsp;<a href="#"><i style='font-size:16px' class='icon-remove' data-toggle="modal" data-target="#modell"></i></a>&nbsp;&nbsp;</div>
+                <div style="float: right" id="EditNamebt"><a href="#" onclick="edit('Name')"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
+                <div id="NameCheck" style="float: right; display: none;"><a href="#" id="NameCheckbt"><i style='font-size:16px' class="fas" data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="NameCanclebt"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
               </div>
               <div class="borderstyle">
                 <br>
                 <label>&nbsp;&nbsp;&nbsp;&nbsp;電&nbsp;&nbsp;&nbsp;&nbsp;話&nbsp;&nbsp;&nbsp;&nbsp;</label><label style="display: inline;">0912345678</label>
-                <div style="float: right"><a href="#"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
-                 <div id="PhoneCheck" style="float: right"><a href="#"><i style='font-size:16px' class='fa fa-check' data-toggle="modal" data-target="#modell"></i></a>&nbsp;&nbsp;<a href="#"><i style='font-size:16px' class='icon-remove' data-toggle="modal" data-target="#modell"></i></a>&nbsp;&nbsp;</div>
+                <div style="float: right"; id="EditPhonebt"><a href="#"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
+                 <div id="PhoneCheck" style="float: right;display: none;"><a href="#" id="PhoneCheckbt"><i style='font-size:16px' class='fas' data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="PhoneCancle"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell"></i>&#xf00d;</a>&nbsp;&nbsp;</div>
               </div>
               <div class="borderstyle">
                 <br>
                 <label>&nbsp;&nbsp;&nbsp;&nbsp;生&nbsp;&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;&nbsp;</label><label style="display: inline;">1998-01-01</label>
-                <div style="float: right"><a href="#"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
-                <div id="BirthdayCheck" style="float: right"><a href="#"><i style='font-size:16px' class='fa fa-check' data-toggle="modal" data-target="#modell"></i></a>&nbsp;&nbsp;<a href="#"><i style='font-size:16px' class='icon-remove' data-toggle="modal" data-target="#modell"></i></a>&nbsp;&nbsp;</div>
+                <div style="float: right" id="EditBirthdaybt"><a href="#"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
+                <div id="BirthdayCheck" style="float: right;display: none;"><a href="#"><i style='font-size:16px' class='fas' data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="BirthdayCancle"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
               </div>
             </div>
 
@@ -149,7 +149,8 @@ function edit(category)
   {
       document.getElementById('name').style.display = "none";
       document.getElementById('EditName').style.display = "inline";
-
+      document.getElementById('EditNamebt').style.display = "none"
+      document.getElementById('NameCheck').style.display = "inline";
       value = document.getElementById('EditName').value;
       console.log(value);
   }
