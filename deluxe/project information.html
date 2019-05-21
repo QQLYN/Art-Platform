@@ -167,6 +167,87 @@
 										    </label>
 										  </div>
 										</form>
+                         
+                         <div class="tab">
+	  			<button class="tablinks" onclick="openCity(event, 'Scenery')">全部</button>
+	  			<button class="tablinks" onclick="openCity(event, 'People')">附上評論</button>
+	  			<button class="tablinks" onclick="openCity(event, 'Food')">附上圖片</button>
+               <br>
+                <button class="tablinks" onclick="openCity(event, 'Food')">五顆星</button>
+                <button class="tablinks" onclick="openCity(event, 'Food')">四顆心</button>
+                <button class="tablinks" onclick="openCity(event, 'Food')">三顆心</button>
+                <button class="tablinks" onclick="openCity(event, 'Food')">兩顆心</button>
+                <button class="tablinks" onclick="openCity(event, 'Food')">一顆心</button>
+		            </div>
+                         
+                         
+                         
+                         <div class="container">
+                            <div id="home" class="tab-pane active container">
+                           <br>
+                            <table class="table table-bordered"  style="width:700px">
+                             <thead>
+                                <tr>
+                                  <th colspan="2" style="padding-left: 20px"><img src="images/dixi.jpg" width="35px" height="35px" >&nbsp;&nbsp;&nbsp;Kender</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td colspan="2"><img style="float: left; margin: 15px" src="images/%E5%B0%88%E6%A1%881.jpg" width="267px" height="181"><p><h3><a href="#"><strong>山水風景畫</strong></a></h3>
+                                        <a href="#"><p class="rate" style="margin-right: 15px"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p></a>
+                                        
+                                        謝謝Jack專業的拍攝，在旅途中幫助我在當地留下了最棒、最美的回憶<br><br><br><br>
+                                        
+                                        <br>2019 - 05 - 19<br>交易紀錄<a href="#">(3)</a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            </div>
+                        <div id="home" class="tab-pane active container">
+                           <br>
+                            <table class="table table-bordered"  style="width:700px">
+                             <thead>
+                                <tr>
+                                  <th colspan="2" style="padding-left: 20px"><img src="images/xiaobo.jpeg" width="35px" height="35px" >&nbsp;&nbsp;&nbsp;Nana</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td colspan="2"><img style="float: left; margin: 15px" src="https://ppt.cc/fc54yx@.jpg" width="267px" height="181"><p><h3><a href="#"><strong>人像model拍攝</strong></a></h3>
+                                        <a href="#"><p class="rate" style="margin-right: 15px"><span><i class="icon-star"></i></span></p></a>
+                                        
+                                        拍攝過程不太友好，拍出來的照片有瑕疵，和想像中有極大落差.......下次換一位<br><br><br><br>
+                                        
+                                        <br>2019 - 04 - 15<br>交易紀錄<a href="#">(1)</a></td>
+                                </tr>
+                                
+                              </tbody>
+                            </table>
+                        </div>
+                        <div id="home" class="tab-pane active container">
+                           <br>
+                            <table class="table table-bordered"  style="width:700px">
+                             <thead>
+                                <tr>
+                                  <th colspan="2" style="padding-left: 20px"><img src="images/star.PNG" width="35px" height="35px" >&nbsp;&nbsp;&nbsp;Andy</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td colspan="2"><img style="float: left; margin: 15px" src="https://ppt.cc/fBJBDx@.jpg" width="267px" height="181"><p><h3><a href="#"><strong>美食特派員</strong></a></h3><a href="#"><p class="rate" style="margin-right: 15px"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p></a>最近店裡需要做線上店舖，缺會拍攝食物的攝影師，剛好在網站上接洽到Jack，服務好<br><br><br><br>
+                                        <br>2019 - 04 - 12<br>交易紀錄<a href="#">(2)</a>
+                                    </td>
+                                </tr>
+                                
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                        
+                        
+                         
+                         
+                         
           				</div>
           			</div>
           		</div>
@@ -243,6 +324,46 @@
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  
+  
+  
+  <!--小卡片的內容-->
+<script>
+	function openCity(evt, cityName) {
+		console.log(cityName);
+		if(cityName == "Scenery")
+		{
+			document.getElementById("first").style.display = "unset";
+			document.getElementById("second").style.display = "none";
+			document.getElementById("third").style.display = "none";
+			console.log("Scenery");
+			//document.getElementById("SceneryPicture").style.background-image = "url(images/sa2.jpg)";
+			/*document.getElementById("title").innerHTML = "山水風景畫地區不限";
+			document.getElementById("name").innerHTML = "山水風景";
+			document.getElementById("tag").innerHTML = "<span>類別:</span>風景";
+			document.getElementById("area").innerHTML = "<span>地區:</span>台灣，台北";
+			document.getElementById("years").innerHTML = "<span>資歷:</span>5年";
+			document.getElementById("price").innerHTML = "<span>價格:</span>1000元";*/
+		}
+		if(cityName == "People")
+		{
+			document.getElementById("first").style.display = "none";
+			document.getElementById("second").style.display = "unset";
+			document.getElementById("third").style.display = "none";
+			console.log("People");
+		}
+		if(cityName == "Food")
+		{
+			document.getElementById("first").style.display = "none";
+			document.getElementById("second").style.display = "none";
+			document.getElementById("third").style.display = "unset";
+			console.log("Food");
+		}
+	}
+</script>
+
+
+
 
 
   <script src="js/jquery.min.js"></script>
