@@ -168,6 +168,16 @@
         document.getElementById('EditName').style.display = "inline";
         document.getElementById('EditNamebt').style.display = "none"
         document.getElementById('NameCheck').style.display = "inline";
+        $.ajax({
+              url:"/EditProfile.html",  
+              type:"POST",
+              data:{},
+              dataType:"json",
+              success:function(data)
+              {
+                console.log("good");
+              }
+            })
     }
     if(category == 'Phone')
     {
@@ -175,6 +185,16 @@
         document.getElementById('EditPhone').style.display = "inline";
         document.getElementById('EditPhonebt').style.display = "none";
         document.getElementById('PhoneCheck').style.display = "inline";
+       $.ajax({
+              url:"/EditProfile.html",  
+              type:"POST",
+              data:{},
+              dataType:"json",
+              success:function(data)
+              {
+                console.log("good");
+              }
+            })
     }
     if(category == 'Birthday')
     {
