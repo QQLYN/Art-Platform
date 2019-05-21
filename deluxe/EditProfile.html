@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/VerticalTabStyle.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-   
   </head>
   <body>
 
@@ -78,33 +77,49 @@
               <button class="tablinks" onclick="openCity(event, 'Profile')">基本資料</button>
               <button class="tablinks" onclick="openCity(event, 'Account')">帳號管理</button>
             </div>
-            <div id="Profile" class="tabcontent">
+            <div id="Profile" class="tabcontent" style="display: inline;">
               <div class="borderstyle">
                 <br>
                 <label>&nbsp;&nbsp;&nbsp;&nbsp;姓&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;</label>
                 <label id = "name" style="display: inline;">Andy Liu</label><label><input id="EditName" type="text" value="Andy Liu" name="請輸入姓名" style="display: none"></label>
                 <div style="float: right" id="EditNamebt"><a href="#" onclick="edit('Name')"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
-                <div id="NameCheck" style="float: right; display: none;"><a href="#" id="NameCheckbt"><i style='font-size:16px' class="fas" data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="NameCanclebt"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
+                <div id="NameCheck" style="float: right; display: none;"><a href="#" id="NameCheckbt" onclick="update('Name')"><i style='font-size:16px' class="fas" data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="NameCanclebt"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
               </div>
               <div class="borderstyle">
                 <br>
                 <label>&nbsp;&nbsp;&nbsp;&nbsp;電&nbsp;&nbsp;&nbsp;&nbsp;話&nbsp;&nbsp;&nbsp;&nbsp;</label><label id="Phone" style="display: inline;">0912345678</label>
                 <label><input id="EditPhone" type="text" value="0912345678" name="請輸入姓名" style="display: none"></label>
                 <div style="float: right"; id="EditPhonebt"><a href="#" onclick="edit('Phone')"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
-                 <div id="PhoneCheck" style="float: right;display: none;"><a href="#" id="PhoneCheckbt"><i style='font-size:16px' class='fas' data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="PhoneCancle"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
+                 <div id="PhoneCheck" style="float: right;display: none;"><a href="#" id="PhoneCheckbt" onclick="update('Phone')"><i style='font-size:16px' class='fas' data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="PhoneCancle"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
               </div>
               <div class="borderstyle">
                 <br>
                 <label>&nbsp;&nbsp;&nbsp;&nbsp;生&nbsp;&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;&nbsp;</label><label id="Birthday" style="display: inline;">1998-01-01</label>
                 <label><input id="EditBirthday" type="text" value="1998-01-01" name="請輸入姓名" style="display: none"></label>
                 <div style="float: right" id="EditBirthdaybt"><a href="#" onclick="edit('Birthday')"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
-                <div id="BirthdayCheck" style="float: right;display: none;"><a href="#" id="BirthdayCheckbt"><i style='font-size:16px' class='fas' data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="BirthdayCancle"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
+                <div id="BirthdayCheck" style="float: right;display: none;"><a href="#" id="BirthdayCheckbt" onclick="update('Birthday')"><i style='font-size:16px' class='fas' data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="BirthdayCancle"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
               </div>
             </div>
 
             <div id="Account" class="tabcontent">
-              <h3>Paris</h3>
-              <p>Paris is the capital of France.</p> 
+              <div class="borderstyle">
+                <br>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;電子郵件&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <label id = "Mail" style="display: inline;">abc@gamil.com</label><label><input id="EditMail" type="text" value="abc@gamil.com" name="請輸入電子郵件" style="display: none"></label>
+                <div style="float: right" id="EditMailbt"><a href="#" onclick="edit('Mail')"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
+                <div id="MailCheck" style="float: right; display: none;"><a href="#" id="MailCheckbt" onclick="update('Mail')"><i style='font-size:16px' class="fas" data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="MailCanclebt"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
+              </div>
+               <div class="borderstyle">
+                <br>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;碼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label id="Password" style="display: inline;">已設定</label>
+                <div id="EditPassword" style="display: none;">
+                  <label>舊密碼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="EditOldPassword" type="password" name="舊密碼" style="display: none"></label>
+                  <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新密碼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="EditNewPassword" type="password" name="新密碼" style="display: none"></label>
+                  <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;確認密碼&nbsp;&nbsp;&nbsp;<input id="CheckNewPassword" type="password" name="確認新密碼" style="display: none"></label>
+                </div>
+                <div style="float: right"; id="EditPasswordbt"><a href="#" onclick="edit('Password')"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
+                 <div id="PasswordCheck" style="float: right;display: none;"><a href="#" id="PasswordCheckbt" onclick="update('Password')"><i style='font-size:16px' class='fas' data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="PasswordCancle"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
+              </div>
             </div>
 
             <div id="Tokyo" class="tabcontent">
@@ -125,50 +140,124 @@
 <script>
   function openCity(evt, cityName) {
   // Declare all variables
-  var i, tabcontent, tablinks;
+    var i, tabcontent, tablinks;
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
 
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
 
-  // Show the current tab, and add an "active" class to the link that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-function edit(category)
-{
-  var value;
-  console.log(category);
-  if(category == 'Name')
-  {
-      document.getElementById('name').style.display = "none";
-      document.getElementById('EditName').style.display = "inline";
-      document.getElementById('EditNamebt').style.display = "none"
-      document.getElementById('NameCheck').style.display = "inline";
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
   }
-  if(category == 'Phone')
+  function edit(category)
   {
-      document.getElementById('Phone').style.display = "none";
-      document.getElementById('EditPhone').style.display = "inline";
-      document.getElementById('EditPhonebt').style.display = "none";
-      document.getElementById('PhoneCheck').style.display = "inline";
+    var value;
+    console.log(category);
+    if(category == 'Name')
+    {
+        document.getElementById('name').style.display = "none";
+        document.getElementById('EditName').style.display = "inline";
+        document.getElementById('EditNamebt').style.display = "none"
+        document.getElementById('NameCheck').style.display = "inline";
+    }
+    if(category == 'Phone')
+    {
+        document.getElementById('Phone').style.display = "none";
+        document.getElementById('EditPhone').style.display = "inline";
+        document.getElementById('EditPhonebt').style.display = "none";
+        document.getElementById('PhoneCheck').style.display = "inline";
+    }
+    if(category == 'Birthday')
+    {
+        document.getElementById('Birthday').style.display = "none";
+        document.getElementById('EditBirthday').style.display = "inline";
+        document.getElementById('EditBirthdaybt').style.display = "none"
+        document.getElementById('BirthdayCheck').style.display = "inline";
+    }
+    if(category == 'Mail')
+    {
+        document.getElementById('Mail').style.display = "none";
+        document.getElementById('EditMail').style.display = "inline";
+        document.getElementById('EditMailbt').style.display = "none"
+        document.getElementById('MailCheck').style.display = "inline";
+    }
+    if(category == 'Password')
+    {
+        document.getElementById('Password').style.display = "none";
+        document.getElementById('EditPassword').style.display = "inline";
+        document.getElementById('EditOldPassword').style.display = "inline";
+        document.getElementById('EditNewPassword').style.display = "inline";
+        document.getElementById('CheckNewPassword').style.display = "inline";
+        document.getElementById('EditPasswordbt').style.display = "none"
+        document.getElementById('PasswordCheck').style.display = "inline";
+    }
   }
-  if(category == 'Birthday')
+  function update(category)
   {
-      document.getElementById('Birthday').style.display = "none";
-      document.getElementById('EditBirthday').style.display = "inline";
-      document.getElementById('EditBirthdaybt').style.display = "none"
-      document.getElementById('BirthdayCheck').style.display = "inline";
+    var value;
+    console.log(category);
+    if(category == 'Name')
+    {
+        value = document.getElementById('EditName').value;
+        document.getElementById('name').innerHTML = "<label id = 'name' style='display: inline;''>"+value+"</label>";
+        document.getElementById('name').style.display = "inline";
+        document.getElementById('EditName').style.display = "none";
+         document.getElementById('EditNamebt').style.display = "inline"
+        document.getElementById('NameCheck').style.display = "none";
+        console.log(value);
+    }
+    if(category == 'Phone')
+    {
+        value = document.getElementById('EditPhone').value;
+        document.getElementById('Phone').innerHTML = "<label id = 'Phone' style='display: inline;''>"+value+"</label>";
+        document.getElementById('Phone').style.display = "inline";
+        document.getElementById('EditPhone').style.display = "none";
+         document.getElementById('EditPhonebt').style.display = "inline"
+        document.getElementById('PhoneCheck').style.display = "none";
+        console.log(value);
+    }
+    if(category == 'Birthday')
+    {
+        value = document.getElementById('EditBirthday').value;
+        document.getElementById('Birthday').innerHTML = "<label id = 'Birthday' style='display: inline;''>"+value+"</label>";
+        document.getElementById('Birthday').style.display = "inline";
+        document.getElementById('EditBirthday').style.display = "none";
+         document.getElementById('EditBirthdaybt').style.display = "inline"
+        document.getElementById('BirthdayCheck').style.display = "none";
+        console.log(value);
+    }
+    if(category == 'Mail')
+    {
+        value = document.getElementById('EditMail').value;
+        document.getElementById('Mail').innerHTML = "<label id = 'Mail' style='display: inline;''>"+value+"</label>";
+        document.getElementById('Mail').style.display = "inline";
+        document.getElementById('EditMail').style.display = "none";
+         document.getElementById('EditMailbt').style.display = "inline"
+        document.getElementById('MailCheck').style.display = "none";
+        console.log(value);
+    }
+     if(category == 'Password')
+    {
+        document.getElementById('Password').innerHTML = "<label id='Password' style='display: inline;''>已設定</label>";
+        document.getElementById('Password').style.display = "inline";
+        document.getElementById('EditPassword').style.display = "none";
+        document.getElementById('EditPasswordbt').style.display = "inline"
+        document.getElementById('PasswordCheck').style.display = "none";
+        document.getElementById('EditOldPassword').style.display = "none";
+        document.getElementById('EditNewPassword').style.display = "none";
+        document.getElementById('CheckNewPassword').style.display = "none";
+        console.log(value);
+    }
   }
-}
 </script>
 
 
