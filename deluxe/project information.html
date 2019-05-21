@@ -21,6 +21,7 @@
 
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
+      <link rel="stylesheet" href="css/buttom.css">
 
     
     <link rel="stylesheet" href="css/flaticon.css">
@@ -31,21 +32,9 @@
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
       
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>.fixed-footer{
-  background: white;
-  color:#333333;
-  text-align:left;
-  border:1px solid #999999;
-  padding:10px;
-  width:100%;
-  position:fixed;
-  bottom:0;
-  left:50%;
-  margin-left:-640px;
-  _position: absolute; /* position fixed for IE6 */
-  _top:expression(documentElement.scrollTop+documentElement.clientHeight-this.clientHeight-4);
-  z-index:4;
-}</style>
+      <link rel="stylesheet" href="css/footer.css">
+      
+
       
   </head>
   <body>
@@ -134,51 +123,17 @@
           		<div class="col-md-12 properties-single ftco-animate mb-5 mt-4">
           			<h3 class="mb-4">&nbsp;<i class='far fa-thumbs-up' style='font-size:24px'></i>&nbsp;&nbsp;評價篩選</h3>
           			<div class="row">
-          				<div class="col-md-6">
-          					<form method="post" class="star-rating">
-										  <div class="form-check">
-												<input type="checkbox" class="form-check-input" id="exampleCheck1">
-												<label class="form-check-label" for="exampleCheck1">
-													<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i> 100 Ratings</span></p>
-												</label>
-										  </div>
-										  <div class="form-check">
-									      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-									      <label class="form-check-label" for="exampleCheck1">
-									    	   <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i> 30 Ratings</span></p>
-									      </label>
-										  </div>
-										  <div class="form-check">
-									      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-									      <label class="form-check-label" for="exampleCheck1">
-									      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 5 Ratings</span></p>
-									     </label>
-										  </div>
-										  <div class="form-check">
-										    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-									      <label class="form-check-label" for="exampleCheck1">
-									      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 0 Ratings</span></p>
-									      </label>
-										  </div>
-										  <div class="form-check">
-									      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-									      <label class="form-check-label" for="exampleCheck1">
-									      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 0 Ratings</span></p>
-										    </label>
-										  </div>
-										</form>
-                         
-                         <div class="tab">
-	  			<button class="tablinks" onclick="openCity(event, 'Scenery')">全部</button>
-	  			<button class="tablinks" onclick="openCity(event, 'People')">附上評論</button>
-	  			<button class="tablinks" onclick="openCity(event, 'Food')">附上圖片</button>
+                        <div class="tab"><!-- 評價篩選標籤 -->
+	  			<button class="button button1" onclick="openCity(event, 'Scenery')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;全部評論&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>(100)</button>
+	  			<button class="button button1" onclick="openCity(event, 'People')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;附上評論&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>(34)</button>
+	  			<button class="button button1" onclick="openCity(event, 'Food')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;附上圖片&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>(23)</button>
                <br>
-                <button class="tablinks" onclick="openCity(event, 'Food')">五顆星</button>
-                <button class="tablinks" onclick="openCity(event, 'Food')">四顆心</button>
-                <button class="tablinks" onclick="openCity(event, 'Food')">三顆心</button>
-                <button class="tablinks" onclick="openCity(event, 'Food')">兩顆心</button>
-                <button class="tablinks" onclick="openCity(event, 'Food')">一顆心</button>
-		            </div>
+                <button class="button button1" onclick="openCity(event, 'Food')">五顆星<br>(20)</button>
+                <button class="button button1" onclick="openCity(event, 'Food')">四顆心<br>(20)</button>
+                <button class="button button1" onclick="openCity(event, 'Food')">三顆心<br>(20)</button>
+                <button class="button button1" onclick="openCity(event, 'Food')">兩顆心<br>(20)</button>
+                <button class="button button1" onclick="openCity(event, 'Food')">一顆心<br>(20)</button>
+		          </div>
                          
                          
                          
@@ -193,12 +148,13 @@
                               </thead>
                               <tbody>
                                 <tr>
-                                    <td colspan="2"><img style="float: left; margin: 15px" src="images/%E5%B0%88%E6%A1%881.jpg" width="267px" height="181"><p><h3><a href="#"><strong>山水風景畫</strong></a></h3>
+                                    <td colspan="2">
                                         <a href="#"><p class="rate" style="margin-right: 15px"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p></a>
-                                        
-                                        謝謝Jack專業的拍攝，在旅途中幫助我在當地留下了最棒、最美的回憶<br><br><br><br>
-                                        
-                                        <br>2019 - 05 - 19<br>交易紀錄<a href="#">(3)</a></td>
+                                        <!-- 評價內容 -->
+                                        <h5>謝謝Jack專業的拍攝，在旅途中幫助我在當地留下了最棒、最美的回憶</h5>
+                                        <!-- 評價時間 -->
+                                        <p>2019 - 05 - 19&nbsp;交易紀錄<a href="#">(3)</a>
+                                    </td>
                                 </tr>
                               </tbody>
                             </table>
@@ -213,42 +169,17 @@
                               </thead>
                               <tbody>
                                 <tr>
-                                    <td colspan="2"><img style="float: left; margin: 15px" src="https://ppt.cc/fc54yx@.jpg" width="267px" height="181"><p><h3><a href="#"><strong>人像model拍攝</strong></a></h3>
+                                    <td colspan="2"><p>
                                         <a href="#"><p class="rate" style="margin-right: 15px"><span><i class="icon-star"></i></span></p></a>
                                         
-                                        拍攝過程不太友好，拍出來的照片有瑕疵，和想像中有極大落差.......下次換一位<br><br><br><br>
-                                        
-                                        <br>2019 - 04 - 15<br>交易紀錄<a href="#">(1)</a></td>
-                                </tr>
-                                
-                              </tbody>
-                            </table>
-                        </div>
-                        <div id="home" class="tab-pane active container">
-                           <br>
-                            <table class="table table-bordered"  style="width:700px">
-                             <thead>
-                                <tr>
-                                  <th colspan="2" style="padding-left: 20px"><img src="images/star.PNG" width="35px" height="35px" >&nbsp;&nbsp;&nbsp;Andy</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                    <td colspan="2"><img style="float: left; margin: 15px" src="https://ppt.cc/fBJBDx@.jpg" width="267px" height="181"><p><h3><a href="#"><strong>美食特派員</strong></a></h3><a href="#"><p class="rate" style="margin-right: 15px"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p></a>最近店裡需要做線上店舖，缺會拍攝食物的攝影師，剛好在網站上接洽到Jack，服務好<br><br><br><br>
-                                        <br>2019 - 04 - 12<br>交易紀錄<a href="#">(2)</a>
-                                    </td>
+                                        拍攝過程不太友好，拍出來的照片有瑕疵，和想像中有極大落差.......下次換一位<p><img src="images/menu-1.jpg" width="267px" height="181"></p>
+                                        2019 - 04 - 15&nbsp;交易紀錄<a href="#">(1)</a></td>
                                 </tr>
                                 
                               </tbody>
                             </table>
                         </div>
                     </div>
-                        
-                        
-                         
-                         
-                         
-          				</div>
           			</div>
           		</div>
           		<div class="col-md-12 room-single ftco-animate mb-5 mt-5">
@@ -316,8 +247,8 @@
 
 
     <footer class="fixed-footer">
-        <span class="price mr-2">$1,500</span>
-        <input type="button" value="更多資訊" class="btn btn-primary py-3 px-4">
+        <span class="price mr-2">NT$1,500</span>
+        <input type="button" value="發送交易邀請" class="btn btn-primary py-3 px-4">
     </footer>
     
   
