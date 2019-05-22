@@ -179,29 +179,28 @@
                 </div>
             </div>
             
-            <div style="display:inline; width: 100%">
-                <button class="button button1">Photographer</button>
-                <a class="nav-item active">&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <button class="button button1">consumer</button>
+            <div style="display:inline; width: 100%" class="person">
+                <button class="button button1" onclick="cPerson(event, 'Provider')">Photographer</button>
+                <a class="nav-item active" >&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <button class="button button1" onclick="cPerson(event, 'User')">consumer</button>
                 <p><p>
-
-
             </div>
+            
     		<div class="row">
-    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    			<div id="one" class="col-sm col-md-6 col-lg-4 ftco-animate">
     				<div class="room">
-    					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/sa2.jpg);">
+    					<a id="onePicture" href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/sa2.jpg);">
     						<div class="icon d-flex justify-content-center align-items-center">
     							<span class="icon-search2"></span>
     						</div>
     					</a>
     					<div class="text p-3 text-center">
-    						<h3 class="mb-3"><a href="rooms.html">山水風景畫地區不限</a></h3>
-    						<p><span class="price mr-2">$1,000</span> <span class="per">每張照片</span></p>
+    						<h3 class="mb-3"><a id="title"href="rooms.html">山水風景畫地區不限</a></h3>
+    						<p id="price"><span class="price mr-2">$1,000</span> <span class="per">每張照片</span></p>
                             
                             <p><i class='fas fa-map-marker-alt' ></i>&nbsp;&nbsp;
-                                台灣，台北&nbsp;&nbsp;&nbsp;
-                                <i class='fas fa-image'></i>&nbsp;&nbsp;
+                                <span id="area">台灣，台北</span>&nbsp;&nbsp;&nbsp;
+                                <i id="tab" class='fas fa-image'></i>&nbsp;&nbsp;
                                 風景</p>
                             <p>
                                 <i class='fas fa-star'></i>&nbsp;
@@ -214,7 +213,7 @@
     					</div>
     				</div>
     			</div>
-    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    			<div id="two" class="col-sm col-md-6 col-lg-4 ftco-animate">
     				<div class="room">
     					<a href="project information.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/sa3.jpg);">
     						<div class="icon d-flex justify-content-center align-items-center">
@@ -236,7 +235,7 @@
     					</div>
     				</div>
     			</div>
-    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    			<div id="three" class="col-sm col-md-6 col-lg-4 ftco-animate">
     				<div class="room">
     					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/sa1.jpg);">
     						<div class="icon d-flex justify-content-center align-items-center">
@@ -258,7 +257,7 @@
     					</div>
     				</div>
     			</div>
-    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    			<div id="four" class="col-sm col-md-6 col-lg-4 ftco-animate">
     				<div class="room">
     					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/sa5.jpg);">
     						<div class="icon d-flex justify-content-center align-items-center">
@@ -280,7 +279,7 @@
     					</div>
     				</div>
     			</div>
-    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    			<div id="five" class="col-sm col-md-6 col-lg-4 ftco-animate">
     				<div class="room">
     					<a href="rooms.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/sa6.jpg);">
     						<div class="icon d-flex justify-content-center align-items-center">
@@ -302,7 +301,7 @@
     					</div>
     				</div>
     			</div>
-    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    			<div id="six" class="col-sm col-md-6 col-lg-4 ftco-animate">
     				<div class="room">
     					<a href="project information.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-6.jpg);">
     						<div class="icon d-flex justify-content-center align-items-center">
@@ -478,7 +477,32 @@
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
+      
+<script language="javascript">
+function cPerson(evt, personName) {
+		console.log(personName);
+		if(personName == "Provider")/*攝影師*/
+		{
+			document.getElementById("one").style.display = "unset";
+			document.getElementById("two").style.display = "unset";
+			document.getElementById("three").style.display = "unset";
+            document.getElementById("four").style.display = "none";
+			document.getElementById("five").style.display = "none";
+			document.getElementById("six").style.display = "none";
+			console.log("Provider");
+		}
+		if(personName == "User")/*消費者*/
+		{
+			document.getElementById("one").style.display = "none";
+			document.getElementById("two").style.display = "none";
+			document.getElementById("three").style.display = "none";
+            document.getElementById("four").style.display = "unset";
+			document.getElementById("five").style.display = "unset";
+			document.getElementById("six").style.display = "unset";
+			console.log("User");
+		}
+	}
+</script>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
