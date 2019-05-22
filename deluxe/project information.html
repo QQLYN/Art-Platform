@@ -324,7 +324,7 @@
 
     <footer class="fixed-footer" style="text-align: center; ">&nbsp;
         <font size="5" style="vertical-align: middle" color="red">NT 1,500</font>&nbsp;&nbsp;&nbsp;
-        <input type="button" value="發送交易邀請" class="btn btn-primary py-2 px-4" style="font-size:17px;">
+        <input type="button" onclick="send()" value="發送交易邀請" class="btn btn-primary py-2 px-4" style="font-size:17px;">
     </footer>
     
   
@@ -336,6 +336,9 @@
   
   <!--小卡片的內容-->
 <script>
+    function send() {
+         alert("發送邀請成果");
+    }
 	function openCity(evt, cityName) {
 		console.log(cityName);
 		if(cityName == "all")
