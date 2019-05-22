@@ -11,7 +11,7 @@
   position:fixed;
   bottom:0;
   left:50%;
-  margin-left:-640px;
+  margin-left:-50%;
   _position: absolute; /* position fixed for IE6 */
   _top:expression(documentElement.scrollTop+documentElement.clientHeight-this.clientHeight-4);
   z-index:4;
