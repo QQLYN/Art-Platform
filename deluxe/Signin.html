@@ -31,44 +31,44 @@
     <script src="js/jquery-3.2.1.min.js"></script>
   </head>
   <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">ARTSA</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-
-	      </button>
-	    </div>
-	  </nav>
 	  
 	  
     <!-- END nav -->
+     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a href="index.html">ARTSA</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	    </div>
+	  </nav>
 
-    <div class="hero-wrap" style="background-image: url('images/bg_1.jpg');">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
-          <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
-          	<div class="text">
-	            <h1 class="mb-4 bread">Login</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
 
     
 
     <section class="ftco-section ftc-no-pb ftc-no-pt">
 			<div class="container">
-                
-					
-					<div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
-	          	
-	            <span class="subheading"></span>
-	            <br>
-	          </div>
-	          <div class="pb-md-5">
+	          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" style="width:800px">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					&times;
+				</button>
+            </div>
+            <div class="modal-body">
+               <tr height=50>
+              <td>信箱：</td>
+              <td><input type="text" name="name" class="lable"></td>
+          </tr>
+              </div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" type="reset">傳送至信箱
+				</button>
+            </div>
+            </div></div></div>
+	          <div class="pb-md-3">
 	          <div class="login-wrap">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
@@ -87,61 +87,29 @@
 					<input id="check" type="checkbox" class="check" checked>
 					<label for="check"><span class="icon"></span> Keep me Signed in</label>
 				</div>
+				<br>
 				<div>
 				<ul class="ftco-social d-flex">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <li class="ftco-animate"  ><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#" style="color: aliceblue"><span class="icon-facebook"></span></a></li>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+                <li class="ftco-animate"><a href="#" style="color: aliceblue"><span class="icon-google-plus"></span></a></li>
                                 </ul>
                 </div>
+                <br>
 				<div class="group"><a href="index.html" class="nav-link">
                     <input type="submit" class="button" value="一般登入"></a>
                     <a href="index.html" class="nav-link">
                     <input type="submit" class="button" value="攝影師登入"></a>
 				</div>
-				<div class="hr"></div>
+				<div><p style="color: gainsboro">------------------------------------------------------------------------</p></div>
 				<div class="foot-lnk">
             <div style="display:inline; width: 100%" align=left>
                 <button class="button button1" data-toggle="modal" data-target="#myModal">Forgot Password?</button>
-                   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-
-	<div class="modal-dialog model-dialog-centered modal-lg" role="document" style="width:800px">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-					&times;
-				</button>
+    </div></div>
             </div>
-            <div class="modal-body">
-            
-				 <style>
-             body {
-              width: 100%;
-              height: 100%;
-              margin:auto;
-              }
-              #inp {
-              text-align: center;
-              margin:0 0px 0px 0px;
-              }
-             </style>
-               <tr height=50>
-              <td>信箱：</td>
-              <td><input type="text" name="name" class="lable"></td>
-          </tr>
-               <tr><td></td></tr>
-                </table>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" type="reset">傳送至信箱
-				</button>
-            </div></div></div></div></div></div>
-				
-            </div>
-			
 			<div class="sign-up-htm">
 				<div class="group">
 					<label for="user" class="label">Mail</label>
@@ -162,30 +130,31 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#">&nbsp;&nbsp;<u>Got Verification Code</u></a>
+					<a href="#" style="color: aliceblue">&nbsp;&nbsp;<u>Got Verification Code</u></a>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Verification Code</label>
 					<input id="pass" type="text" class="input">
-				</div>
+				</div><br>
 				<div>
 				<ul class="ftco-social d-flex">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#" style="color: aliceblue"><span class="icon-facebook"></span></a></li>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+                <li class="ftco-animate"><a href="#" style="color: aliceblue"><span class="icon-google-plus"></span></a></li>
                                 </ul>
                 </div>
+                <br>
 				<div class="group">
 					<input type="submit" class="button" value="Sign Up">
 				</div>	
 			</div>
         </div>
-</div></div></div>
+                  </div></div></div></div>
 
-					</div>
+					
 		</section>
 		
     
@@ -220,7 +189,7 @@
 <style>
 body{
 	margin:0;
-	font:600 16px/18px 'Open Sans',sans-serif;
+	font:500 16px/18px 'Open Sans',sans-serif;
 }
 *,:after,:before{box-sizing:border-box}
 .clearfix:after,.clearfix:before{content:'';display:table}
@@ -231,16 +200,16 @@ a{color:inherit;text-decoration:none}
 	width:100%;
 	margin:auto;
 	max-width:525px;
-	min-height:725px;
+	min-height:650px;
 	position:relative;
-	
+    background-color: none;
 	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
 .login-html{
 	width:100%;
 	height:100%;
 	position:absolute;
-	padding:90px 70px 50px 70px;
+	padding:50px 70px 50px 70px;
 	background:	#007799;
     opacity:0.4;
 }
@@ -264,19 +233,20 @@ a{color:inherit;text-decoration:none}
 .login-form .group .label,
 .login-form .group .button{
 	text-transform:uppercase;
+    border-color: #007799;
 }
 .login-html .tab{
-	font-size:22px;
+	font-size:25px;
 	margin-right:15px;
 	padding-bottom:5px;
 	margin:0 15px 10px 0;
 	display:inline-block;
-	border-bottom:2px solid transparent;
+	border-bottom:0px solid transparent;
 }
 .login-html .sign-in:checked + .tab,
 .login-html .sign-up:checked + .tab{
 	color:#fff;
-	border-color:#5599FF;
+	border-color:#007799;
 }
 .login-form{
 	min-height:345px;
@@ -297,9 +267,9 @@ a{color:inherit;text-decoration:none}
 .login-form .group .input,
 .login-form .group .button{
 	border:none;
-	padding:15px 20px;
+	padding:10px 15px;
 	border-radius:25px;
-	background:rgba(255,255,255,.1);
+	background:rgba(255,255,255,.3);
 }
 .login-form .group input[data-type="password"]{
 	text-security:circle;
@@ -307,7 +277,7 @@ a{color:inherit;text-decoration:none}
 }
 .login-form .group .label{
 	color:#FFF0F5;
-	font-size:12px;
+	font-size:12.5px;
 }
 .login-form .group .button{
 	background:#8B4513;
