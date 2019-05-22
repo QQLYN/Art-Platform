@@ -28,8 +28,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/VerticalTabStyle.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
   </head>
   <body>
 
@@ -60,8 +58,8 @@
         <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
           <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
             <div class="text">
-               <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>Collection</span></p>
-              <h1 class="mb-4 bread">Collection</h1>
+               <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>編輯基本資料</span></p>
+              <h1 class="mb-4 bread">編輯基本資料</h1>
             </div>
           </div>
         </div>
@@ -79,35 +77,62 @@
               <button class="tablinks" onclick="openCity(event, 'Profile')">基本資料</button>
               <button class="tablinks" onclick="openCity(event, 'Account')">帳號管理</button>
             </div>
-            <div id="Profile" class="tabcontent">
+            <div id="Profile" class="tabcontent" style="display: inline;">
               <div class="borderstyle">
                 <br>
-                <label>&nbsp;&nbsp;&nbsp;&nbsp;姓&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;</label><label id = "name" style="display: inline;">Andy Liu</label><label><input id="EditName" type="text" value="Andy Liu" name="請輸入姓名" style="display: none"></label>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;姓&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <label id = "name" style="display: inline;">Andy Liu</label><label><input id="EditName" type="text" value="Andy Liu" name="請輸入姓名" style="display: none"></label>
                 <div style="float: right" id="EditNamebt"><a href="#" onclick="edit('Name')"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
-                <div id="NameCheck" style="float: right; display: none;"><a href="#" id="NameCheckbt"><i style='font-size:16px' class="fas" data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="NameCanclebt"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
+                <div id="NameCheck" style="float: right; display: none;"><a href="#" id="NameCheckbt" onclick="update('Name')"><i style='font-size:16px' class="fas" data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="NameCanclebt" onclick="update('NameCancle')"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
               </div>
               <div class="borderstyle">
                 <br>
-                <label>&nbsp;&nbsp;&nbsp;&nbsp;電&nbsp;&nbsp;&nbsp;&nbsp;話&nbsp;&nbsp;&nbsp;&nbsp;</label><label style="display: inline;">0912345678</label>
-                <div style="float: right"; id="EditPhonebt"><a href="#"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
-                 <div id="PhoneCheck" style="float: right;display: none;"><a href="#" id="PhoneCheckbt"><i style='font-size:16px' class='fas' data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="PhoneCancle"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell"></i>&#xf00d;</a>&nbsp;&nbsp;</div>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;電&nbsp;&nbsp;&nbsp;&nbsp;話&nbsp;&nbsp;&nbsp;&nbsp;</label><label id="Phone" style="display: inline;">0912345678</label>
+                <label><input id="EditPhone" type="text" value="0912345678" name="請輸入姓名" style="display: none"></label>
+                <div style="float: right"; id="EditPhonebt"><a href="#" onclick="edit('Phone')"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
+                 <div id="PhoneCheck" style="float: right;display: none;"><a href="#" id="PhoneCheckbt" onclick="update('Phone')"><i style='font-size:16px' class='fas' data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="PhoneCanclebt" onclick="update('PhoneCancle')"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
               </div>
               <div class="borderstyle">
                 <br>
-                <label>&nbsp;&nbsp;&nbsp;&nbsp;生&nbsp;&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;&nbsp;</label><label style="display: inline;">1998-01-01</label>
-                <div style="float: right" id="EditBirthdaybt"><a href="#"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
-                <div id="BirthdayCheck" style="float: right;display: none;"><a href="#"><i style='font-size:16px' class='fas' data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="BirthdayCancle"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;生&nbsp;&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;&nbsp;</label><label id="Birthday" style="display: inline;">1998-01-01</label>
+                <label><input id="EditBirthday" type="text" value="1998-01-01" name="請輸入姓名" style="display: none"></label>
+                <div style="float: right" id="EditBirthdaybt"><a href="#" onclick="edit('Birthday')"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
+                <div id="BirthdayCheck" style="float: right;display: none;"><a href="#" id="BirthdayCheckbt" onclick="update('Birthday')"><i style='font-size:16px' class='fas' data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="BirthdayCanclebt" onclick="update('BirthdayCancle')"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
               </div>
             </div>
 
             <div id="Account" class="tabcontent">
-              <h3>Paris</h3>
-              <p>Paris is the capital of France.</p> 
-            </div>
-
-            <div id="Tokyo" class="tabcontent">
-              <h3>Tokyo</h3>
-              <p>Tokyo is the capital of Japan.</p>
+              <div class="borderstyle">
+                <br>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;電子郵件&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <label id = "Mail" style="display: inline;">abc@gamil.com</label><label><input id="EditMail" type="text" value="abc@gamil.com" name="請輸入電子郵件" style="display: none"></label>
+                <div style="float: right" id="EditMailbt"><a href="#" onclick="edit('Mail')"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
+                <div id="MailCheck" style="float: right; display: none;"><a href="#" id="MailCheckbt" onclick="update('Mail')"><i style='font-size:16px' class="fas" data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="MailCanclebt" onclick="update('MailCancle')"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
+              </div>
+               <div class="borderstyle">
+                <br>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;碼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label id="Password" style="display: inline;">已設定</label>
+                <div id="EditPassword" style="display: none;">
+                  <label>舊密碼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="EditOldPassword" type="password" name="舊密碼" style="display: none"></label>
+                  <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新密碼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="EditNewPassword" type="password" name="新密碼" style="display: none"></label>
+                  <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;確認密碼&nbsp;&nbsp;&nbsp;<input id="CheckNewPassword" type="password" name="確認新密碼" style="display: none"></label>
+                </div>
+                <div style="float: right"; id="EditPasswordbt"><a href="#" onclick="edit('Password')"><i style='font-size:16px' class='far' data-toggle="modal" data-target="#modell">&#xf044;</i></a>&nbsp;&nbsp;</div>
+                 <div id="PasswordCheck" style="float: right;display: none;"><a href="#" id="PasswordCheckbt" onclick="update('Password')"><i style='font-size:16px' class='fas' data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="PasswordCanclebt" onclick="update('PasswordCancle')"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
+              </div>
+              <div class="borderstyle">
+                <br>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <label id = "Identity" style="display: inline;">消費者</label>
+                <label>
+                  <div class="col-md-2 d-flex">
+                    <div >
+                      <input type="submit" value="申請為攝影師" class="btn btn-primary pybt align-self-stretch">
+                    </div>
+                  </div>
+              </label>
+                <div id="MailCheck" style="float: right; display: none;"><a href="#" id="MailCheckbt" onclick="update('Mail')"><i style='font-size:16px' class="fas" data-toggle="modal" data-target="#modell">&#xf00c;</i></a>&nbsp;&nbsp;<a href="#" id="MailCanclebt" onclick="update('MailCancle')"><i style='font-size:16px' class='fa' data-toggle="modal" data-target="#modell">&#xf00d;</i></a>&nbsp;&nbsp;</div>
+              </div>
             </div>
           </div>
         </div>
@@ -123,38 +148,150 @@
 <script>
   function openCity(evt, cityName) {
   // Declare all variables
-  var i, tabcontent, tablinks;
+    var i, tabcontent, tablinks;
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
   }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the link that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-function edit(category)
-{
-  var value;
-  console.log(category);
-  if(category == 'Name')
+  function edit(category)
   {
-      document.getElementById('name').style.display = "none";
-      document.getElementById('EditName').style.display = "inline";
-      document.getElementById('EditNamebt').style.display = "none"
-      document.getElementById('NameCheck').style.display = "inline";
-      value = document.getElementById('EditName').value;
-      console.log(value);
+    var value;
+    console.log(category);
+    if(category == 'Name')
+    {
+        document.getElementById('name').style.display = "none";
+        document.getElementById('EditName').style.display = "inline";
+        document.getElementById('EditNamebt').style.display = "none"
+        document.getElementById('NameCheck').style.display = "inline";
+        $.ajax({
+              url:"/EditProfile.html",  
+              type:"POST",
+              data:{},
+              dataType:"json",
+              success:function(data)
+              {
+                console.log("good");
+              }
+            })
+    }
+    if(category == 'Phone')
+    {
+        document.getElementById('Phone').style.display = "none";
+        document.getElementById('EditPhone').style.display = "inline";
+        document.getElementById('EditPhonebt').style.display = "none";
+        document.getElementById('PhoneCheck').style.display = "inline";
+       $.ajax({
+              url:"/EditProfile.html",  
+              type:"POST",
+              data:{},
+              dataType:"json",
+              success:function(data)
+              {
+                console.log("good");
+              }
+            })
+    }
+    if(category == 'Birthday')
+    {
+        document.getElementById('Birthday').style.display = "none";
+        document.getElementById('EditBirthday').style.display = "inline";
+        document.getElementById('EditBirthdaybt').style.display = "none"
+        document.getElementById('BirthdayCheck').style.display = "inline";
+    }
+    if(category == 'Mail')
+    {
+        document.getElementById('Mail').style.display = "none";
+        document.getElementById('EditMail').style.display = "inline";
+        document.getElementById('EditMailbt').style.display = "none"
+        document.getElementById('MailCheck').style.display = "inline";
+    }
+    if(category == 'Password')
+    {
+        document.getElementById('Password').style.display = "none";
+        document.getElementById('EditPassword').style.display = "inline";
+        document.getElementById('EditOldPassword').style.display = "inline";
+        document.getElementById('EditNewPassword').style.display = "inline";
+        document.getElementById('CheckNewPassword').style.display = "inline";
+        document.getElementById('EditPasswordbt').style.display = "none"
+        document.getElementById('PasswordCheck').style.display = "inline";
+    }
   }
-}
+  function update(category)
+  {
+    var value;
+    if(category == 'Name' || category == 'NameCancle')
+    {
+      if(category == 'Name')
+      {
+        value = document.getElementById('EditName').value;
+        document.getElementById('name').innerHTML = "<label id = 'name' style='display: inline;''>"+value+"</label>";
+      }
+        document.getElementById('name').style.display = "inline";
+        document.getElementById('EditName').style.display = "none";
+        document.getElementById('EditNamebt').style.display = "inline"
+        document.getElementById('NameCheck').style.display = "none";
+    }
+    if(category == 'Phone' || category == 'PhoneCancle')
+    {
+      if(category == 'Phone')
+      {
+        value = document.getElementById('EditPhone').value;
+        document.getElementById('Phone').innerHTML = "<label id = 'Phone' style='display: inline;''>"+value+"</label>";
+      }
+        document.getElementById('Phone').style.display = "inline";
+        document.getElementById('EditPhone').style.display = "none";
+        document.getElementById('EditPhonebt').style.display = "inline"
+        document.getElementById('PhoneCheck').style.display = "none";
+    }
+    if(category == 'Birthday' || category == 'BirthdayCancle')
+    {
+      if(category == 'Birthday')
+      {
+        value = document.getElementById('EditBirthday').value;
+        document.getElementById('Birthday').innerHTML = "<label id = 'Birthday' style='display: inline;''>"+value+"</label>";
+      }
+        document.getElementById('Birthday').style.display = "inline";
+        document.getElementById('EditBirthday').style.display = "none";
+        document.getElementById('EditBirthdaybt').style.display = "inline"
+        document.getElementById('BirthdayCheck').style.display = "none";
+    }
+    if(category == 'Mail' || category == 'MailCancle')
+    {
+      if(category == 'Mail')
+      {
+        value = document.getElementById('EditMail').value;
+        document.getElementById('Mail').innerHTML = "<label id = 'Mail' style='display: inline;''>"+value+"</label>";
+      }
+        document.getElementById('Mail').style.display = "inline";
+        document.getElementById('EditMail').style.display = "none";
+        document.getElementById('EditMailbt').style.display = "inline"
+        document.getElementById('MailCheck').style.display = "none";
+    }
+     if(category == 'Password' || category == 'PasswordCancle')
+    {
+        document.getElementById('Password').innerHTML = "<label id='Password' style='display: inline;''>已設定</label>";
+        document.getElementById('Password').style.display = "inline";
+        document.getElementById('EditPassword').style.display = "none";
+        document.getElementById('EditPasswordbt').style.display = "inline"
+        document.getElementById('PasswordCheck').style.display = "none";
+        document.getElementById('EditOldPassword').style.display = "none";
+        document.getElementById('EditNewPassword').style.display = "none";
+        document.getElementById('CheckNewPassword').style.display = "none";
+    }
+  }
 </script>
 
 

@@ -6260,6 +6260,13 @@ button.bg-dark:focus {
 .py-3 {
   padding-top: 1rem !important; }
 
+.pybt{
+  padding-top: 0.5rem !important;
+  padding-bottom: : 0.5rem !important;
+  padding-left: 1.0rem !important;
+  padding-right: : 1.0rem !important;
+}
+
 .pr-3,
 .px-3 {
   padding-right: 1rem !important; }
