@@ -179,14 +179,13 @@
                 </div>
             </div>
             
-            <div style="display:inline; width: 100%">
-                <button class="button button1">Photographer</button>
-                <a class="nav-item active">&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <button class="button button1">consumer</button>
+            <div style="display:inline; width: 100%" class="person">
+                <button class="button button1" onclick="ShowPhotographer()">Photographer</button>
+                <a class="nav-item active" >&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <button class="button button1" onclick="ShowConsumer()">consumer</button>
                 <p><p>
-
-
             </div>
+            
     		<div class="row">
     			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
     				<div class="room">
@@ -478,7 +477,13 @@
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
+      
+<script language="javascript">
+function ShowMeDate() {
+　var Today=new Date();
+　alert("今天日期是 " + Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日");
+}
+</script>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>

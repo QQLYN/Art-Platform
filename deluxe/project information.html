@@ -111,7 +111,7 @@
           		</div>
           		
                 <div class="col-md-12 room-single ftco-animate mb-5 mt-4">
-          			<h3 class="mb-4">影片介紹</h3>
+          			<h3 class="mb-4"><i class='fas fa-film' style='font-size:24px'></i>&nbsp;影片介紹</h3>
           			<div class="block-16">
 		              <figure>
 		                <img src="images/picm2.jpg" alt="Image placeholder" class="img-fluid">
@@ -128,11 +128,11 @@
 	  			<button class="button button1" onclick="openCity(event, 'People')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;附上評論&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>(34)</button>
 	  			<button class="button button1" onclick="openCity(event, 'Food')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;附上圖片&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>(23)</button>
                <br>
-                <button class="button button1" onclick="openCity(event, 'Food')">五顆星<br>(20)</button>
-                <button class="button button1" onclick="openCity(event, 'Food')">四顆心<br>(20)</button>
-                <button class="button button1" onclick="openCity(event, 'Food')">三顆心<br>(20)</button>
-                <button class="button button1" onclick="openCity(event, 'Food')">兩顆心<br>(20)</button>
-                <button class="button button1" onclick="openCity(event, 'Food')">一顆心<br>(20)</button>
+                <button class="button button1" class="star" onclick="cStar(event, 'five')">五顆星<br>(20)</button>
+                <button class="button button1" onclick="cStar(event, 'four')">四顆心<br>(20)</button>
+                <button class="button button1" onclick="cStar(event, 'three')">三顆心<br>(20)</button>
+                <button class="button button1" onclick="cStar(event, 'two')">兩顆心<br>(20)</button>
+                <button class="button button1" onclick="cStar(event, 'one')">一顆心<br>(20)</button>
 		          </div>
                          
                          
@@ -149,11 +149,11 @@
                               <tbody>
                                 <tr>
                                     <td colspan="2">
-                                        <a href="#"><p class="rate" style="margin-right: 15px"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p></a>
+                                        <a href="#"><p class="rate" style="margin-right: 15px"><span id="Star"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p></a>
                                         <!-- 評價內容 -->
-                                        <h5>謝謝Jack專業的拍攝，在旅途中幫助我在當地留下了最棒、最美的回憶</h5>
+                                        <h5 id="rankcontent">謝謝Jack專業的拍攝，在旅途中幫助我在當地留下了最棒、最美的回憶</h5>
                                         <!-- 評價時間 -->
-                                        <p>2019 - 05 - 19&nbsp;交易紀錄<a href="#">(3)</a>
+                                        <p>2019 - 05 - 19&nbsp;
                                     </td>
                                 </tr>
                               </tbody>
@@ -246,9 +246,8 @@
 
 
 
-    <footer class="fixed-footer">
-        <span class="price mr-2">NT$1,500</span>
-        <input type="button" value="發送交易邀請" class="btn btn-primary py-3 px-4">
+    <footer class="fixed-footer">&nbsp;&nbsp;
+        <font size="5" align="center"valign="center">$1,500</font>&nbsp;&nbsp;&nbsp;<input type="button" value="發送交易邀請" class="btn btn-primary py-3 px-4">
     </footer>
     
   
