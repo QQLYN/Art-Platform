@@ -112,9 +112,15 @@
           		</div>
                 <div>
                     
+                     <!-- 愛心-->
+    					<style>
+                            .like{ font-size:25px;  color:#ccc; cursor:pointer;}
+                            .cs{color:#f00;}
+                        </style>  
                     
                     
-                <h5>
+                    
+                    <h5>
                     
                         &nbsp;&nbsp;&nbsp;
                         <i id="tab" class='fas fa-image'></i>&nbsp;&nbsp;
@@ -125,7 +131,8 @@
                                 <i class='far fa-star'></i>&nbsp;
                                 <i class='far fa-star'></i>&nbsp;
                                 <a href="">(3.0)</a>&nbsp;&nbsp;|&nbsp;
-                                <span id="">交易筆數&nbsp;<a href="">(3)</a></span>
+                                <span id="">交易筆數&nbsp;<a href="">(3)</a></span>&nbsp;&nbsp;|&nbsp;
+                                <span class="like">&#10084;</span>
                     </h5>
                     </div>
           		<div class="col-md-12 room-single mt-4 mb-5 ftco-animate">
@@ -314,7 +321,7 @@
 				    						</div>
 				    					</a>
 				    					<div class="text p-3 text-center">
-				    						<h3 class="mb-3"><a href="">大學生畢業照熱血青春</a></h3>
+				    						<h3 class="mb-3"><a href="">大學生畢業照熱血青春</a><span style="float: right" class="like">&#10084;</span></h3>
 				    						<p><span class="price mr-2">$1,500</span> <span class="per">每張照片</span></p>
 				    						
     						<p><i class='fas fa-map-marker-alt' ></i>&nbsp;&nbsp;台灣，台南&nbsp;&nbsp;&nbsp;<i class='fas fa-image'></i>&nbsp;&nbsp;人像</p>
@@ -337,7 +344,7 @@
     						</div>
     					</a>
     					<div class="text p-3 text-center">
-    						<h3 class="mb-3"><a href="rooms.html">山水風景畫地區不限</a></h3>
+    						<h3 class="mb-3"><a href="rooms.html">山水風景畫地區不限</a><span style="float: right" class="like">&#10084;</span></h3>
     						<p><span class="price mr-2">$1,000</span> <span class="per">每張照片</span></p>
                             
                             <p><i class='fas fa-map-marker-alt' ></i>&nbsp;&nbsp;
@@ -466,6 +473,15 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+         
+    <script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        $(function () {            
+            $(".like").click(function () {
+                $(this).toggleClass('cs');                
+            })
+        })
+    </script>
           
   </body>
 </html>
