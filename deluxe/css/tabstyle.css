@@ -1,19 +1,21 @@
 .tab {
   overflow: hidden;
   background-color: transparent;
-  margin-bottom: 10px;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
   float: left;
-  border: none;
+  border: solid;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 17px;
+  margin-right: 3px;
+  border-radius: 1em;
+  border-color: #8d703b; 
 }
 
 /* Change background color of buttons on hover */
@@ -32,4 +34,14 @@
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+}
+
+.ftco-section2{
+  padding: 3em 0;
+}
+
+.pius{
+  border: solid;
+  border-radius: 10em;
+  color: #8d703b;
 }
