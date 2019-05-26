@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/tabstyle.css">
       <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+      <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+      <link rel=stylesheet href="css/buttom.css">
+      <link rel=stylesheet href="css/ul.css">
   </head>
   <body>
 
@@ -68,12 +71,21 @@
 
 
     <section class="ftco-section bg-light">
-		<div>
+        
+        
+		
+            
     	<div class="container">
+            <div style="display:inline; width: 100%" class="person";margin-left:100px;float:rigtht;>
+                <button id="buttonP"class="button button1" onclick="cPerson(event, 'Provider')">Photographer</button>
+                <button id="buttonU" class="button button1" onclick="cPerson(event, 'User')">consumer</button>
+                <p><p>
+            </div>
     		<div class="row">
 	        <div class="col-lg-9">
 		    		<div class="row">
 		    			<div id="first" class="col-sm col-md-6 col-lg-4 ftco-animate" style="display: unset">
+                        
 						<!--小卡片-->
 		    				<div class="room">
 		    					<a id="SceneryPicture" href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/sa2.jpg);">
@@ -163,7 +175,7 @@
 		    	</div>
 		    	<div class="col-lg-3 sidebar">
 	      		<div class="sidebar-wrap bg-light ftco-animate">
-	      			<h3 class="heading mb-4">Advanced Search</h3>
+	      			<h3 class="heading mb-4">搜尋條件</h3>
 	      			<form action="#">
 	      				<div class="fields">
 		              <div class="form-group">
