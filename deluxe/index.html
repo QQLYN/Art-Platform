@@ -141,66 +141,7 @@
 		                  </div>
 	        			</div>
                        
-                       <div class="col-md-3 d-flex">
-	        				<div class="form-group p-4 align-self-stretch d-flex align-items-end">
-	        			        <div class="wrap">
-			      			    <label for="#">年資</label>
-			      					<div class="form-field">
-			        					<div class="select-wrap">
-                                            <ul class="drop-down-menu">
-                                                <li>請選擇&nbsp;<div class="arrow-bottom"></div>
-                                                <ul>
-                                                <li><input type="checkbox" name="vehicle1" value="Bike">&nbsp;&nbsp;一年內<br></li>
-                                                <li><input type="checkbox" name="vehicle1" value="Bike">&nbsp;&nbsp;1~5年<br></li>
-                                                <li><input type="checkbox" name="vehicle1" value="Bike">&nbsp;&nbsp;5~10年<br></li>
-                                                <li><input type="checkbox" name="vehicle1" value="Bike">&nbsp;&nbsp;10年以上<br></li>
-                                                </ul>
-                                                </li>
-                                                </ul>
-			                             </div>
-				                    </div>
-				                </div>
-		                  </div>
-	        			</div>
-                     
-                     <div class="col-md-3 d-flex">
-	        				<div class="form-group p-4 align-self-stretch d-flex align-items-end">
-	        			        <div class="wrap">
-			      			    <label for="#">有無工作室</label>
-			      					<div class="form-field">
-			        					<div class="select-wrap">
-                                            <ul class="drop-down-menu">
-                                            <li>請選擇&nbsp;<div class="arrow-bottom"></div>
-                                            <ul>
-                                            <li><input type="checkbox" name="vehicle1" value="Bike">&nbsp;&nbsp;有<br></li>
-                                            <li><input type="checkbox" name="vehicle1" value="Bike">&nbsp;&nbsp;無<br></li>
-                                            </ul>
-                                            </li>
-                                            </ul>
-			                             </div>
-				                    </div>
-				                </div>
-		                  </div>
-	        			</div>
-                     
-                     <div height="1px" width="1px">
-                     </div>
-                      
-                      
-                        <div class="col-md-3 d-flex">
-	        				<div class="form-group p-4 align-self-stretch d-flex align-items-end">
-	        			        <div class="wrap">
-			      			    <label for="#">價格</label>
-			      					<div class="form-field">
-			        					<div class="select-wrap">
-                                          <input type="text" name="vehicle1" size="4">&nbsp;元 - 
-                                        <input type="text" name="vehicle1" size="4">&nbsp;元
-                                         </div>
-				                    </div>
-				                </div>
-		                  </div>
-	        			</div>
-	        			
+                       
 	        			<div class="col-md d-flex">
 	        				<div class="form-group p-4 align-self-stretch d-flex align-items-end">
 	        					<div class="wrap">
@@ -216,7 +157,7 @@
 	        			
 	        			<div class="col-md-2 d-flex" href="searchResults.html">
 	        				<div class="form-group d-flex align-self-stretch">
-			              <input type="submit" value="Search" class="btn btn-primary py-3 px-4 align-self-stretch" onclick="redirect();" >
+			              <input type="submit" value="Search" class="btn btn-primary py-3 px-4 align-self-stretch" >
 			            </div>
 	        			</div>
                         
@@ -239,7 +180,7 @@
             </div>
             
             <div style="display:inline; width: 100%" class="person">
-                <button  id="buttonP"class="button button1" onclick="cPerson(event, 'Provider')">Photographer</button>
+                <button id="buttonP"class="button button1" onclick="cPerson(event, 'Provider')">Photographer</button>
                 <button id="buttonU" class="button button1" onclick="cPerson(event, 'User')">consumer</button>
                 <p><p>
             </div>
@@ -557,10 +498,7 @@
       
 <script language="javascript">
     window.onload=cPerson(event, 'Provider');
-    
-    function redirect(){ 
-2	window.location.href = "collection.html"; // other page 
-3	}
+
     
 function cPerson(evt, personName) {
         personName == "Provider";
