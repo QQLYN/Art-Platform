@@ -72,11 +72,16 @@
       	</div>
     </div>
     <section class="ftco-section2 bg-light">
-    	<div class="tab" style="background: #F8F9FA; position: relative; left: 6%;margin-bottom: 20px;">
-			<button class="tablinks" onclick="openCity(event, 'All')">全部</button>
-			<button class="tablinks" onclick="openCity(event, 'Scenery')">風景</button>
-			<button class="tablinks" onclick="openCity(event, 'People')">人像</button>
-			<button class="tablinks" onclick="openCity(event, 'Food')">美食</button>
+    	<div>
+    		<button id="Identity" class="button button1" style="position: relative; left: 6%; margin-bottom: 20px;" onclick="switchVisible()" value="PHOTOGRAPHER">PHOTOGRAPHER</button>
+    	</div>
+    	<div class="tab" style="background: #F8F9FA; position: relative; left: 6%; margin-bottom: 20px;">
+			<div id="AlbumTab">
+				<button class="tablinks" onclick="openCity(event, 'All')">全部</button>
+				<button class="tablinks" onclick="openCity(event, 'Scenery')">風景</button>
+				<button class="tablinks" onclick="openCity(event, 'People')">人像</button>
+				<button class="tablinks" onclick="openCity(event, 'Food')">美食</button>
+			</div>
 			<div style="left: 34%;position: relative;">
 
 		    	<button type="button" class="tablinks" data-toggle="modal" data-target="#myModal">新增相簿</button>
@@ -87,13 +92,13 @@
 				      <!-- Modal content-->
 				      <div class="modal-content">
 				        <div class="modal-header">
-				          <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        	<button type="button" class="close" data-dismiss="modal">&times;</button>
 				        </div>
 				        <div class="modal-body">
-				           <label id = "Album">相簿名稱</label><label><input id="AlbumName" type="text" value="" name="請輸入電子郵件" style="display: none"></label>
+				           <label id = "AlbumID">相簿名稱</label>&nbsp;&nbsp;&nbsp;<label><input id="AlbumName" type="text" value="" name="請輸入相簿名稱" ></label>
 				        </div>
 				        <div class="modal-footer">
-				          <button type="button" class="btn btn-default" data-dismiss="modal">新增</button>
+				          <button type="button" id="AddAlbum" class="btn btn-default" data-dismiss="modal" onclick="UpdateAlbum()">新增</button>
 				        </div>
 				      </div>
 				      
@@ -247,31 +252,31 @@
 										<div class="form-check">
 											<input type="checkbox" class="form-check-input" id="exampleCheck1">
 											<label class="form-check-label" for="exampleCheck1">
-												<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p>
+												<p class="rate" style="margin-left: 15px;"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p>
 											</label>
 										</div>
 										<div class="form-check">
 										    <input type="checkbox" class="form-check-input" id="exampleCheck1">
 										    <label class="form-check-label" for="exampleCheck1">
-										    	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i></span></p>
+										    	<p class="rate" style="margin-left: 15px;"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i></span></p>
 										    </label>
 										</div>
 										<div class="form-check">
 										    <input type="checkbox" class="form-check-input" id="exampleCheck1">
 										    <label class="form-check-label" for="exampleCheck1">
-										      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+										      	<p class="rate" style="margin-left: 15px;"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
 										    </label>
 										</div>
 										<div class="form-check">
 											<input type="checkbox" class="form-check-input" id="exampleCheck1">
 										    <label class="form-check-label" for="exampleCheck1">
-										      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+										      	<p class="rate" style="margin-left: 15px;"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
 										    </label>
 										</div>
 										<div class="form-check">
 										    <input type="checkbox" class="form-check-input" id="exampleCheck1">
 										    <label class="form-check-label" for="exampleCheck1">
-										      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+										      	<p class="rate" style="margin-left: 15px;"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
 											</label>
 										</div>
 									</form>
@@ -330,6 +335,33 @@
 			document.getElementById("second").style.display = "none";
 			document.getElementById("third").style.display = "unset";
 			console.log("Food");
+		}
+	}
+
+	function UpdateAlbum(){
+		var value ,option;
+		var album = document.getElementById("AlbumTab");
+		value = document.getElementById("AlbumName").value;
+		console.log(value);
+		var btn = document.createElement("Button");
+		btn.class = 'tablinks';
+		btn.onclick = 'openCity(event, "ABC")';
+		btn.innerHTML = value;
+		console.log(btn);
+		album.append(btn);
+		document.getElementById("AlbumName").value = "";
+		//option.innerHTML = option.innerHTML + "<button class='tablinks' onclick='openCity(event, 'ABC')''>"+value+"</button>";
+	}
+	function switchVisible(){
+		var Identity = document.getElementById("Identity").value;
+		console.log(Identity);
+		if(Identity == "PHOTOGRAPHER"){
+			document.getElementById("Identity").innerHTML = "CONSUMER";
+			document.getElementById("Identity").value = "CONSUMER";
+		}
+		else if (Identity == "CONSUMER"){
+			document.getElementById("Identity").innerHTML = "PHOTOGRAPHER";
+			document.getElementById("Identity").value = "PHOTOGRAPHER";
 		}
 	}
 </script>
