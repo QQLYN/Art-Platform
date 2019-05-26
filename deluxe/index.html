@@ -214,9 +214,9 @@
 		              </div>
 	        			</div>
 	        			
-	        			<div class="col-md-2 d-flex">
+	        			<div class="col-md-2 d-flex" href="searchResults.html">
 	        				<div class="form-group d-flex align-self-stretch">
-			              <input type="submit" value="Search" class="btn btn-primary py-3 px-4 align-self-stretch">
+			              <input type="submit" value="Search" class="btn btn-primary py-3 px-4 align-self-stretch" onclick="redirect();" >
 			            </div>
 	        			</div>
                         
@@ -557,6 +557,10 @@
       
 <script language="javascript">
     window.onload=cPerson(event, 'Provider');
+    
+    function redirect(){ 
+2	window.location.href = "collection.html"; // other page 
+3	}
     
 function cPerson(evt, personName) {
         personName == "Provider";
