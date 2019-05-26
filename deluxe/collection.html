@@ -30,52 +30,79 @@
 
  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
   </head>
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">ARTSA</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+	    	<a class="navbar-brand" href="index.html">ARTSA</a>
+	      	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        	<span class="oi oi-menu"></span> Menu
+	      	</button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item active"><a href="collection.html" class="nav-link">Collection</a></li>
-	          <li class="nav-item"><a href="transaction.html" class="nav-link">Transcation</a></li>
-              <li class="nav-item"><a href="blog.html" class="nav-link">Account</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-              <li class="nav-item"><a href="Signin.html" class="nav-link">Login</a></li>
-	        </ul>
-	      </div>
+		    <div class="collapse navbar-collapse" id="ftco-nav">
+		        <ul class="navbar-nav ml-auto">
+		        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+			        <li class="nav-item active"><a href="collection.html" class="nav-link">Collection</a></li>
+			        <li class="nav-item"><a href="transaction.html" class="nav-link">Transcation</a></li>
+		            <li class="nav-item"><a href="blog.html" class="nav-link">Account</a></li>
+			        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+		            <li class="nav-item"><a href="Signin.html" class="nav-link">Login</a></li>
+		        </ul>
+		    </div>
 	    </div>
-	  </nav>
+	</nav>
     <!-- END nav -->
 
     <div class="hero-wrap" style="background-image: url('images/bg_1.jpg');">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
-          <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
-          	<div class="text">
-	             <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>Collection</span></p>
-	            <h1 class="mb-4 bread">Collection</h1>
-            </div>
-          </div>
-        </div>
-      </div>
+      	<div class="overlay"></div>
+      	<div class="container">
+	        <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
+		        <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
+		          	<div class="text">
+			             <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>Collection</span></p>
+			            <h1 class="mb-4 bread">Collection</h1>
+		            </div>
+		        </div>
+	        </div>
+      	</div>
     </div>
     <section class="ftco-section2 bg-light">
-    	<div class="tab" style="background: #F8F9FA; position: relative; left: 10%;margin-bottom: 20px;">
+    	<div class="tab" style="background: #F8F9FA; position: relative; left: 6%;margin-bottom: 20px;">
 			<button class="tablinks" onclick="openCity(event, 'All')">全部</button>
 			<button class="tablinks" onclick="openCity(event, 'Scenery')">風景</button>
 			<button class="tablinks" onclick="openCity(event, 'People')">人像</button>
 			<button class="tablinks" onclick="openCity(event, 'Food')">美食</button>
-			<div style="left: 36%;margin-top: 15px;position: relative;">
-		    	<a class="fa fa-plus" style="border: solid;border-radius: 10em;color: #8d703b; font-size: 35px;" data-toggle="model" data-target="#model"></a>
-		    	</div>
+			<div style="left: 34%;position: relative;">
+
+		    	<button type="button" class="tablinks" data-toggle="modal" data-target="#myModal">新增相簿</button>
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" role="dialog">
+				    <div class="modal-dialog">
+				    
+				      <!-- Modal content-->
+				      <div class="modal-content">
+				        <div class="modal-header">
+				          <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        </div>
+				        <div class="modal-body">
+				           <label id = "Album">相簿名稱</label><label><input id="AlbumName" type="text" value="" name="請輸入電子郵件" style="display: none"></label>
+				        </div>
+				        <div class="modal-footer">
+				          <button type="button" class="btn btn-default" data-dismiss="modal">新增</button>
+				        </div>
+				      </div>
+				      
+				    </div>
+				  </div>
+				  
+				</div>
+
+			</div>
 		</div>
 
     	<div class="container">
@@ -100,7 +127,7 @@
 			    							<li id="price"><span>價錢:</span>1000元</li>
 			    						</ul>
 			    						<hr>
-			    						<p class="pt-1"><a href="room-single.html" class="btn-custom">More Information <span class="icon-long-arrow-right"></span></a></p>
+			    						<p class="pt-1"><a href="room-single.html" class="btn-custom">More Information <span class="icon-long-arrow-right" style="position: absolute; margin-top: 5px; margin-left: 5px;"></span></a></p>
 			    					</div>
 			    				</div>
 			    			</div>
@@ -121,7 +148,7 @@
 			    							<li><span>價錢:</span>2000元</li>
 			    						</ul>
 			    						<hr>
-			    						<p class="pt-1"><a href="room-single.html" class="btn-custom">More Information <span class="icon-long-arrow-right"></span></a></p>
+			    						<p class="pt-1"><a href="room-single.html" class="btn-custom">More Information <span class="icon-long-arrow-right" style="position: absolute; margin-top: 5px; margin-left: 5px;"></span></a></p>
 			    					</div>
 			    				</div>
 			    			</div>
@@ -142,7 +169,7 @@
 			    							<li><span>價錢:</span>1300元</li>
 			    						</ul>
 			    						<hr>
-			    						<p class="pt-1"><a href="room-single.html" class="btn-custom">More Information <span class="icon-long-arrow-right"></span></a></p>
+			    						<p class="pt-1"><a href="room-single.html" class="btn-custom">More Information <span class="icon-long-arrow-right" style="position: absolute; margin-top: 5px; margin-left: 5px;"></span></a></p>
 			    					</div>
 			    				</div>
 			    			</div>
@@ -282,8 +309,8 @@
 			document.getElementById("second").style.display = "none";
 			document.getElementById("third").style.display = "none";
 			console.log("Scenery");
-			//document.getElementById("SceneryPicture").style.background-image = "url(images/sa2.jpg)";
-			/*document.getElementById("title").innerHTML = "山水風景畫地區不限";
+			/*document.getElementById("SceneryPicture").style.background-image = "url(images/sa2.jpg)";
+			document.getElementById("title").innerHTML = "山水風景畫地區不限";
 			document.getElementById("name").innerHTML = "山水風景";
 			document.getElementById("tag").innerHTML = "<span>類別:</span>風景";
 			document.getElementById("area").innerHTML = "<span>地區:</span>台灣，台北";
