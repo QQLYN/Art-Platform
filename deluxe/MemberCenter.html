@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/membercenterstyle.css">
     <link rel="stylesheet" href="css/tabstyle.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
 
@@ -69,7 +71,7 @@
 
     <section class="ftco-section bg-light">
       <div class="container">
-      	<div><label>您現在的身分是<input type="button" id="Identity" name="User_Identity" class="button button1" style="position: relative; left: 6%; margin-bottom: 20px;" onclick="switchVisible()" value="PHOTOGRAPHER"></label>
+      	<div><label>您現在的身分是<input type="submit" id="Identity" name="User_Identity" class="button button1" style="position: relative; left: 6%; margin-bottom: 20px;" onclick="switchVisible()" value="PHOTOGRAPHER"></label>
     		
     	</div>
           <div style="border-style: solid; border-width: 1px;">
@@ -178,7 +180,7 @@
 	function switchVisible(){
 		var Value;
 		var Identity = document.getElementById("Identity").value;
-		console.log(Identity);
+		//console.log(Identity);
 		if(Identity == "PHOTOGRAPHER"){
 			document.getElementById("Identity").innerHTML = "CONSUMER";
 			Value = document.getElementById("Identity").value = "CONSUMER";
@@ -188,16 +190,18 @@
 			Value = document.getElementById("Identity").value = "PHOTOGRAPHER";
 		}
 
-		$.ajax({
-              url:"./PHP/Identity.php",  
-              type:"POST",
-              data:{Value},
-              dataType:"json",
-              success:function(data)
-              {
-                console.log("good");
-              }
-            })
+		$.ajax
+		({
+            url:"./PHP/Identity.php",  
+            type:"POST",
+            data:{identity: Value},
+            dataType:"json",
+            success:function(data)
+            {
+	         	console.log(data.msg);
+	            console.log("good");
+            }       
+		})
 	}
 </script>
 
