@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/membercenterstyle.css">
+    <link rel="stylesheet" href="css/tabstyle.css">
   </head>
   <body>
 
@@ -67,7 +68,10 @@
     </div>
 
     <section class="ftco-section bg-light">
-      <div class="container"  >
+      <div class="container">
+      	<div><label>您現在的身分是<input type="button" id="Identity" name="User_Identity" class="button button1" style="position: relative; left: 6%; margin-bottom: 20px;" onclick="switchVisible()" value="PHOTOGRAPHER"></label>
+    		
+    	</div>
           <div style="border-style: solid; border-width: 1px;">
             <div>
               <br>
@@ -169,6 +173,33 @@
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+
+<script type="text/javascript">
+	function switchVisible(){
+		var Value;
+		var Identity = document.getElementById("Identity").value;
+		console.log(Identity);
+		if(Identity == "PHOTOGRAPHER"){
+			document.getElementById("Identity").innerHTML = "CONSUMER";
+			Value = document.getElementById("Identity").value = "CONSUMER";
+		}
+		else if (Identity == "CONSUMER"){
+			document.getElementById("Identity").innerHTML = "PHOTOGRAPHER";
+			Value = document.getElementById("Identity").value = "PHOTOGRAPHER";
+		}
+
+		$.ajax({
+              url:"./PHP/Identity.php",  
+              type:"POST",
+              data:{Value},
+              dataType:"json",
+              success:function(data)
+              {
+                console.log("good");
+              }
+            })
+	}
+</script>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
