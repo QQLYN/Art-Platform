@@ -1,4 +1,6 @@
 <?php
-	$identity = $_POST["User_Identity"];
+	$identity = $_POST['identity'];
+	$json = array('msg' => $identity);
 	echo $identity;
+	echo json_encode($json);
 ?>
