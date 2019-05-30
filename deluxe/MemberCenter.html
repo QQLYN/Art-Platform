@@ -182,23 +182,26 @@
 
 <script type="text/javascript" crossorigin="anonymous">
   function switchVisible(){
-    var Value;
+    var Value
+    var role;
     var Identity = document.getElementById("Identity").value;
     //console.log(Identity);
     if(Identity == "PHOTOGRAPHER"){
       document.getElementById("Identity").innerHTML = "CONSUMER";
       Value = document.getElementById("Identity").value = "CONSUMER";
+      role = 1;
     }
     else if (Identity == "CONSUMER"){
       document.getElementById("Identity").innerHTML = "PHOTOGRAPHER";
       Value = document.getElementById("Identity").value = "PHOTOGRAPHER";
+      role = 2;
     }
 
     $.ajax
     ({
             url:"http://localhost/SA/deluxe/PHP/Identity.php",  
             type:"POST",
-            data:{Value},
+            data:{role},
             dataType:"json",
             success:function(data)
             {
