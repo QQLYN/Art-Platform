@@ -2,7 +2,7 @@
 	//echo $Identity;
 	$Link = mysqli_connect('localhost', 'ARTSA', 'artsa108');
 	mysqli_select_db($Link,'artsa')or die($connect_error);
-	$result = mysqli_query($Link,"SELECT `Identity` FROM `test`");
+	$result = mysqli_query($Link,"SELECT `role` FROM `test`");
 	if(!$result)
 	{
 		echo ("Error: ".mysqli_error($Link));
@@ -10,7 +10,15 @@
 	}
 	while ($row = mysqli_fetch_array($result)) {
 		//echo 'Identity = ';
-		echo json_encode(array('Identity' => $row['Identity']));
+		if($row['role'] == 1)
+		{
+			echo "COUMSER";
+		}
+		if($row['role'] == 2)
+		{
+			echo "PHOTOGRAPHER";
+		}
+		//echo json_encode(array('Identity' => $row['Identity']));
 	}
 	
 	mysqli_close($Link);
