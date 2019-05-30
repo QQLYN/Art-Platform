@@ -30,29 +30,33 @@
     <link rel="stylesheet" href="css/tabstyle.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script> 
+
   </head>
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">ARTSA</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">ARTSA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item "><a href="rooms.html" class="nav-link">Collection</a></li>
-	          <li class="nav-item"><a href="restaurant.html" class="nav-link">Transcation</a></li>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item "><a href="rooms.html" class="nav-link">Collection</a></li>
+            <li class="nav-item"><a href="restaurant.html" class="nav-link">Transcation</a></li>
                 
               <li class="nav-item active"><a href="blog.html" class="nav-link">Account</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
             <li class="nav-item"><a href="" class="nav-link">logout</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <!-- END nav -->
 
     <div class="hero-wrap" style="background-image: url('images/bg_1.jpg');">
@@ -60,9 +64,9 @@
       <div class="container">
         <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
           <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
-          	<div class="text">
-	            <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
-	            <h1 class="mb-4 bread">MemberCenter</h1>
+            <div class="text">
+              <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
+              <h1 class="mb-4 bread">MemberCenter</h1>
             </div>
           </div>
         </div>
@@ -71,9 +75,9 @@
 
     <section class="ftco-section bg-light">
       <div class="container">
-      	<div><label>您現在的身分是<input type="submit" id="Identity" name="User_Identity" class="button button1" style="position: relative; left: 6%; margin-bottom: 20px;" onclick="switchVisible()" value="PHOTOGRAPHER"></label>
-    		
-    	</div>
+        <div><label>您現在的身分是<input type="submit" id="Identity" name="User_Identity" class="button button1" style="position: relative; left: 6%; margin-bottom: 20px;" onclick="switchVisible()" value="PHOTOGRAPHER"></label>
+        
+      </div>
           <div style="border-style: solid; border-width: 1px;">
             <div>
               <br>
@@ -105,7 +109,7 @@
              <br>
           </div>
       </div>
-		
+    
     </section>
 
 
@@ -148,14 +152,14 @@
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -176,33 +180,36 @@
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-<script type="text/javascript">
-	function switchVisible(){
-		var Value;
-		var Identity = document.getElementById("Identity").value;
-		//console.log(Identity);
-		if(Identity == "PHOTOGRAPHER"){
-			document.getElementById("Identity").innerHTML = "CONSUMER";
-			Value = document.getElementById("Identity").value = "CONSUMER";
-		}
-		else if (Identity == "CONSUMER"){
-			document.getElementById("Identity").innerHTML = "PHOTOGRAPHER";
-			Value = document.getElementById("Identity").value = "PHOTOGRAPHER";
-		}
+<script type="text/javascript" crossorigin="anonymous">
+  function switchVisible(){
+    var Value;
+    var Identity = document.getElementById("Identity").value;
+    //console.log(Identity);
+    if(Identity == "PHOTOGRAPHER"){
+      document.getElementById("Identity").innerHTML = "CONSUMER";
+      Value = document.getElementById("Identity").value = "CONSUMER";
+    }
+    else if (Identity == "CONSUMER"){
+      document.getElementById("Identity").innerHTML = "PHOTOGRAPHER";
+      Value = document.getElementById("Identity").value = "PHOTOGRAPHER";
+    }
 
-		$.ajax
-		({
-            url:"./PHP/Identity.php",  
+    $.ajax
+    ({
+            url:"http://localhost/SA/deluxe/PHP/Identity.php",  
             type:"POST",
-            data:{identity: Value},
+            data:{Value},
             dataType:"json",
             success:function(data)
             {
-	         	console.log(data.msg);
-	            console.log("good");
-            }       
-		})
-	}
+            console.log(data.Identity);
+              console.log("good");
+            },
+            error: function(xhr) { 
+               console.log(xhr.responseText);
+            }        
+    })
+  }
 </script>
 
   <script src="js/jquery.min.js"></script>
