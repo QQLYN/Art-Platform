@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION["Mail"])){
-  header("Location: index.html");
+  header("Location: index.php");
 }else{
   if(isset($_POST["s_mail"])){
     $data = check_id_pass($_POST["s_mail"], $_POST["s_password"], $_POST["Provider_or_not"]);
@@ -47,14 +47,16 @@ function check_id_pass($Mail, $Password,$Provider_or_not){
 
   return false;
 }
+
 function signin_success($data){
   $_SESSION[Mail] = $data[Mail];
   $_SESSION[Password] = $data[Password];
   $_SESSION[Phone] = $data[Phone];
   $_SESSION[Provider_or_not] = $data[Provider_or_not];
     
-  header("Location: index.html");
+  header("Location: index.php");
 }
+
 function show_html($error=''){
   ?>
   <?php
@@ -103,7 +105,7 @@ header("Content-Type:text/html; charset=utf-8");
     <!-- END nav -->
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-            <a href="index.html">ARTSA</a>
+            <a>ARTSA</a>
         </div>
     </nav>
 
