@@ -15,6 +15,6 @@
     mysql_query($sql,$link);
 
   
-    header("Location:Signin.html");
+    header("Location:Sign.php");
 
 ?>
