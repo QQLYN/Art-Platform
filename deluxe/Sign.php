@@ -7,7 +7,7 @@ if(isset($_SESSION["Mail"])){
     $data = check_id_pass($_POST["s_mail"], $_POST["s_password"], $_POST["Provider_or_not"]);
         
       if($data){
-          if($_POST["Provider_or_not"] == "一般登入"){
+          if($_POST["Provider_or_not"] == "ä¸€èˆ¬ç™»å…¥"){
               if($data["Provider_or_not"] == 0){
                   signin_success($data);
               }else{
@@ -16,7 +16,7 @@ if(isset($_SESSION["Mail"])){
               }
           }else{
               if($data["Provider_or_not"] == 0){
-                  show_html("<p><font>>您還未成為攝影師唷！</font></p>");
+                  show_html("<p><font>>æ‚¨é‚„æœªæˆç‚ºæ”å½±å¸«å”·ï¼</font></p>");
               }else{
                   $data["Provider_or_not"] = 0;
                   signin_success($data);
@@ -24,7 +24,7 @@ if(isset($_SESSION["Mail"])){
           }
           
       }else{
-          show_html("<p><font>帳號或密碼錯誤</font></p>");
+          show_html("<p><font>å¸³è™Ÿæˆ–å¯†ç¢¼éŒ¯èª¤</font></p>");
       }
       
   }else{
@@ -123,12 +123,12 @@ header("Content-Type:text/html; charset=utf-8");
                         </div>
                         <div class="modal-body">
                             <tr height=50>
-                                <td>??:</td>
+                                <td>MailS</td>
                                 <td><input type="text" name="name" class="lable"></td>
                             </tr>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" type="submit">傳送至信箱
+                            <button type="button" class="btn btn-default" type="submit">å‚³é€è‡³ä¿¡ç®±
                             </button>
                         </div>
                     </div>
@@ -168,8 +168,8 @@ header("Content-Type:text/html; charset=utf-8");
                                     </div><br>
                                     <? echo $error; ?>
                                     <div class="group">
-                                            <input type="submit" class="button" value="一般登入" name="Provider_or_not">
-                                            <input type="submit" class="button" value="攝影師登入" name="Provider_or_not">
+                                            <input type="submit" class="button" value="ä¸€èˆ¬ç™»å…¥" name="Provider_or_not">
+                                            <input type="submit" class="button" value="æ”å½±å¸«ç™»å…¥" name="Provider_or_not">
                                     </div>
                                     <div>
                                         <p style="color: gainsboro">------------------------------------------------------------------------</p>
@@ -196,7 +196,7 @@ header("Content-Type:text/html; charset=utf-8");
                                     </div>
                                     <div class="group">
                                         <label for="pass" class="label">Password</label>
-                                        <input name="r_password" type="password" placeholder="至少六位數以上英數字組合" required pattern="[A-Za-z0-9]{6,20}" class="input" data-type="password" required="required">
+                                        <input name="r_password" type="password" placeholder="è‡³å°‘å…­ä½æ•¸ä»¥ä¸Šè‹±æ•¸å­—çµ„åˆ" required pattern="[A-Za-z0-9]{6,20}" class="input" data-type="password" required="required">
                                     </div>
                                     <!---<div class="group">
 <label for="pass" class="label">Repeat Password</label>
@@ -226,7 +226,7 @@ header("Content-Type:text/html; charset=utf-8");
                                         </ul>
                                     </div><br>
                                     <div class="group">
-                                        <input type="submit" class="button" value="註冊完成">
+                                        <input type="submit" class="button" value="è¨»å†Šå®Œæˆ">
                                     </div>
                                 </div>
                                 </table>
