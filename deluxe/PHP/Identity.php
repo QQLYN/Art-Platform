@@ -1,4 +1,5 @@
 <?php
+
 	$Identity = json_encode($_POST['role']);
 	//echo $Identity;
 	$Link = mysqli_connect('localhost', 'ARTSA', 'artsa108');
