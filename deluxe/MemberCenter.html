@@ -34,6 +34,28 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="http://malsup.github.com/jquery.form.js"></script> 
 
+    <script>
+    $( document ).ready(function() {
+        console.log( "document loaded" );
+    $.ajax
+        ({
+                url:"http://localhost/SA/deluxe/PHP/GetUser.php",  
+                type:"POST",
+                data:{},
+                dataType:"json",
+                success:function(data)
+                {
+                  console.log(data);
+                  console.log("good");
+                },
+                error: function(xhr) { 
+                   console.log(xhr.responseText);
+                }        
+        })
+
+    });
+  </script>
+
   </head>
   <body>
 
