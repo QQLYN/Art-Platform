@@ -16,7 +16,7 @@ if(isset($_SESSION["Mail"])){
               }
           }else{
               if($data["Provider_or_not"] == 0){
-                  show_html("<p><font>>您還未成為攝影師唷！</font></p>");
+                  show_html("<p><font color='white'><strong><您還未成為攝影師唷！></strong></font></p>");
               }else{
                   $data["Provider_or_not"] = 0;
                   signin_success($data);
@@ -24,7 +24,7 @@ if(isset($_SESSION["Mail"])){
           }
           
       }else{
-          show_html("<p><font>帳號或密碼錯誤</font></p>");
+          show_html("<p><font color='white'><strong>帳號或密碼錯誤！</strong></font></p>");
       }
       
   }else{
