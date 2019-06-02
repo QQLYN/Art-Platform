@@ -12,6 +12,7 @@ if(! isset($_SESSION["Mail"])){
 }$mail=$_SESSION["Mail"];
 $pon=$_SESSION["Provider_or_not"];
 $rolesign=$_SESSION["role"];
+echo "$rolesign";
 //重上一個得到的值，這個帳號登入後就會存入。
 //下面才會用到，判斷是不是攝影師
 //$_SESSION[Provider_or_not] = 0;
@@ -213,7 +214,7 @@ $rolesign=$_SESSION["role"];
                                 <?//php 
                                    echo "<span class='per' id='year'>";
                                 
-                                    if($rolesign == 2){
+                                    if($rolesign == 1){
                                         
                                         $date = date("Y");//取得年份（相減）
                                         $yy=$date-$rs[8];
@@ -349,7 +350,7 @@ $rolesign=$_SESSION["role"];
       
 <script language="javascript">
     <?
-    if($pon == 2){
+    if($rolesign == 1){
         echo "window.onload=cPerson(event,'User');";
     }else{
         echo "window.onload=cPerson(event,'Provider');";
@@ -358,12 +359,12 @@ $rolesign=$_SESSION["role"];
 
     
 function cPerson(evt, personName) {
-         <?
-    if($rolesign == 2){
+<?
+    if($rolesign == 1){
         echo "personName == 'Provider';";
    }else{
         echo "personName == 'User';";
-    }?>
+}?>
 		console.log(personName);
         
 		if(personName == "Provider")/*消費者：攝影師發布的專案*/
@@ -375,7 +376,6 @@ function cPerson(evt, personName) {
 		}
 		if(personName == "User")/*攝影師：消費者發布的專案*/
 		{
-            
             document.getElementById("cYear").style.display = "unset";
             document.getElementById("cOffice").style.display = "unset";
 			console.log("User");
