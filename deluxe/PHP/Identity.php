@@ -1,7 +1,8 @@
 <?php
 
-	session_start();
+	
 	$Identity = json_encode(@$_POST["role"]);
+	session_start();
 	$_SESSION['role'] = $Identity;
 	$Mail = json_encode(@$_POST["Mail"]);
 	//echo $Identity;
