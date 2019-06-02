@@ -11,7 +11,7 @@ if(! isset($_SESSION["Mail"])){
   
 }$mail=$_SESSION["Mail"];
 $pon=$_SESSION["Provider_or_not"];
-$rolesign=$_SESSION["role"]
+$rolesign=$_SESSION["role"];
 //重上一個得到的值，這個帳號登入後就會存入。
 //下面才會用到，判斷是不是攝影師
 //$_SESSION[Provider_or_not] = 0;
