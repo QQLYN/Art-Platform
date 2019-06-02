@@ -194,7 +194,8 @@ $rolesign=$_SESSION["role"];
                         </style>  
                         
     					<div class="text p-3 text-center">
-    						<h3 class="mb-3"><a id="title" href="project information P.php"><?php echo $rs[2]?></a><span style="float: right" class="like">&#10084;</span></h3>
+    						<h3 class="mb-3"><a id="title" href="<?
+                    if($rolesign ==1){echo'project information P.php?';}else{echo 'project information C.php?';}?>"><?php echo $rs[2]?></a><span style="float: right" class="like">&#10084;</span></h3>
     						<p id="price"><span id="price"class="price mr-2">$<?php echo $rs[7]?></span> <span class="per">每張照片</span></p>
                             
                             <p><i class='fas fa-map-marker-alt' ></i>&nbsp;&nbsp;
