@@ -15,10 +15,13 @@
 		//echo 'Identity = ';
 		if($row['role'] == 1)
 		{
+			$_SESSION['role'] = 1;
 			echo "COUMSER";
+
 		}
 		if($row['role'] == 2)
 		{
+			$_SESSION['role'] = 2;
 			echo "PHOTOGRAPHER";
 		}
 		//echo json_encode(array('Identity' => $row['Identity']));
