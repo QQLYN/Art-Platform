@@ -232,19 +232,11 @@ if(! isset($_SESSION['Mail'])){
       document.getElementById("Identity").innerHTML = "CONSUMER";
       Value = document.getElementById("Identity").value = "CONSUMER";
       role = 1;
-      <?php
-      session_start();
-      $_SESSION['role'] = 1;
-      ?>
     }
     else if (Identity == "CONSUMER"){
       document.getElementById("Identity").innerHTML = "PHOTOGRAPHER";
       Value = document.getElementById("Identity").value = "PHOTOGRAPHER";
       role = 2;
-      <?php
-      session_start();
-      $_SESSION['role'] = 2;
-      ?>
     }
     $.ajax
     ({
