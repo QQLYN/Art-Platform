@@ -72,9 +72,9 @@ if(! isset($_SESSION['Mail'])){
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="collection.html" class="nav-link">Collection</a></li>
+            <li class="nav-item"><a href="collection.php" class="nav-link">Collection</a></li>
             <li class="nav-item"><a href="transaction.php" class="nav-link">Transcation</a></li>
-            <li class="nav-item  active"><a href="MemberCenter.html" class="nav-link">Account</a></li>
+            <li class="nav-item  active"><a href="MemberCenter.php" class="nav-link">Account</a></li>
             <li class="nav-item" id="logout"></li>
           </ul>
         </div>
