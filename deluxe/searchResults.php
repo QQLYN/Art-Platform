@@ -115,51 +115,51 @@ $rolesign=$_SESSION["role"];
 
                         if(isset($_POST['area'])){
                         
-                            if(!empty($_POST['priceone'])){
-                                $priceone=$_POST['priceone'];
-                            }else{
-                                $priceone=0;
-                            }
-
-                            if(!empty($_POST['pricetwo'])){
-                                $pricetwo=$_POST['pricetwo'];
-                            }else{
-                                $pricetwo=10000;
-                            }
-
-
-                            if(!empty($_POST['year'])){
-                                $year=$_POST['year'];
-                            }else{
-                                $year=-1;
-                            }
-
-                            if(!empty($_POST['office'])){
-                                $office=$_POST['office'];
-                            }else{
-                                $office=">-1";
-
-                            }
-
-                             $area=$_POST['area'];//地區
-
-                             $tag=$_POST['tag'];//類別
-
-
-
-
-                             $data=mysql_query("
-                             select * from Project 
-                             where Area like '%$area%' 
-                             and Tag like '%$tag%' 
-                             and role = '$role'
-                             and Price > '$priceone' 
-                             and Price < '$pricetwo' 
-                             and 2019 - Year >= '$year'
-                             and Office_or_not $office
-                             "); //篩選條件：地區、類別、價格、年份
-                                //Price 資料庫的值
-
+                        if(!empty($_POST['priceone'])){
+                            $priceone=$_POST['priceone'];
+                        }else{
+                            $priceone=0;
+                        }
+                            
+                        if(!empty($_POST['pricetwo'])){
+                            $pricetwo=$_POST['pricetwo'];
+                        }else{
+                            $pricetwo=10000;
+                        }
+                            
+                            
+                        if(!empty($_POST['year'])){
+                            $year=$_POST['year'];
+                        }else{
+                            $year=-1;
+                        }
+                            
+                        if(!empty($_POST['office'])){
+                            $office=$_POST['office'];
+                        }else{
+                            $office=">-1";
+                            
+                        }
+                         
+                         $area=$_POST['area'];//地區
+                        
+                         $tag=$_POST['tag'];//類別
+                            
+                            
+                            
+                            
+                         $data=mysql_query("
+                         select * from Project 
+                         where Area like '%$area%' 
+                         and Tag like '%$tag%' 
+                         and role = '$role'
+                         and Price > '$priceone' 
+                         and Price < '$pricetwo' 
+                         and 2019 - Year >= '$year'
+                         and Office_or_not $office
+                         "); //篩選條件：地區、類別、價格、年份
+                            //Price 資料庫的值
+                            
                            
                         }else{
                          $data=mysql_query("
@@ -349,7 +349,7 @@ $rolesign=$_SESSION["role"];
       
 <script language="javascript">
     <?
-    if($rolesign == 2){
+    if($pon == 2){
         echo "window.onload=cPerson(event,'User');";
     }else{
         echo "window.onload=cPerson(event,'Provider');";
