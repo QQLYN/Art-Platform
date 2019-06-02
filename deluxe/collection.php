@@ -317,7 +317,36 @@ if(! isset($_SESSION['Mail'])){
 		    </div>
     	</div>
     </section>
+<script type="text/javascript">
+			    		function openCity(event,type)
+			    		{
+			    			if(type == "Scenery")
+			    			{
+			    				document.getElementById("first").style.display = "inline";
+			    				document.getElementById("second").style.display = "none";
+			    				document.getElementById("third").style.display = "none";
+			    			}
+			    			if(type == "People")
+			    			{
+			    				document.getElementById("first").style.display = "none";
+			    				document.getElementById("second").style.display = "inline";
+			    				document.getElementById("third").style.display = "none";
+			    			}
+			    			if(type == "Food")
+			    			{
+			    				document.getElementById("first").style.display = "none";
+			    				document.getElementById("second").style.display = "none";
+			    				document.getElementById("third").style.display = "inline";
+			    			}
+			    			if(type == "All")
+			    			{
+			    				document.getElementById("first").style.display = "inline";
+			    				document.getElementById("second").style.display = "inline";
+			    				document.getElementById("third").style.display = "inline";
+			    			}
 
+			    		}
+			    	</script>
 
     <!--<section class="instagram pt-5">
       <div class="container-fluid">
