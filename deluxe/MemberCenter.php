@@ -74,10 +74,11 @@ if(! isset($_SESSION['Mail'])){
     function SetMail(Mail,role,Provider_or_not)
     {
 	    console.log("Mail:" + mail);
-	    document.getElementById("Mail").innerHTML = mail;
+	    document.getElementById("Mail").innerHTML = mail;NonOpen
 	    if(Provider_or_not == 0)
 	    {
 	    	document.getElementById("IdentityBT").style.display = "none";
+	    	document.getElementById("NonOpen").style.display = "none";
 	    }
 	    else
 	    {
@@ -85,11 +86,13 @@ if(! isset($_SESSION['Mail'])){
 		    {
 		      document.getElementById("IdentityBT").style.display = "inline";
 		      document.getElementById("Identity").value = "CONSUMER";
+		      document.getElementById("NonOpen").style.display = "none";
 		    }
 		    if(role == 2)
 		    {
 		      document.getElementById("IdentityBT").style.display = "inline";
 		      document.getElementById("Identity").value = "PHOTOGRAPHER";
+		      document.getElementById("NonOpen").style.display = "inline";
 		    }
   		}
     }
@@ -160,7 +163,7 @@ if(! isset($_SESSION['Mail'])){
                     <ul>
                       <li><span>專案個數:</span> <span>6</span></li>
                       <li><span>我的簡歷:</span> <span class="form-group"><a href="#">編輯簡歷</a></span></li>
-                      <li><span>非公開身分:</span> <span><span>關閉 &nbsp;</span><label class="switch"><input type="checkbox"><span class="slider round"></span></label><span> &nbsp;開啟</span></span></li>
+                      <li id = "NonOpen"><span>非公開身分:</span> <span><span>關閉 &nbsp;</span><label class="switch"><input type="checkbox"><span class="slider round"></span></label><span> &nbsp;開啟</span></span></li>
                       <div class="form-group">
                           <p><a class="btn-custom" href="PM.php">瀏覽全部專案</a></p>
                       </div> 
