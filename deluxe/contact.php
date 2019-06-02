@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php
+session_start();
+if(! isset($_SESSION["Mail"])){
+  header("Location: Sign.php?");
+}$mail=$_SESSION["Mail"];
+$rolesign=$_SESSION["role"];
+$pon=$_SESSION["Provider_or_not"];
+
+//重上一個得到的值，這個帳號登入後就會存入。
+//下面才會用到，判斷是不是攝影師
+//$_SESSION[Provider_or_not] = 0;
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <title>ARTSA</title>

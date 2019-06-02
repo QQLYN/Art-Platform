@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(! isset($_SESSION['Mail'])){
+    header("Location:Sign.php");
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,9 +71,9 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-            <li class="nav-item "><a href="collection.php" class="nav-link">Collection</a></li>
+            <li class="nav-item active"><a href="collection.php" class="nav-link">Collection</a></li>
             <li class="nav-item"><a href="transaction.php" class="nav-link">Transcation</a></li>
-            <li class="nav-item active"><a href="MemberCenter.php" class="nav-link">Account</a></li>
+            <li class="nav-item"><a href="MemberCenter.php" class="nav-link">Account</a></li>
            <li class="nav-item" id = "logout"><a href='./PHP/log-out.php' class='nav-link'>Logout</a></li>
           </ul>
         </div>
@@ -80,7 +87,7 @@
 	        <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
 		        <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
 		          	<div class="text">
-			             <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>Collection</span></p>
+			             <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.php">Home</a></span> <span>Collection</span></p>
 			            <h1 class="mb-4 bread">Collection</h1>
 		            </div>
 		        </div>
@@ -199,37 +206,6 @@
 			    			</div>
 			    		</div>
 			    	</div>
-
-			    	<script type="text/javascript">
-			    		function openCity(event,type)
-			    		{
-			    			if(type == "Scenery")
-			    			{
-			    				document.getElementById("first").style.display = "inline";
-			    				document.getElementById("second").style.display = "none";
-			    				document.getElementById("third").style.display = "none";
-			    			}
-			    			if(type == "People")
-			    			{
-			    				document.getElementById("first").style.display = "none";
-			    				document.getElementById("second").style.display = "inline";
-			    				document.getElementById("third").style.display = "none";
-			    			}
-			    			if(type == "Food")
-			    			{
-			    				document.getElementById("first").style.display = "none";
-			    				document.getElementById("second").style.display = "none";
-			    				document.getElementById("third").style.display = "inline";
-			    			}
-			    			if(type == "All")
-			    			{
-			    				document.getElementById("first").style.display = "inline";
-			    				document.getElementById("second").style.display = "inline";
-			    				document.getElementById("third").style.display = "inline";
-			    			}
-
-			    		}
-			    	</script>
 		    	<!--Search-->
 
 		    	<div class="col-lg-3 sidebar">
@@ -341,7 +317,36 @@
 		    </div>
     	</div>
     </section>
+<script type="text/javascript">
+			    		function openCity(event,type)
+			    		{
+			    			if(type == "Scenery")
+			    			{
+			    				document.getElementById("first").style.display = "inline";
+			    				document.getElementById("second").style.display = "none";
+			    				document.getElementById("third").style.display = "none";
+			    			}
+			    			if(type == "People")
+			    			{
+			    				document.getElementById("first").style.display = "none";
+			    				document.getElementById("second").style.display = "inline";
+			    				document.getElementById("third").style.display = "none";
+			    			}
+			    			if(type == "Food")
+			    			{
+			    				document.getElementById("first").style.display = "none";
+			    				document.getElementById("second").style.display = "none";
+			    				document.getElementById("third").style.display = "inline";
+			    			}
+			    			if(type == "All")
+			    			{
+			    				document.getElementById("first").style.display = "inline";
+			    				document.getElementById("second").style.display = "inline";
+			    				document.getElementById("third").style.display = "inline";
+			    			}
 
+			    		}
+			    	</script>
 
     <!--<section class="instagram pt-5">
       <div class="container-fluid">

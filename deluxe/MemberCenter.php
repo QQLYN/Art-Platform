@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(! isset($_SESSION['Mail'])){
+    header("Location:Sign.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,7 +43,7 @@
 
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
-    var mail;
+    var mail,role,Provider_or_not;
     $( document ).ready(function() {
         console.log( "document loaded" );
     $.ajax
@@ -48,9 +55,13 @@
             success:function(data)
             {
               console.log(data.Mail);
+              console.log(data.role);
+              console.log(data.Provider_or_not);
               mail = data.Mail;
+              role = data.role;
+              Provider_or_not = data.Provider_or_not;
               console.log("good");
-              SetMail(mail);
+              SetMail(mail,role,Provider_or_not);
             },
             error: function(xhr) { 
                console.log(xhr.responseText);
@@ -60,10 +71,30 @@
         
 
     });
-    function SetMail(Mail)
+    function SetMail(Mail,role,Provider_or_not)
     {
-      console.log("Mail:" + mail);
-      document.getElementById("Mail").innerHTML = mail;
+	    console.log("Mail:" + mail);
+	    document.getElementById("Mail").innerHTML = mail;NonOpen
+	    if(Provider_or_not == 0)
+	    {
+	    	document.getElementById("IdentityBT").style.display = "none";
+	    	document.getElementById("NonOpen").style.display = "none";
+	    }
+	    else
+	    {
+		    if(role == 1)
+		    {
+		      document.getElementById("IdentityBT").style.display = "inline";
+		      document.getElementById("Identity").value = "CONSUMER";
+		      document.getElementById("NonOpen").style.display = "none";
+		    }
+		    if(role == 2)
+		    {
+		      document.getElementById("IdentityBT").style.display = "inline";
+		      document.getElementById("Identity").value = "PHOTOGRAPHER";
+		      document.getElementById("NonOpen").style.display = "inline";
+		    }
+  		}
     }
 
   </script>
@@ -73,7 +104,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.php">ARTSA</a>
+        <a class="navbar-brand" href="index.html">ARTSA</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
@@ -108,7 +139,7 @@
     <section class="ftco-section bg-light">
       <div class="container">
         <label style="display: none;" id = Mail></label>
-        <div><label>您現在的身分是<input type="submit" id="Identity" name="User_Identity" class="button button1" style="position: relative; left: 6%; margin-bottom: 20px;" onclick="switchVisible()" value="PHOTOGRAPHER"></label>
+        <div id="IdentityBT"><label>您現在的身分是<input type="submit" id="Identity" name="User_Identity" class="button button1" style="position: relative; left: 6%; margin-bottom: 20px;" onclick="switchVisible()" value="PHOTOGRAPHER"></label>
         
       </div>
           <div style="border-style: solid; border-width: 1px;">
@@ -132,7 +163,7 @@
                     <ul>
                       <li><span>專案個數:</span> <span>6</span></li>
                       <li><span>我的簡歷:</span> <span class="form-group"><a href="#">編輯簡歷</a></span></li>
-                      <li><span>非公開身分:</span> <span><span>關閉 &nbsp;</span><label class="switch"><input type="checkbox"><span class="slider round"></span></label><span> &nbsp;開啟</span></span></li>
+                      <li id = "NonOpen"><span>非公開身分:</span> <span><span>關閉 &nbsp;</span><label class="switch"><input type="checkbox"><span class="slider round"></span></label><span> &nbsp;開啟</span></span></li>
                       <div class="form-group">
                           <p><a class="btn-custom" href="PM.php">瀏覽全部專案</a></p>
                       </div> 
@@ -147,7 +178,7 @@
 
 
     
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
+    <!--<footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md">
@@ -199,13 +230,13 @@
         <div class="row">
           <div class="col-md-12 text-center">
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <p> Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+   Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. </p>
           </div>
         </div>
       </div>
-    </footer>
+    </footer>-->
     
   
 

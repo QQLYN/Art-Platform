@@ -4,7 +4,8 @@ if(! isset($_SESSION["Mail"])){
   header("Location: Sign.php?");
 }$mail=$_SESSION["Mail"];
 $pon=$_SESSION["Provider_or_not"];
-echo "$pon";
+$rolesign=$_SESSION["role"];
+echo "身分為$rolesign";
 //重上一個得到的值，這個帳號登入後就會存入。
 //下面才會用到，判斷是不是攝影師
 //$_SESSION[Provider_or_not] = 0;
@@ -62,8 +63,8 @@ echo "$pon";
 	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="collection.html" class="nav-link">Collection</a></li>
 	          <li class="nav-item"><a href="transaction.php" class="nav-link">Transcation</a></li>
-              <li class="nav-item"><a href="MemberCenter.html" class="nav-link">Account< /a></li>
-              <li class="nav-item"><a href="Signin.html" class="nav-link"><?if($_SESSION['Mail']){echo'<li class="nav-item"><a href="log-out.php" class="nav-link">Logout</a></li>';}?></a></li>
+              <li class="nav-item"><a href="MemberCenter.html" class="nav-link">Account</a></li>
+              <?if($_SESSION['Mail']){echo'<li class="nav-item"><a href="log-out.php" class="nav-link">Logout</a></li>';}?>
 	        </ul>
 	      </div>
 	    </div>
@@ -198,7 +199,7 @@ echo "$pon";
                 mysql_query("set names utf8");
                 mysql_select_db("artsa",$link1);
                 
-                if($pon == 0){
+                if($rolesign == 1){
                     $role=2;
                 }else{
                     $role=1;
@@ -252,7 +253,7 @@ echo "$pon";
                             <p class="pt-1"><i class='fas fa-user-circle'></i>&nbsp;&nbsp;<?php echo $rs[3]?><?php echo $rs[4] ?>&nbsp;&nbsp;<span class="per"><?//php 
                                    echo "<span class='per' id='year'>";
                                 
-                                    if($pon == 2){
+                                    if($rolesign == 1){
                                         
                                         $date = date("Y");//取得年份（相減）
                                         $yy=$date-$rs[8];
