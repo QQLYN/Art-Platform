@@ -1,6 +1,17 @@
 
 <?php
 
+
+session_start();
+if(! isset($_SESSION["Mail"])){
+  header("Location: Sign.php?");
+  
+}$mail=$_SESSION["Mail"];
+$pon=$_SESSION["Provider_or_not"];
+
+
+
+
 if($_GET['name']){
 
 $Username=$_GET['name'];
