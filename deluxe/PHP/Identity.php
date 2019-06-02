@@ -4,7 +4,7 @@
 	$Identity = json_encode(@$_POST["role"]);
 	$Mail = json_encode(@$_POST["Mail"]);
 	//echo $Identity;
-	$Link = mysqli_connect('localhost', 'ARTSA', 'artsa108');
+	$Link = mysqli_connect('localhost', 'root', '1234');
 	mysqli_select_db($Link,'artsa')or die($connect_error);
 	$data = mysqli_query($Link,"UPDATE `account` SET `role`=".$Identity ."where `Mail` = ".$Mail );
 	$result = mysqli_query($Link,"SELECT `role` FROM `account`where `Mail` = ".$Mail);
