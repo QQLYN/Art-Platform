@@ -4,15 +4,15 @@
 	$Mail = @$_SESSION['Mail'];
 	//echo $Identity;
 	$role = @$_SESSION['role'];
-	$Link = mysqli_connect('localhost', 'root', '1234');
-	mysqli_select_db($Link,'artsa')or die($connect_error);
-	$result = mysqli_query($Link,"SELECT `role` FROM `account`where `Mail` = '".$Mail."'");
+	$Link = mysql_connect('localhost', 'root', '1234');
+	mysql_select_db('artsa',$Link)or die($connect_error);
+	$result = mysql_query("SELECT `role` FROM `account`where `Mail` = '".$Mail."'",$Link);
 	if(!$result)
 	{
-		echo ("Error: ".mysqli_error($Link));
+		echo ("Error: ".mysql_error($Link));
 		exit();
 	}
-	while ($row = mysqli_fetch_array($result)) {
+	while ($row = mysql_fetch_array($result)) {
 		//echo 'Identity = ';
 		if($row['role'] == 1)
 		{
@@ -28,5 +28,5 @@
 		//echo json_encode(array('Identity' => $row['Identity']));
 	}
 	
-	mysqli_close($Link);
+	mysql_close($Link);
 ?>
