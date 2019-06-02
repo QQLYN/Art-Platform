@@ -49,7 +49,6 @@ if(! isset($_SESSION['Mail'])){
 		                {
 		                  console.log(data.Identity);
 		                  console.log("good");
-		                  document.getElementById("logout").innerHTML = "<a href='./PHP/log-out.php' class='nav-link'>Logout</a>"
 		                },
 		                error: function(xhr) { 
 		                   console.log(xhr.responseText);
@@ -64,7 +63,7 @@ if(! isset($_SESSION['Mail'])){
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.html">ARTSA</a>
+        <a class="navbar-brand" href="index.php">ARTSA</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
@@ -72,10 +71,10 @@ if(! isset($_SESSION['Mail'])){
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-            <li class="nav-item "><a href="collection.php" class="nav-link">Collection</a></li>
+            <li class="nav-item active"><a href="collection.php" class="nav-link">Collection</a></li>
             <li class="nav-item"><a href="transaction.php" class="nav-link">Transcation</a></li>
-            <li class="nav-item active"><a href="MemberCenter.php" class="nav-link">Account</a></li>
-           <li class="nav-item" id = "logout"></li>
+            <li class="nav-item"><a href="MemberCenter.php" class="nav-link">Account</a></li>
+           <li class="nav-item" id = "logout"><a href='./PHP/log-out.php' class='nav-link'>Logout</a></li>
           </ul>
         </div>
       </div>
@@ -88,7 +87,7 @@ if(! isset($_SESSION['Mail'])){
 	        <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
 		        <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
 		          	<div class="text">
-			             <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>Collection</span></p>
+			             <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.php">Home</a></span> <span>Collection</span></p>
 			            <h1 class="mb-4 bread">Collection</h1>
 		            </div>
 		        </div>
