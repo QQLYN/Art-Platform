@@ -8,8 +8,8 @@
 	//echo $Identity;
 	$Link = mysql_connect('localhost', 'root', '1234');
 	mysql_select_db('artsa',$Link)or die($connect_error);
-	$data = mysql_query("UPDATE `account` SET `role`=".$Identity ."where `Mail` = ".$Mail,$Link );
-	$result = mysql_query("SELECT `role` FROM `account`where `Mail` = ".$Mail,$Link);
+	$data = mysql_query("UPDATE `account` SET `role`=".$Identity );
+	$result = mysql_query("SELECT `role` FROM `account`");
 	if(!$result)
 	{
 		echo ("Error: ".mysql_error($Link));
