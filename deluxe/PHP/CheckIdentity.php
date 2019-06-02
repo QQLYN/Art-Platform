@@ -1,8 +1,9 @@
 <?php
 
 	session_start();
-	$Mail = $_SESSION['Mail'];
+	$Mail = @$_SESSION['Mail'];
 	//echo $Identity;
+	$role = @$_SESSION['role'];
 	$Link = mysqli_connect('localhost', 'root', '1234');
 	mysqli_select_db($Link,'artsa')or die($connect_error);
 	$result = mysqli_query($Link,"SELECT `role` FROM `account`where `Mail` = '".$Mail."'");
