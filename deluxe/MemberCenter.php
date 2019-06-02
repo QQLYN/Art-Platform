@@ -43,7 +43,7 @@ if(! isset($_SESSION['Mail'])){
 
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
-    var mail;
+    var mail,role;
     $( document ).ready(function() {
         console.log( "document loaded" );
     $.ajax
@@ -55,9 +55,11 @@ if(! isset($_SESSION['Mail'])){
             success:function(data)
             {
               console.log(data.Mail);
+              console.log(data.role);
               mail = data.Mail;
+              role = data.role;
               console.log("good");
-              SetMail(mail);
+              SetMail(mail,role);
             },
             error: function(xhr) { 
                console.log(xhr.responseText);
@@ -67,11 +69,19 @@ if(! isset($_SESSION['Mail'])){
         
 
     });
-    function SetMail(Mail)
+    function SetMail(Mail,role)
     {
       console.log("Mail:" + mail);
       document.getElementById("Mail").innerHTML = mail;
       document.getElementById("logout").innerHTML = "<a href='./PHP.log-out.php' class='nav-link'>Logout</a>"
+      if(role == 1)
+      {
+        document.getElementById("Identity").value = "CONSUMER";
+      }
+      if(role == 2)
+      {
+        document.getElementById("Identity").value = "PHOTOGRAPHER";
+      }
     }
 
   </script>
