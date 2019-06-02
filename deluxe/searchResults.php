@@ -11,6 +11,7 @@ if(! isset($_SESSION["Mail"])){
   
 }$mail=$_SESSION["Mail"];
 $pon=$_SESSION["Provider_or_not"];
+$rolesign=$_SESSION["role"]
 //重上一個得到的值，這個帳號登入後就會存入。
 //下面才會用到，判斷是不是攝影師
 //$_SESSION[Provider_or_not] = 0;
@@ -105,7 +106,7 @@ $pon=$_SESSION["Provider_or_not"];
                         mysql_query("set names utf8");
                         mysql_select_db("artsa",$link1);
                         
-                        if($pon == 0){//pon從section得到的值，轉換為role去判斷專案發佈者應該的身分。
+                        if($rolesign == 1){//pon從section得到的值，轉換為role去判斷專案發佈者應該的身分。
                             $role=2;
                         }else{
                             $role=1;
@@ -114,51 +115,51 @@ $pon=$_SESSION["Provider_or_not"];
 
                         if(isset($_POST['area'])){
                         
-                        if(!empty($_POST['priceone'])){
-                            $priceone=$_POST['priceone'];
-                        }else{
-                            $priceone=0;
-                        }
-                            
-                        if(!empty($_POST['pricetwo'])){
-                            $pricetwo=$_POST['pricetwo'];
-                        }else{
-                            $pricetwo=10000;
-                        }
-                            
-                            
-                        if(!empty($_POST['year'])){
-                            $year=$_POST['year'];
-                        }else{
-                            $year=-1;
-                        }
-                            
-                        if(!empty($_POST['office'])){
-                            $office=$_POST['office'];
-                        }else{
-                            $office=">-1";
-                            
-                        }
-                         
-                         $area=$_POST['area'];//地區
-                        
-                         $tag=$_POST['tag'];//類別
-                            
-                            
-                            
-                            
-                         $data=mysql_query("
-                         select * from Project 
-                         where Area like '%$area%' 
-                         and Tag like '%$tag%' 
-                         and role = '$role'
-                         and Price > '$priceone' 
-                         and Price < '$pricetwo' 
-                         and 2019 - Year >= '$year'
-                         and Office_or_not $office
-                         "); //篩選條件：地區、類別、價格、年份
-                            //Price 資料庫的值
-                            
+                            if(!empty($_POST['priceone'])){
+                                $priceone=$_POST['priceone'];
+                            }else{
+                                $priceone=0;
+                            }
+
+                            if(!empty($_POST['pricetwo'])){
+                                $pricetwo=$_POST['pricetwo'];
+                            }else{
+                                $pricetwo=10000;
+                            }
+
+
+                            if(!empty($_POST['year'])){
+                                $year=$_POST['year'];
+                            }else{
+                                $year=-1;
+                            }
+
+                            if(!empty($_POST['office'])){
+                                $office=$_POST['office'];
+                            }else{
+                                $office=">-1";
+
+                            }
+
+                             $area=$_POST['area'];//地區
+
+                             $tag=$_POST['tag'];//類別
+
+
+
+
+                             $data=mysql_query("
+                             select * from Project 
+                             where Area like '%$area%' 
+                             and Tag like '%$tag%' 
+                             and role = '$role'
+                             and Price > '$priceone' 
+                             and Price < '$pricetwo' 
+                             and 2019 - Year >= '$year'
+                             and Office_or_not $office
+                             "); //篩選條件：地區、類別、價格、年份
+                                //Price 資料庫的值
+
                            
                         }else{
                          $data=mysql_query("
@@ -212,7 +213,7 @@ $pon=$_SESSION["Provider_or_not"];
                                 <?//php 
                                    echo "<span class='per' id='year'>";
                                 
-                                    if($pon == 2){
+                                    if($rolesign == 2){
                                         
                                         $date = date("Y");//取得年份（相減）
                                         $yy=$date-$rs[8];
@@ -348,7 +349,7 @@ $pon=$_SESSION["Provider_or_not"];
       
 <script language="javascript">
     <?
-    if($pon == 2){
+    if($rolesign == 2){
         echo "window.onload=cPerson(event,'User');";
     }else{
         echo "window.onload=cPerson(event,'Provider');";
@@ -358,7 +359,7 @@ $pon=$_SESSION["Provider_or_not"];
     
 function cPerson(evt, personName) {
          <?
-    if($pon == 2){
+    if($rolesign == 2){
         echo "personName == 'Provider';";
    }else{
         echo "personName == 'User';";
