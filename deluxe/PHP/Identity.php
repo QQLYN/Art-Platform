@@ -1,5 +1,6 @@
 <?php
 
+	session_start();
 	$Identity = json_encode(@$_POST["role"]);
 	$Mail = json_encode(@$_POST["Mail"]);
 	//echo $Identity;
@@ -16,10 +17,12 @@
 		//echo 'Identity = ';
 		if($row['role'] == 1)
 		{
+			$_SESSION['role'] = 1;
 			echo "COUMSER";
 		}
 		if($row['role'] == 2)
 		{
+			$_SESSION['role'] = 2;
 			echo "PHOTOGRAPHER";
 		}
 		//echo json_encode(array('Identity' => $row['Identity']));
