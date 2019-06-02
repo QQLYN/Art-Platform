@@ -7,9 +7,9 @@
 	$Mail = json_encode(@$_POST["Mail"]);
 	//echo $Identity;
 	$Link = mysql_connect('localhost', 'root', '1234');
-	mysql_select_db('artsa')or die($connect_error);
-	$data = mysql_query("UPDATE `account` SET `role`=".$Identity ."where `Mail` = ".$Mail );
-	$result = mysql_query("SELECT `role` FROM `account`where `Mail` = ".$Mail);
+	mysql_select_db('artsa',$Link)or die($connect_error);
+	$data = mysql_query("UPDATE `account` SET `role`=".$Identity ."where `Mail` = ".$Mail,$Link );
+	$result = mysql_query("SELECT `role` FROM `account`where `Mail` = ".$Mail,$Link);
 	if(!$result)
 	{
 		echo ("Error: ".mysql_error($Link));
