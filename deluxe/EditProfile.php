@@ -49,7 +49,6 @@ if(! isset($_SESSION['Mail'])){
                 {
                   console.log(data.Identity);
                   console.log("good");
-                  document.getElementById("logout").innerHTML = "<a href='./PHP.log-out.php' class='nav-link'>Logout</a>"
                 },
                 error: function(xhr) { 
                    console.log(xhr.responseText);
@@ -75,7 +74,7 @@ if(! isset($_SESSION['Mail'])){
             <li class="nav-item"><a href="collection.php" class="nav-link">Collection</a></li>
             <li class="nav-item"><a href="transaction.php" class="nav-link">Transcation</a></li>
             <li class="nav-item  active"><a href="MemberCenter.php" class="nav-link">Account</a></li>
-            <li class="nav-item" id="logout"></li>
+            <li class="nav-item" id="logout"><a href='./PHP.log-out.php' class='nav-link'>Logout</a></li>
           </ul>
         </div>
       </div>
