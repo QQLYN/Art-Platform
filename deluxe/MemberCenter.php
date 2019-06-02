@@ -43,7 +43,7 @@ if(! isset($_SESSION['Mail'])){
 
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
-    var mail,role;
+    var mail,role,Provider_or_not;
     $( document ).ready(function() {
         console.log( "document loaded" );
     $.ajax
@@ -56,10 +56,12 @@ if(! isset($_SESSION['Mail'])){
             {
               console.log(data.Mail);
               console.log(data.role);
+              console.log(data.Provider_or_not);
               mail = data.Mail;
               role = data.role;
+              Provider_or_not = data.Provider_or_not;
               console.log("good");
-              SetMail(mail,role);
+              SetMail(mail,role,Provider_or_not);
             },
             error: function(xhr) { 
                console.log(xhr.responseText);
@@ -69,18 +71,27 @@ if(! isset($_SESSION['Mail'])){
         
 
     });
-    function SetMail(Mail,role)
+    function SetMail(Mail,role,Provider_or_not)
     {
-      console.log("Mail:" + mail);
-      document.getElementById("Mail").innerHTML = mail;
-      if(role == 1)
-      {
-        document.getElementById("Identity").value = "CONSUMER";
-      }
-      if(role == 2)
-      {
-        document.getElementById("Identity").value = "PHOTOGRAPHER";
-      }
+	    console.log("Mail:" + mail);
+	    document.getElementById("Mail").innerHTML = mail;
+	    if(Provider_or_not == 0)
+	    {
+	    	document.getElementById("IdentityBT").style.display = "none";
+	    }
+	    else
+	    {
+		    if(role == 1)
+		    {
+		      document.getElementById("IdentityBT").style.display = "inline";
+		      document.getElementById("Identity").value = "CONSUMER";
+		    }
+		    if(role == 2)
+		    {
+		      document.getElementById("IdentityBT").style.display = "inline";
+		      document.getElementById("Identity").value = "PHOTOGRAPHER";
+		    }
+  		}
     }
 
   </script>
@@ -125,7 +136,7 @@ if(! isset($_SESSION['Mail'])){
     <section class="ftco-section bg-light">
       <div class="container">
         <label style="display: none;" id = Mail></label>
-        <div><label>您現在的身分是<input type="submit" id="Identity" name="User_Identity" class="button button1" style="position: relative; left: 6%; margin-bottom: 20px;" onclick="switchVisible()" value="PHOTOGRAPHER"></label>
+        <div id="IdentityBT"><label>您現在的身分是<input type="submit" id="Identity" name="User_Identity" class="button button1" style="position: relative; left: 6%; margin-bottom: 20px;" onclick="switchVisible()" value="PHOTOGRAPHER"></label>
         
       </div>
           <div style="border-style: solid; border-width: 1px;">
