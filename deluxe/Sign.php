@@ -6,24 +6,27 @@ if(isset($_SESSION["Mail"])){
   if(isset($_POST["s_mail"])){
     $data = check_id_pass($_POST["s_mail"], $_POST["s_password"], $_POST["Provider_or_not"]);
         
-      if($data){
-          if($_POST["Provider_or_not"] == "一般登入"){
-              if($data["Provider_or_not"] == 0){
+       if($data){
+          if($data["Provider_or_not"] == 1){
+              if($_POST["Provider_or_not"] == "一般登入"){
+                  $data[role]=1;
                   signin_success($data);
-              }else{
-                  $data["Provider_or_not"] = 0;
+              }else if($_POST["Provider_or_not"] == "攝影師登入"){
+                  $data[role]=2;
                   signin_success($data);
               }
           }else{
               if($data["Provider_or_not"] == 0){
+                 if($_POST["Provider_or_not"] == "一般登入"){
+                 $data[role]=1;
+                 signin_success($data);
+                 }else if($_POST["Provider_or_not"] == "攝影師登入"){
                   show_html("<p><font color='white'><strong><您還未成為攝影師唷！></strong></font></p>");
-              }else{
-                  $data["Provider_or_not"] = 0;
-                  signin_success($data);
               }
           }
           
-      }else{
+      }
+       }else{
           show_html("<p><font color='white'><strong>帳號或密碼錯誤！</strong></font></p>");
       }
       
@@ -31,6 +34,7 @@ if(isset($_SESSION["Mail"])){
     show_html();
   }
 }
+
 function check_id_pass($Mail, $Password,$Provider_or_not){
   mysql_connect("localhost", "root", "1234");
   mysql_query("set names utf8");
@@ -53,6 +57,7 @@ function signin_success($data){
   $_SESSION[Password] = $data[Password];
   $_SESSION[Phone] = $data[Phone];
   $_SESSION[Provider_or_not] = $data[Provider_or_not];
+  $_SESSION[role]=$data[role];
     
   header("Location: index.php");
 }

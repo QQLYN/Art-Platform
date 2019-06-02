@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+      
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">ARTSA</a>
@@ -64,74 +65,49 @@
     </div>
 
     <section class="ftco-section">
+        <form action="profile.php" method="get">
+            
       <table align=center style="text-align:center;border-collapse:separate;" width=64% rules="none" border="1">
             <tr>
-                <td colspan="4"><img id="output" height="250" style="display:none"></td>
-            </tr>
-             <style>
-             body {
-              width: 100%;
-              height: 100%;
-              margin:auto;
-              }
-              #inp {
-              text-align: center;
-              margin:0 0px 0px 100px;
-              }
-             </style>
-             <script>
-             function openFile(event){
-                var input = event.target; //取得上傳檔案
-                var reader = new FileReader(); //建立FileReader物件
-                 reader.readAsDataURL(input.files[0]); //以.readAsDataURL將上傳檔案轉換為base64字串
-                 reader.onload = function(){ //FileReader取得上傳檔案後執行以下內容
-                     var dataURL = reader.result; //設定變數dataURL為上傳圖檔的base64字串
-                     $('#output').attr('src', dataURL).show(); //將img的src設定為dataURL並顯示
-                 };
-             }</script>
-          <tr height=50 bgcolor="#F5F5F5">
-             <td colspan="2"><font color="red">＊</font>上傳頭貼
-             <td colspan="2" align=left><input id="inp" type="file" onchange="openFile(event)" accept="image/jpeg,image/jpg" required></td>
+              <td colspan="2"><font color="red">＊</font>上傳照片</td>
+             <td colspan="2"><input name="photo" accept="image/jpeg,image/jpg" style="width: 280px" required></td>
           </tr>
+                          
           <tr height=100>
               <td width=25%><font color="red">＊</font>姓名</td>
               <td width=25%><input type="text" name="name" required></td>
               <td width=25%><font color="red">＊</font>性別</td>
-              <td width=25%><form><input type="radio" name="gender" value="male" checked>男&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="female">女</form></td>
+              <td width=25%><form><input type="radio" name="gender" value="男" checked>男&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="女">女</form></td>
           </tr>
           <tr height=100 bgcolor="#F5F5F5">
               <td><font color="red">＊</font>出生年月日</td>
-              <td><input type="date" name="birth" placeholder="年/月/日" required></td>
+              <td><input type="text" name="birth" placeholder="年-月-日 (西元)" required></td>
               <td><font color="red">＊</font>電話</td>
-              <td><input type="phone" name="phone"  required></td>
+              <td><input type="phone" name="phone" required></td>
           </tr>
           <tr height=100>
               <td><font color="red">＊</font>信箱</td>
               <td><input type="email" name="email" required></td>
-              <td><font color="red">＊</font>年資</td>
-              <td><select name="year" style="width: 150px">
-              <option value="one">1年以內</option>
-              <option value="two">1~2年</option>
-              <option value="five">2~5年</option>
-              <option value="ten">5~10年</option>
-              <option value="above">10年以上</option></select></td>
+              <td><font color="red">＊</font>年資(年分)</td>
+              <td><input type="text" name="year" style="width: 150px">
+              </td>
           </tr>
           <tr height=100 bgcolor="#F5F5F5">
               <td><font color="red">＊</font>地區</td>
               <td><select name="zone" style="width: 150px">
-              <option value="Taipei">台北市</option>
-              <option value="NewTaipei">新北市</option>
-              <option value="Taoyuan">桃園市</option>
-              <option value="Taichung">台中市</option>
-              <option value="Tainan">台南市</option>
-              <option value="Kaoshong">高雄市</option></select></td>
+              <option value="台北市">台北市</option>
+              <option value="新北市">新北市</option>
+              <option value="桃園市">桃園市</option>
+              <option value="台中市">台中市</option>
+              <option value="台南市">台南市</option>
+              <option value="高雄市">高雄市</option></select></td>
               <td><font color="red">＊</font>類別</td>
               <td><select name="tag" style="width: 150px">
-              <option value="people">人像</option>
-              <option value="view">風景</option>
-              <option value="animal">動物</option>
-              <option value="food">食物</option>
-              <option value="thing">商品</option></select></td>
+              <option value="人像">人像</option>
+              <option value="風景">風景</option>
+              <option value="動物">動物</option>
+              <option value="食物">食物</option>
+              <option value="商品">商品</option></select></td>
           </tr>
           <tr height=100 >
               <td>聯絡地址</td>
@@ -139,13 +115,16 @@
           </tr>
           <tr height=100 bgcolor="#F5F5F5">
               <td>工作經驗</td>
-              <td colspan="3"><textarea rows="5" cols="54"></textarea></td>
+              <td colspan="3"><textarea rows="5" cols="54" name="experience"></textarea></td>
           </tr>
           <tr height=100 >
-              <td colspan="4"><input class="button  button1" type="submit" value="送出"></td>
+             <td colspan="4"><input class="button  button1" type="submit" value="送出"></td>
+              
           </tr>
       </table>
+        </form>
       </section>
+      
     
   
 
