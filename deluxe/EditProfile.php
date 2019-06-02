@@ -1,7 +1,13 @@
+<?php
+session_start();
+if(! isset($_SESSION['Mail'])){
+    header("Location:Sign.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>編輯個人基本資料</title>
+    <title>ARTSA</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -43,6 +49,7 @@
                 {
                   console.log(data.Identity);
                   console.log("good");
+                  document.getElementById("logout").innerHTML = "<a href='./PHP.log-out.php' class='nav-link'>Logout</a>"
                 },
                 error: function(xhr) { 
                    console.log(xhr.responseText);
@@ -57,7 +64,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.php">ARTSA</a>
+        <a class="navbar-brand" href="index.html">ARTSA</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
@@ -68,7 +75,7 @@
             <li class="nav-item"><a href="collection.php" class="nav-link">Collection</a></li>
             <li class="nav-item"><a href="transaction.php" class="nav-link">Transcation</a></li>
             <li class="nav-item  active"><a href="MemberCenter.php" class="nav-link">Account</a></li>
-            <li class="nav-item" id="logout"><a href='./PHP.log-out.php' class='nav-link'>Logout</a></li>
+            <li class="nav-item" id="logout"></li>
           </ul>
         </div>
       </div>
@@ -81,7 +88,7 @@
         <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
           <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
             <div class="text">
-               <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.php">Home</a></span> <span>編輯基本資料</span></p>
+               <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>編輯基本資料</span></p>
               <h1 class="mb-4 bread">編輯基本資料</h1>
             </div>
           </div>

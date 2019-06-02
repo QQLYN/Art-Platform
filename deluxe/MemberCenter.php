@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(! isset($_SESSION['Mail'])){
+    header("Location:Sign.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -64,6 +71,7 @@
     {
       console.log("Mail:" + mail);
       document.getElementById("Mail").innerHTML = mail;
+      document.getElementById("logout").innerHTML = "<a href='./PHP.log-out.php' class='nav-link'>Logout</a>"
     }
 
   </script>
@@ -73,7 +81,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.php">ARTSA</a>
+        <a class="navbar-brand" href="index.html">ARTSA</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
@@ -84,7 +92,7 @@
             <li class="nav-item "><a href="collection.php" class="nav-link">Collection</a></li>
             <li class="nav-item"><a href="transaction.php" class="nav-link">Transcation</a></li>
             <li class="nav-item active"><a href="MemberCenter.php" class="nav-link">Account</a></li>
-           <li class="nav-item" id="logout"><a href='./PHP.log-out.php' class='nav-link'>Logout</a></li>
+           <li class="nav-item" id="logout"></li>
           </ul>
         </div>
       </div>
@@ -224,11 +232,19 @@
       document.getElementById("Identity").innerHTML = "CONSUMER";
       Value = document.getElementById("Identity").value = "CONSUMER";
       role = 1;
+      <?php
+      session_start();
+      $_SESSION['role'] = 1;
+      ?>
     }
     else if (Identity == "CONSUMER"){
       document.getElementById("Identity").innerHTML = "PHOTOGRAPHER";
       Value = document.getElementById("Identity").value = "PHOTOGRAPHER";
       role = 2;
+      <?php
+      session_start();
+      $_SESSION['role'] = 2;
+      ?>
     }
     $.ajax
     ({

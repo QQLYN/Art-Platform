@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(! isset($_SESSION['Mail'])){
+    header("Location:Sign.php");
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,6 +49,7 @@
 		                {
 		                  console.log(data.Identity);
 		                  console.log("good");
+		                  document.getElementById("logout").innerHTML = "<a href='./PHP/log-out.php' class='nav-link'>Logout</a>"
 		                },
 		                error: function(xhr) { 
 		                   console.log(xhr.responseText);
@@ -56,7 +64,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.php">ARTSA</a>
+        <a class="navbar-brand" href="index.html">ARTSA</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
@@ -67,7 +75,7 @@
             <li class="nav-item "><a href="collection.php" class="nav-link">Collection</a></li>
             <li class="nav-item"><a href="transaction.php" class="nav-link">Transcation</a></li>
             <li class="nav-item active"><a href="MemberCenter.php" class="nav-link">Account</a></li>
-           <li class="nav-item" id = "logout"><a href='./PHP/log-out.php' class='nav-link'>Logout</a></li>
+           <li class="nav-item" id = "logout"></li>
           </ul>
         </div>
       </div>

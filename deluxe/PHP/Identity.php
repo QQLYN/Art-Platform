@@ -3,13 +3,13 @@
 	
 	$Identity = json_encode(@$_POST["role"]);
 	session_start();
-	$_SESSION['role'] = $Identity;
+	$_SESSION[role] = $Identity;
 	$Mail = json_encode(@$_POST["Mail"]);
-	//echo $Identity;
-	$Link = mysqli_connect('localhost', 'root', '1234');
+	echo $_SESSION['role'];
+	$Link = mysqli_connect('localhost', 'ARTSA', 'artsa108');
 	mysqli_select_db($Link,'artsa')or die($connect_error);
-	$data = mysqli_query($Link,"UPDATE `account` SET `role`=".$Identity ."where `Mail` = ".$Mail );
-	$result = mysqli_query($Link,"SELECT `role` FROM `account`where `Mail` = ".$Mail);
+	$data = mysqli_query($Link,"UPDATE `account` SET `role`=".$Identity."where `Mail` = '".$Mail."'" );
+	$result = mysqli_query($Link,"SELECT `role` FROM `account`where `Mail` = '".$Mail."'");
 	if(!$result)
 	{
 		echo ("Error: ".mysqli_error($Link));
