@@ -2,6 +2,7 @@
 
 	session_start();
 	$Identity = json_encode(@$_POST["role"]);
+	$_SESSION['role'] = $Identity;
 	$Mail = json_encode(@$_POST["Mail"]);
 	//echo $Identity;
 	$Link = mysqli_connect('localhost', 'root', '1234');
