@@ -12,7 +12,7 @@ if(! isset($_SESSION["Mail"])){
 }$mail=$_SESSION["Mail"];
 $pon=$_SESSION["Provider_or_not"];
 $rolesign=$_SESSION["role"];
-echo "$rolesign";
+
 //重上一個得到的值，這個帳號登入後就會存入。
 //下面才會用到，判斷是不是攝影師
 //$_SESSION[Provider_or_not] = 0;
@@ -65,9 +65,9 @@ echo "$rolesign";
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="collection.html" class="nav-link">Collection</a></li>
-	          <li class="nav-item"><a href="transaction.php" class="nav-link">Transcation</a></li>
-              <li class="nav-item"><a href="MemberCenter.html" class="nav-link">Account</a></li>
-              <li class="nav-item"><a href="Signin.html" class="nav-link"> <? if($_SESSION['Mail']){echo'<li class="nav-item"><a href="log-out.php" class="nav-link">Logout</a></li>';}?></a></li>
+	          <li class="nav-item"><a href="transaction P.php" class="nav-link">Transcation</a></li>
+              <li class="nav-item"><a href="MemberCenter.php" class="nav-link">Account</a></li>
+              <li class="nav-item"><a href="Signin.php" class="nav-link"> <? if($_SESSION['Mail']){echo'<li class="nav-item"><a href="log-out.php" class="nav-link">Logout</a></li>';}?></a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -182,7 +182,8 @@ echo "$rolesign";
                         
 						
 		    				<div class="room">
-		    					<a id="SceneryPicture" href="project information P.php" class="img d-flex justify-content-center align-items-center" style="background-image: url(<? echo $rs[12]?>);">
+		    					<a id="SceneryPicture" href="<?
+                    if($rolesign ==1){echo'project information P.php?';}else{echo 'project information C.php?';}?>" class="img d-flex justify-content-center align-items-center" style="background-image: url(<? echo $rs[12]?>);">
 		    						<div class="icon d-flex justify-content-center align-items-center">
 		    							<span class="icon-search2"></span>
 		    						</div>
@@ -230,7 +231,6 @@ echo "$rolesign";
 		    				</div>
 		    			</div>
                         <?
-                        
                         }
                         ?>
 		    		</div>
