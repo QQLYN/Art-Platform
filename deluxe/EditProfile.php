@@ -49,6 +49,7 @@ if(! isset($_SESSION['Mail'])){
                 {
                   console.log(data.Identity);
                   console.log("good");
+                  SetIdentity(data.Identity);
                 },
                 error: function(xhr) { 
                    console.log(xhr.responseText);
@@ -56,6 +57,19 @@ if(! isset($_SESSION['Mail'])){
         })
 
     });
+    function(Identity)
+    {
+      if(Identity == "CONSUMER")
+      {
+        document.getElementById("Identity").innerHTML = "消費者";
+        document.getElementById("Apply").style.display = "inline";
+      }
+      else
+      {
+        document.getElementById("Identity").innerHTML = "攝影師";
+        document.getElementById("Apply").style.display = "none";
+      }
+    }
   </script>
 
   </head>
@@ -154,7 +168,7 @@ if(! isset($_SESSION['Mail'])){
                 <label>&nbsp;&nbsp;&nbsp;&nbsp;身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分&nbsp;&nbsp;&nbsp;&nbsp;</label>
                 <label id = "Identity" style="display: inline;">消費者</label>
                 <label>
-                  <div class="col-md-2 d-flex">
+                  <div class="col-md-2 d-flex" id="Apply">
                     <div >
                       <a href="./Profile.html"><input type="submit" value="申請為攝影師" class="btn btn-primary pybt align-self-stretch"></a>
                     </div>

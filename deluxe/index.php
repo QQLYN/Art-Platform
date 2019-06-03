@@ -2,13 +2,14 @@
 session_start();
 if(! isset($_SESSION["Mail"])){
   header("Location: Sign.php?");
-}$mail=$_SESSION["Mail"];
+}
+$mail=$_SESSION["Mail"];
 $pon=$_SESSION["Provider_or_not"];
 $rolesign=$_SESSION["role"];
-echo "身分為$rolesign";
 //重上一個得到的值，這個帳號登入後就會存入。
 //下面才會用到，判斷是不是攝影師
 //$_SESSION[Provider_or_not] = 0;
+echo "$rolesign";
 ?>
 <!DOCTYPE html>
 
@@ -62,8 +63,8 @@ echo "身分為$rolesign";
 
 	          <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="collection.html" class="nav-link">Collection</a></li>
-	          <li class="nav-item"><a href="transaction.php" class="nav-link">Transcation</a></li>
-              <li class="nav-item"><a href="MemberCenter.html" class="nav-link">Account</a></li>
+	          <li class="nav-item"><a href="transaction P.php" class="nav-link">Transcation</a></li>
+              <li class="nav-item"><a href="MemberCenter.php" class="nav-link">Account</a></li>
               <?if($_SESSION['Mail']){echo'<li class="nav-item"><a href="log-out.php" class="nav-link">Logout</a></li>';}?>
 	        </ul>
 	      </div>
@@ -219,7 +220,8 @@ echo "身分為$rolesign";
                 ?>
     			<div id="<? echo $rs[0]?>" class="col-sm col-md-6 col-lg-4 ftco-animate">
     				<div class="room">
-    					<a id="onePicture" href="project information P.php" class="img d-flex justify-content-center align-items-center" style="background-image: url(<? echo $rs[12]?>);">
+    					<a id="onePicture" href="<?
+                    if($rolesign ==1){echo'project information P.php?';}else{echo 'project information C.php?';}?>" class="img d-flex justify-content-center align-items-center" style="background-image: url(<? echo $rs[12]?>);">
     						<div class="icon d-flex justify-content-center align-items-center">
     							<span class="icon-search2"></span>
     						</div>
@@ -234,7 +236,8 @@ echo "身分為$rolesign";
                         
  
     					<div class="text p-3 text-center">
-    						<h3 class="mb-3"><a id="title" href="project information P.php"><?php echo $rs[2]?></a><span style="float: right" class="like">&#10084;</span></h3>
+    						<h3 class="mb-3"><a id="title" href="<?
+                    if($rolesign ==1){echo'project information P.php?';}else{echo 'project information C.php?';}?>"><?php echo $rs[2]?></a><span style="float: right" class="like">&#10084;</span></h3>
     						<p id="price"><span class="price mr-2">$<?php echo $rs[7]?></span> <span class="per">每張照片</span></p>
                             
                             <p><i class='fas fa-map-marker-alt' ></i>&nbsp;&nbsp;
@@ -262,7 +265,7 @@ echo "身分為$rolesign";
                                     }else{//消費者沒有年份
                                     }
                                 echo "</span>";
-                                ?></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交易筆數：<?php echo $rs[10]?></p>
+                                ?></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交易筆數：<?php echo $rs[10]?></p>
     					</div>
     				</div>
     			</div>
